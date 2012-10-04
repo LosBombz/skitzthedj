@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en-US"> 
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta name="description" content="">
+	<link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" type="text/css" media="all" href="/styles/fonts.css" /> 
+	<link rel="stylesheet" type="text/css" media="screen" href="/styles/styles.css" /> 
+</head>
+<body>
+    <div class="controls-container">
+
+    </div>
+    <div class="wrap-all">
+        <!-- start Nav -->
+        <div class="nav-hook">
+            
+        </div>
+        <!-- End Nav -->
+
+        <div class="page-hook">
+
+        </div>
+        
+    </div>
+    <div class="footer-hook">
+
+    </div>
+<!-- underscore templates -->
+<script type="text/template" id="navTmpl">
+    <li><a href="#">Home</a></li>
+    <li><a href="#/music">Music</a></li>
+</script>
+
+<script type="text/template" id="featuredTmpl">
+    <div class="player-container">
+        <button class="prev play-btn">.</button>
+        <button href="#" class="next play-btn">/</button>
+        <div class="track-container">                
+            <ul class="track-list">
+            </ul>
+        </div>
+    </div>
+</script>
+    
+<script type="text/template" id="musicTmpl">
+    <div class="music">
+        <ul class="music-list">
+            <li>Track1</li>
+            <li>Track2</li>
+            <li>Track3</li>
+            <li>Track4</li>
+            <li>Track5</li>
+            <li>Track6</li>
+        </ul>
+    </div>
+</script>
+    
+<script type="text/template" id="controlsTmpl">
+        <button id="playBtn" class="play-btn" href="#" >!</button>
+        <div class="title-container">
+            <h2 class="title"><%= title%></h2>
+            <div class="tracking-container">
+
+                <div id="progressBar" class="progress-bar"></div>
+                <div class ="marks-container"></div>
+            </div>
+        </div>
+        <button id="listBtn" class="play-btn" href="#" >1</button>
+        <button id="dlBtn" class="play-btn" href="#" >)</button>
+    </script>
+
+
+    <script type="text/template" id="trackTmpl">
+        <a class="track-link" href="#/featured/<%= trackId%>">         
+        <img height="250" width="250" src="<%= cover%>" />
+        </a>
+    </script>
+
+        <script type="text/template" id="contactTmpl">
+            <div class="footer-top">
+                <a class="contact-btn" href="#/contact">Contact</a>
+            </div>
+            <div class="contact-content">
+                <%= content%>
+            </div>
+        </script>
+	
+<!-- point of entry for all scripts using require.js -->
+    <script data-main="scripts/main" src="scripts/libs/require-jquery.js"></script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+/* @import url(http://fonts.googleapis.com/css?family=XXXXXXXXXXXXXXXX); */
+@import "reset.css";
+
+/* START HERE */
+
+body {
+	background:#eee;
+	font-family: arial, sans-serif;
+}
+
+a {
+	-webkit-transition: all .3s;
+	-moz-transition: all .3s;
+	transition: all .3s;
+}
+
+a:hover {
+	background:#46db98;
+	text-shadow: 0 0 3px rgba(70,219,152,.6);
+}
+
+.track{
+	width:25px;
+	height:25px;
+	float: left;
+	background: red;
+	margin: 20px;
+}
+
+.track-link {
+	width: 100%;
+	height: 100%;
+	float: left;
+}
+
+.controls {
+	width: 400px;
+	height: 300px;
+	background: red;
+	float: left;
+}
