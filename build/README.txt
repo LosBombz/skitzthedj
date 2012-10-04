@@ -1,1 +1,0 @@
-Documentation for the build script can be found here: http://html5boilerplate.com/docs/Build-script/
