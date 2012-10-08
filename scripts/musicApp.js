@@ -1,7 +1,16 @@
 /*global console: true,_:true,Backbone:true,define:true*/
 
-define(['jquery', 'underscore', 'backbone', 'soundmanager', 'skitzSlider', 'modules/track', 'modules/player', 'modules/contact', 'router'],
-    function($, _, Backbone, soundManager, skitzSlider, Track, Player, Contact, Router){
+define([
+    'jquery', 
+    'underscore', 
+    'backbone', 
+    'soundmanager', 
+    'modules/track', 
+    'modules/player', 
+    'modules/contact', 
+    'router'
+],
+    function($, _, Backbone, soundManager, Track, Player, Contact, Router){
         'use strict';
 
         soundManager.setup({
@@ -23,6 +32,7 @@ define(['jquery', 'underscore', 'backbone', 'soundmanager', 'skitzSlider', 'modu
                 'artist' : 'Artist 1',
                 'cover' : '/images/mixes/ah.png',
                 'url' : '/tracks/AfterHours.mp3',
+                'trackMarks' : [10, 20, 30, 40, 60,80],
                 'selected' : 'false'
             },
             {
@@ -30,21 +40,24 @@ define(['jquery', 'underscore', 'backbone', 'soundmanager', 'skitzSlider', 'modu
                 'title' : 'Brown Noise Special',
                 'artist' : 'Artist 2',
                 'cover' : '/images/mixes/bn.jpg',
-                'url' : '/tracks/BrownNoise.mp3'
+                'url' : '/tracks/BrownNoise.mp3',
+                'trackMarks' : [10, 20, 30, 40, 60,80]
             },
             {
                 'trackId': 'michaelJackson',
                 'title' : 'A Tribute to Michael Jackson',
                 'artist' : 'Artist 3',
                 'cover' : '/images/mixes/mj.jpg',
-                'url' : '/tracks/MichaelJackson.mp3'
+                'url' : '/tracks/MichaelJackson.mp3',
+                'trackMarks' : [2.5, 5.65, 30, 40, 60,80]
             },
             {
                 'trackId': 'lilWayne',
                 'title' : 'Lil Wayne a Mili (Skitz Mix)',
                 'artist' : 'Artist 4',
                 'cover' : '/images/mixes/lw.jpg',
-                'url' : '/tracks/LilWayne.mp3'
+                'url' : '/tracks/LilWayne.mp3',
+                'trackMarks' : [10, 20, 30, 40, 60,80]
             }           
 
         ];
@@ -71,7 +84,7 @@ define(['jquery', 'underscore', 'backbone', 'soundmanager', 'skitzSlider', 'modu
             },
             initialize: function(){
                 console.log('App Init');
-                // this.trackList = new DJ.MusicAppC(tracks);
+                this.trackList = new DJ.MusicAppC(tracks);
 
 
 
@@ -79,7 +92,7 @@ define(['jquery', 'underscore', 'backbone', 'soundmanager', 'skitzSlider', 'modu
             render: function(){
                 this.$el.html(this.template()).appendTo('.page-hook');
                 
-               
+                this.renderList();
 
 
             },
@@ -88,7 +101,7 @@ define(['jquery', 'underscore', 'backbone', 'soundmanager', 'skitzSlider', 'modu
                     var trackItem = new Track.DJ.TrackV({
                         model: trackM
                     });
-                    trackItem.$el.appendTo('.track-list');
+                    trackItem.$el.appendTo('.music-list');
 
                 }, this);
 

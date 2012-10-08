@@ -1,9 +1,14 @@
 /*global console: true,_:true,Backbone:true,define:true*/
 
 
-define(['jquery', 'underscore', 'backbone','soundmanager'],
+define([
+	'jquery', 
+	'underscore', 
+	'backbone',
+	'soundmanager'
+],
 
-function($, _, Backbone, soundManager){
+function( $, _, Backbone, soundManager ){
 'use strict';
 	var DJ = {};
 
