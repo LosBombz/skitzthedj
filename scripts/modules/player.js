@@ -26,7 +26,7 @@ function( $, _, Backbone, soundManager ){
 		},
 		render: function(){
 			this.$el.html(this.template(this.model.toJSON())).appendTo('.controls-container');
-			
+			this.$el.fadeIn();
 			return this;
 		},
 		setMarks : function(){
@@ -55,40 +55,34 @@ function( $, _, Backbone, soundManager ){
 				soundManager.destroySound('currTrack');
 			}
 
-			this.setMarks();
+			var selfView = this;			
 
 			soundManager.createSound({
 				id: 'currTrack',
 				url: this.model.get('url'),
-				autoLoad: true,
-				//autoPlay: true,
-				onplay: function(){
-					//console.log(currMix.duration);
-					$('#playBtn').text('"');
-				},
-				onstop: function(){
-					console.log(currTrack.duration);
-					$('#playBtn').text('!');
-				},
-				onpause: function(){
-				   $('#playBtn').text('!');
-				},
-				onresume : function(){
-					$('#playBtn').text('"');
-				},
 				whileloading: function() {
-					//$('.tracking-container').text('LOADING');
+					$('#loadingBar').text('LOADING');
 
 				},
 				onload: function(){
-					//$('.tracking-container').text(' ');
+					$('#loadingBar').text('');
+					selfView.setMarks();
 				},
 				whileplaying : function(){
 					currTrack = soundManager.sounds.currTrack;
-					var pos = (currTrack.position / currTrack.duration) * 100;
+					var pos = ( currTrack.position / currTrack.duration ) * 100;
 					$('#progressBar').css({
 						width: pos + '%'
 					});
+					console.log(this.waveformData.left);
+				},
+				onfinish : function(){
+
+					currTrack.setPosition( 0 );
+					$('#progressBar').css({
+						width: 0
+					});
+					$('#playBtn').text('!');
 				}
 				
 			});
@@ -98,8 +92,8 @@ function( $, _, Backbone, soundManager ){
 
 			currTrack.togglePause();
 		},
-		seek: function(e){
-			console.log(e);
+		seek: function( e ){
+			console.log( e );
 			var currTrack = soundManager.sounds.currTrack;
 			var pos = e.offsetX / $('.tracking-container').width() * 100;
 			var setPos = pos * currTrack.duration / 100;
@@ -110,21 +104,11 @@ function( $, _, Backbone, soundManager ){
 				width: pos + '%'
 			});
 			console.log('down');
-			$('.tracking-container').on('mousemove', function(e){
-				
-				pos = e.offsetX / $('.tracking-container').width() *100;
-				console.log(pos);
-				$('#progressBar').css({
-						width: pos + '%'
-				});
-				
-			});
-			$(window).on('mouseup', function(){
-				
-				$('.tracking-container').off('mousemove');
-			});
 				
 			
+		},
+		toggleDetail : function(){
+
 		}
 
 	});

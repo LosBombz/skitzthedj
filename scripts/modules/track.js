@@ -28,7 +28,27 @@ function($, _, Backbone){
 	DJ.TrackV = Backbone.View.extend({
 		tagName: 'li',
 		className: 'track',
-		template: _.template($('#trackTmpl').html()),
+		template: _.template($('#fTrackTmpl').html()),
+		events: {
+			'click' : 'select'
+		},
+		initialize: function(){
+			this.render();
+		},
+		render: function(){
+			this.$el.html(this.template(this.model.toJSON()));
+			return this;
+		},
+		select: function(e){
+			$('.track').removeClass('selected');
+			this.$el.addClass('selected');
+		}
+	});
+
+	DJ.MTrackV = Backbone.View.extend({
+		tagName: 'li',
+		className: 'track',
+		template: _.template($('#mTrackTmpl').html()),
 		events: {
 			'click' : 'select'
 		},

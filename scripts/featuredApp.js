@@ -14,17 +14,7 @@ define([
     function($, _, Backbone, soundManager, skitzSlider, Track, Player, Contact, Router){
         'use strict';
 
-        soundManager.setup({
-            url: 'motion/flash/soundmanager2_flash9_debug.swf',
-            flashVersion: 9,
-            useFlashBlock: false,
-            ontimeout: function(error) {
-            // uh-oh, SM2 failed to start - error, unsupported or other issue
-                console.log('we messed up');
-            }
-        });
-
-        soundManager.beginDelayedInit();
+       
 
         var tracks = [
             {   

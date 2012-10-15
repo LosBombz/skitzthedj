@@ -26,6 +26,8 @@ define([
 			if(Contact.DJ.contact.isOpen){
 				Contact.DJ.contact.close();
 			}
+			MusicApp.DJ.musicApp.loadTrack(id);
+			MusicApp.DJ.musicApp.changePage();
 			console.log(id);
 		},
 		selectFeaturedTrack : function(id){

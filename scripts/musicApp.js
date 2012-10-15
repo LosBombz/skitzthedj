@@ -13,17 +13,7 @@ define([
     function($, _, Backbone, soundManager, Track, Player, Contact, Router){
         'use strict';
 
-        soundManager.setup({
-                url: 'motion/flash/soundmanager2_flash9_debug.swf',
-                flashVersion: 9,
-                useFlashBlock: false,
-                ontimeout: function(error) {
-                // uh-oh, SM2 failed to start - error, unsupported or other issue
-                    console.log('we messed up');
-                }
-        });
-
-        soundManager.beginDelayedInit();
+        
 
         var tracks = [
             {   
@@ -98,7 +88,7 @@ define([
             },
             renderList: function(){
                 _.each(this.trackList.models, function(trackM){
-                    var trackItem = new Track.DJ.TrackV({
+                    var trackItem = new Track.DJ.MTrackV({
                         model: trackM
                     });
                     trackItem.$el.appendTo('.music-list');

@@ -54,36 +54,51 @@
 </script>
     
 <script type="text/template" id="controlsTmpl">
-        <button id="playBtn" class="play-btn" href="#" >!</button>
-        <div class="title-container">
-            <h2 class="title"><%= title%></h2>
-            <div class="tracking-container">
-
-                <div id="progressBar" class="progress-bar"></div>
-                <div class ="marks-container"></div>
-            </div>
+    <button id="playBtn" class="play-btn" href="#" >!</button>
+    <div class="title-container">
+        <h2 class="title"><%= title%></h2>
+        <div class="tracking-container">
+            <div id="loadingBar" class="loading-bar"></div>
+            <div id="progressBar" class="progress-bar"></div>
+            <div class ="marks-container"></div>
         </div>
-        <button id="listBtn" class="play-btn" href="#" >1</button>
-        <button id="dlBtn" class="play-btn" href="#" >)</button>
-    </script>
+    </div>
+    <button id="listBtn" class="play-btn" href="#" >1</button>
+    <button id="dlBtn" class="play-btn" href="#" >)</button>
+</script>
 
+<script type="text/template" id="fTrackTmpl">
+    <a class="track-link" href="#/featured/<%= trackId%>">         
+    <img height="250" width="250" src="<%= cover%>" />
+    </a>
+</script>
 
-    <script type="text/template" id="trackTmpl">
-        <a class="track-link" href="#/featured/<%= trackId%>">         
-        <img height="250" width="250" src="<%= cover%>" />
-        </a>
-    </script>
+<script type="text/template" id="mTrackTmpl">
+    <a class="track-link" href="#/music/<%= trackId%>">         
+    <img height="250" width="250" src="<%= cover%>" />
+    </a>
+</script>
 
-        <script type="text/template" id="contactTmpl">
-            <div class="footer-top">
-                <a class="contact-btn" href="#/contact">Contact</a>
-            </div>
-            <div class="contact-content">
-                <%= content%>
-            </div>
-        </script>
+<script type="text/template" id="contactTmpl">
+    <div class="footer-top">
+        <a class="contact-btn" href="#/contact">Contact</a>
+    </div>
+    <div class="contact-content">
+        <div class="contact-column-left">
+            <h2>Regular Appearances</h2>
+            <ul>
+                <li>Tommy Doyles : Fridays, 11PM - 2AM</li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+        <div class="contact-column-right">
+        </div>
+        <%= content%>
+    </div>
+</script>
 	
 <!-- point of entry for all scripts using require.js -->
-    <script data-main="scripts/main" src="scripts/libs/require-jquery.js"></script>
+<script data-main="scripts/main" src="scripts/libs/require-jquery.js"></script>
 </body>
 </html>

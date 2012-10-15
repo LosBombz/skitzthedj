@@ -208,6 +208,7 @@ a:hover {
 	width: 62.5%; /*650 / 960*/
 	height: 60px;
 	margin: 0 auto;
+	display: none;
 }
 
 .controls h2 {
@@ -421,10 +422,12 @@ a:hover {
 /* Music page */
 .music-container {
 	width: 900px;
+	margin: 0 auto;
 }
 
 .music-container .music-list {
 	width: 900px;
+	float:left;
 }
 
 .music-container .music-list .track{
@@ -439,7 +442,7 @@ a:hover {
 	-moz-transition: all .5s;
 	-webkit-transition: all .5s;
 	transition: all .5s;
-	margin: 0 5px;
+	margin: 0 5px 10px 5px;
 }
 
 .music-container .music-list .track:hover{
