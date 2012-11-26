@@ -1,5 +1,6 @@
 //plugin for the featured slider on skitzthedj.com
 // Author: Carlos Escobar || aGoodRobot.com
+/*global Modernizr*/
 
 ;(function( $ ){
     'use strict';
@@ -57,9 +58,15 @@
                     currSlide++;
                     elem.slide.removeClass( 'activeSlide' );
                     elem.slide.eq(currSlide).addClass( 'activeSlide' );
-                    elem.slideList.animate({
-                        left: increment
-                    });
+                    if(!Modernizr.csstransitions) {
+                        elem.slideList.animate({
+                            left: increment
+                        });
+                    } else {
+                        elem.slideList.css({
+                            left: increment
+                        });
+                    }
                 }
                 else {
                     slideControl.afterLast();
@@ -75,9 +82,15 @@
                     elem.slide.removeClass( 'activeSlide' );
                     elem.slide.eq( currSlide ).addClass( 'activeSlide' );
                     increment += slideWidth;
-                    elem.slideList.animate({
-                        left: increment
-                    });
+                    if(!Modernizr.csstransitions) {
+                        elem.slideList.animate({
+                            left: increment
+                        });
+                    } else {
+                        elem.slideList.css({
+                            left: increment
+                        });
+                    }
                 }
                 else {
                     slideControl.beforeFirst();
@@ -86,25 +99,33 @@
             
 
             afterLast: function(){
-                elem.slideList.stop( false, false ).animate({
-                    left: increment - ( slideWidth / 4 )
-                }, 200 ,function(){
+                if(!Modernizr.csstransitions) {
                     elem.slideList.stop( false, false ).animate({
-                        left: increment
-                    }, 500);
-                });
+                        left: increment - ( slideWidth / 4 )
+                    }, 200 ,function(){
+                        elem.slideList.stop( false, false ).animate({
+                            left: increment
+                        }, 500);
+                    });
+                } else {
+                    return false;
+                }
 
             },
             
 
             beforeFirst: function(){
-                elem.slideList.stop( false, false ).animate({
-                    left: increment + ( slideWidth / 4 )
-                }, 200 ,function(){
+                if(!Modernizr.csstransitions) {
                     elem.slideList.stop( false, false ).animate({
-                        left: increment
-                    }, 500);
-                });
+                        left: increment + ( slideWidth / 4 )
+                    }, 200 ,function(){
+                        elem.slideList.stop( false, false ).animate({
+                            left: increment
+                        }, 500);
+                    });
+                } else {
+                    return false;
+                }
 
              }
         };

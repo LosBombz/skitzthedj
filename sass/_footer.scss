@@ -1,0 +1,49 @@
+
+// Footer heading and contact section:
+//		1. Contact open btn
+//			- social
+//		2. Contact info
+//			-deatialed social
+//		3. Gig info / play dates
+//		4. contact form
+//		
+
+.footer-wrap {
+	width: 100%;
+	position: fixed;
+	background: #333;
+	z-index: 900;
+	height:30px;
+	bottom: 0;
+}
+
+.footer-top {
+	height: 30px;
+	width: 100%;
+	background: url(/images/layout/player-bg.jpg) #555;
+	position: absolute;
+	top: 0;
+	border-top: 1px solid #777;
+	@include single-box-shadow(rgba(0, 0, 0, .7), 0, 2px, 2px);
+	border-bottom: 1px solid #333;
+
+	.contact-btn {
+		float: right;
+		font-family: arial;
+		font-size:14px;
+		color: #fff;
+		margin: 7px 13px 0 0;
+		text-shadow: 0 0 6px #eee;
+	}
+
+}
+
+.contact-content {
+	padding: 40px;
+	font-size: 100px;
+	color: #fff;
+	.contact {
+
+	}
+}
+

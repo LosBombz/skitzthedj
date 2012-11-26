@@ -23,6 +23,7 @@ require.config({
     },
     paths : {
         soundmanager : '/scripts/libs/soundmanager2',
+        modernizr    : '/scripts/libs/modernizr',
         underscore   : '/scripts/libs/underscore-min',
         backbone     : '/scripts/libs/backbone-min',
         skitzSlider  : '/scripts/libs/skitzSlider'
@@ -30,6 +31,7 @@ require.config({
 });
 require([
     'soundmanager',
+    'modernizr',
     'jquery',
     'underscore',
     'backbone',
@@ -38,12 +40,12 @@ require([
     'modules/track',
     'modules/player',
     'modules/contact',
+    'modules/detail',
     'router',
     'featuredApp',
     'musicApp'
 
-
-], function( soundManager, $, _, Backbone, skitzSlider, Nav, Track, Player, Contact, Router, FeaturedApp, MusicApp) {
+], function( soundManager,modernizr, $, _, Backbone, skitzSlider, Nav, Track, Player, Contact, Detail, Router, FeaturedApp, MusicApp) {
     'use strict';
 
     soundManager.setup({
@@ -55,9 +57,12 @@ require([
             console.log('we messed up');
         },
         flash9Options : {
-            useWaveformData: true
-        },
-        defaultOptions : {
+            useWaveformData: false
+        }
+        
+    });
+
+    soundManager.defaultOptions = {
             autoLoad: true,
             onplay: function(){
                 $('#playBtn').text('"');
@@ -66,13 +71,12 @@ require([
                 $('#playBtn').text('!');
             },
             onpause: function(){
-               $('#playBtn').text('!');
+                $('#playBtn').text('!');
             },
             onresume : function(){
                 $('#playBtn').text('"');
             }
-        }
-    });
+        };
 
     soundManager.beginDelayedInit();
     

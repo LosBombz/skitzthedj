@@ -74,12 +74,8 @@ define([
 
             },
             initialize: function(){
-               // this.on('change:trackChange', this.loadTrack);
-                console.log('App Init');
+                console.log('Featured App Init');
                 this.trackList = new DJ.FeaturedAppC(tracks);
-                
-                
-
 
             },
             render: function(){
@@ -90,8 +86,6 @@ define([
                    $('.track-container').skitzSlider({
                         display: 3
                     });
-
-
 
             },
             renderList: function(){

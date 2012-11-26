@@ -7,11 +7,14 @@
 	<meta name="description" content="">
 	<link rel="shortcut icon" href="/favicon.ico">
     <link rel="stylesheet" type="text/css" media="all" href="/styles/fonts.css" /> 
-	<link rel="stylesheet" type="text/css" media="screen" href="/styles/styles.css" /> 
+	<link rel="stylesheet" type="text/css" media="screen" href="/styles/screen.css" /> 
+    <link rel="stylesheet" type="text/css" media="print" href="/styles/print.css" /> 
 </head>
 <body>
-    <div class="controls-container">
+    <div class="details-hook">
+        <div class="controls-container">
 
+        </div>
     </div>
     <div class="wrap-all">
         <!-- start Nav -->
@@ -36,6 +39,8 @@
 
 <script type="text/template" id="featuredTmpl">
     <div class="player-container">
+        <div class="current-container">
+        </div>
         <button class="prev play-btn">.</button>
         <button href="#" class="next play-btn">/</button>
         <div class="track-container">                
@@ -63,7 +68,7 @@
             <div class ="marks-container"></div>
         </div>
     </div>
-    <button id="listBtn" class="play-btn" href="#" >1</button>
+    <a id="listBtn" class="play-btn" href="#/music/<%= trackId%>/detail" >1</a>
     <button id="dlBtn" class="play-btn" href="#" >)</button>
 </script>
 
@@ -77,6 +82,19 @@
     <a class="track-link" href="#/music/<%= trackId%>">         
     <img height="250" width="250" src="<%= cover%>" />
     </a>
+</script>
+
+<script type="text/template" id="detailTmpl">
+    <div class="detail-content">
+        <div class="detail-column-left">
+            <h2>blah</h2>
+            
+        </div>
+        <div class="detail-column-right">
+        
+        </div>
+
+    </div>
 </script>
 
 <script type="text/template" id="contactTmpl">
@@ -97,6 +115,7 @@
         <%= content%>
     </div>
 </script>
+
 	
 <!-- point of entry for all scripts using require.js -->
 <script data-main="scripts/main" src="scripts/libs/require-jquery.js"></script>

@@ -73,7 +73,7 @@ define([
 
             },
             initialize: function(){
-                console.log('App Init');
+                console.log('Music App Init');
                 this.trackList = new DJ.MusicAppC(tracks);
 
 

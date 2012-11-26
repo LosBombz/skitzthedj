@@ -27,6 +27,7 @@ function( $, _, Backbone, soundManager ){
 		render: function(){
 			this.$el.html(this.template(this.model.toJSON())).appendTo('.controls-container');
 			this.$el.fadeIn();
+
 			return this;
 		},
 		setMarks : function(){
@@ -75,6 +76,18 @@ function( $, _, Backbone, soundManager ){
 						width: pos + '%'
 					});
 					console.log(this.waveformData.left);
+					
+					var pixel = $('.pixel');
+					var scale = 32;
+
+					for(var i = 0; i < 256; i++){
+						console.log(pixel[i], scale+Math.ceil(this.waveformData.left[i]*-scale));
+						pixel[i].animate({
+							top: (scale+Math.ceil(this.waveformData.left[i]*-scale))+'px'
+						});
+
+					}
+					
 				},
 				onfinish : function(){
 

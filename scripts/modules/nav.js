@@ -20,12 +20,19 @@ function($, _, Backbone){
 		tagName: 'ul',
 		className: 'nav-list',
 		template: _.template($('#navTmpl').html()),
+		events: {
+			'click a' : 'active'
+		},
 		initialize: function(){
 			this.render();
 		},
 		render: function(){
 			this.$el.html(this.template()).appendTo('.nav-hook');
 			return this;
+		},
+		active: function(e){
+			this.$el.find('a').removeClass('current');
+			$(e.currentTarget).addClass('current');
 		}
 	});
 
