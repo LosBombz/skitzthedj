@@ -1,0 +1,11 @@
+{
+  "title": "skitzthedj.com",
+  "name" : "",
+  "author": {
+  	"name": "Carlos Escobar"
+  	},
+  "version": "2.5.0",
+  "devDependencies": {
+    "grunt": "~0.3.0"
+  }
+}
