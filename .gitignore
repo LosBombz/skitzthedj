@@ -43,8 +43,8 @@ Thumbs.db
 
 #sublime text files#
 ####################
-.sublime-project
-.sublime-workspace
+*.sublime-project
+*.sublime-workspace
 
 #sass#
 ######
