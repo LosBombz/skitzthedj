@@ -1,11 +1,8 @@
 //plugin for the featured slider on skitzthedj.com
 // Author: Carlos Escobar || aGoodRobot.com
 /*global Modernizr*/
-// define(['jquery'],function($){
+ define(['jquery'],function($){
 
-// });
-
-;(function( $ ){
     'use strict';
 	$.fn.skitzSlider = function( options ) {
 		var o = $.extend({}, {
@@ -124,4 +121,5 @@
         return this;
 		
 	};
-})( jQuery );
+
+ });

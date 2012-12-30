@@ -5,11 +5,11 @@ define([
     'jquery', 
     'underscore', 
     'backbone', 
-    'modules/track', 
-    'modules/player', 
-    'featuredApp',
-    'musicApp', 
-    'modules/contact'
+    'track', 
+    'player', 
+    'featured',
+    'music', 
+    'contact'
     ],
     function($, _, Backbone, Track, Player, FeaturedApp, MusicApp, Contact){
     'use strict';
@@ -26,37 +26,37 @@ define([
         'music'              : 'musicPage'
         },
         selectMusicTrack : function(id) {
-            if(Contact.DJ.contact.isOpen){
-                Contact.DJ.contact.close();
+            if(Contact.contact.isOpen){
+                Contact.contact.close();
             }
-            MusicApp.DJ.musicApp.loadTrack(id);
-            MusicApp.DJ.musicApp.changePage();
+            MusicApp.musicApp.loadTrack(id);
+            MusicApp.musicApp.changePage();
             console.log(id);
         },
         selectFeaturedTrack : function(id){
-            if(Contact.DJ.contact.isOpen){
-                Contact.DJ.contact.close();
+            if(Contact.contact.isOpen){
+                Contact.contact.close();
             }
-            FeaturedApp.DJ.featuredApp.loadTrack(id);
-            FeaturedApp.DJ.featuredApp.changePage();
+            FeaturedApp.featuredApp.loadTrack(id);
+            FeaturedApp.featuredApp.changePage();
         },
         index : function() {
-            if(Contact.DJ.contact.isOpen){
-                Contact.DJ.contact.close();
+            if(Contact.contact.isOpen){
+                Contact.contact.close();
             }
-            FeaturedApp.DJ.featuredApp.changePage();
+            FeaturedApp.featuredApp.changePage();
         },
         musicPage : function(){
             
-            if(Contact.DJ.contact.isOpen){
-                Contact.DJ.contact.close();
+            if(Contact.contact.isOpen){
+                Contact.contact.close();
             }
-            MusicApp.DJ.musicApp.changePage();
+            MusicApp.musicApp.changePage();
             
         },
         contactPage : function(){
             console.log(Contact.DJ.contact.isOpen);
-            Contact.DJ.contact.open();
+            Contact.contact.open();
         },
         musicDetail : function(id){
             console.log(id);
@@ -65,8 +65,6 @@ define([
 
     });
 
-    return {
-        DJ: DJ
-    };
+    return DJ;
 
 });

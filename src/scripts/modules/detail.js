@@ -58,8 +58,6 @@ function($, _, Backbone){
 	
 
 
-	return {
-		DJ: DJ
-	};
+	return DJ;
 
 });

@@ -1,6 +1,6 @@
 /*global console: true,_:true,Backbone:true,define:true*/
 
-define(['jquery', 'underscore', 'backbone', 'modules/track'],
+define(['jquery', 'underscore', 'backbone', 'track'],
 	function($, _, Backbone, track){
 		'use strict';
 		var tracks = [
@@ -79,7 +79,5 @@ define(['jquery', 'underscore', 'backbone', 'modules/track'],
 
 		});
 
-		return {
-			DJ: DJ
-		};
+		return DJ;
 });

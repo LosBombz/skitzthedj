@@ -125,8 +125,6 @@ function( $, _, Backbone, soundManager ){
 		}
 
 	});
-	return {
-		DJ: DJ
-	};
+	return DJ;
 
 });

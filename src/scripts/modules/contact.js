@@ -70,8 +70,6 @@ function($, _, Backbone){
 	DJ.contact = new DJ.ContactV();
 
 
-	return {
-		DJ: DJ
-	};
+	return DJ;
 
 });
