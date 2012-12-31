@@ -352,7 +352,7 @@ a:hover {
 /* line 12, ../sass/_featured.scss */
 .player-container .track-container {
   width: 420px;
-  height: 250px;
+  height: 275px;
   float: left;
   position: relative;
   overflow: hidden;
@@ -381,18 +381,29 @@ a:hover {
   height: 100%;
   float: left;
 }
-/* line 40, ../sass/_featured.scss */
+/* line 39, ../sass/_featured.scss */
+.player-container .track-list .track h2 {
+  font-family: arial;
+  font-size: 14px;
+  color: white;
+  margin: 7px 0;
+  text-shadow: 0 0 6px #EEE;
+  float: left;
+  text-align: center;
+  width: 250px;
+}
+/* line 51, ../sass/_featured.scss */
 .player-container .track-list .track:hover {
   opacity: 1;
 }
-/* line 44, ../sass/_featured.scss */
+/* line 55, ../sass/_featured.scss */
 .player-container .track-list img {
   position: absolute;
   top: 0;
   left: 0;
   border-radius: 3px;
 }
-/* line 52, ../sass/_featured.scss */
+/* line 63, ../sass/_featured.scss */
 .player-container .track-list .track-play-btn {
   border: 15px solid #fff;
   color: #fff;
@@ -412,11 +423,11 @@ a:hover {
   margin: -77px 0 0 -77px;
   opacity: .7;
 }
-/* line 69, ../sass/_featured.scss */
+/* line 80, ../sass/_featured.scss */
 .player-container .track-list .track.selected {
   opacity: 1;
 }
-/* line 74, ../sass/_featured.scss */
+/* line 85, ../sass/_featured.scss */
 .player-container .track-list .selected:after {
   content: 'Current Track';
   background: rgba(0, 0, 0, 0.8);
@@ -435,7 +446,7 @@ a:hover {
   border-bottom: 1px solid rgba(255, 255, 255, 0.7);
 }
 
-/* line 101, ../sass/_featured.scss */
+/* line 112, ../sass/_featured.scss */
 .next {
   font-family: 'icon';
   float: right;
@@ -448,7 +459,7 @@ a:hover {
   color: #111;
 }
 
-/* line 110, ../sass/_featured.scss */
+/* line 121, ../sass/_featured.scss */
 .prev {
   font-family: 'icon';
   float: left;
@@ -461,7 +472,7 @@ a:hover {
   color: #111;
 }
 
-/* line 119, ../sass/_featured.scss */
+/* line 130, ../sass/_featured.scss */
 .next:hover, .prev:hover {
   opacity: 1;
 }
@@ -489,7 +500,7 @@ a:hover {
   -moz-transition: all, 0.5s;
   -o-transition: all, 0.5s;
   transition: all, 0.5s;
-  margin: 0 5px 10px 5px;
+  margin: 0 5px 35px 5px;
 }
 /* line 19, ../sass/_music.scss */
 .music-container .music-list .track a {
@@ -498,6 +509,17 @@ a:hover {
   float: left;
 }
 /* line 26, ../sass/_music.scss */
+.music-container .music-list .track h2 {
+  font-family: arial;
+  font-size: 14px;
+  color: white;
+  margin: 7px 0;
+  text-shadow: 0 0 6px #EEE;
+  float: left;
+  text-align: center;
+  width: 250px;
+}
+/* line 38, ../sass/_music.scss */
 .music-container .music-list .track:hover {
   opacity: 1;
 }

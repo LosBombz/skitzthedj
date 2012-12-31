@@ -16,6 +16,15 @@ define([
         
 
         var tracks = [
+            {
+                'trackId': 'td-4-27-12',
+                'title' : 'Tommy doyles live set - 4/27/2012 ',
+                'artist' : 'Artist 4',
+                'cover' : '',
+                'url' : '/tracks/td-4-27-12.mp3',
+                'trackMarks' : [10, 20, 30, 40, 60,80],
+                'selected' : false
+            },  
             {   
                 'trackId': 'afterHours',
                 'title' : 'After Hours',
@@ -23,7 +32,7 @@ define([
                 'cover' : '/images/mixes/ah.png',
                 'url' : '/tracks/AfterHours.mp3',
                 'trackMarks' : [10, 20, 30, 40, 60,80],
-                'selected' : 'false'
+                'selected' : false
             },
             {
                 'trackId': 'brownNoise',
@@ -31,7 +40,8 @@ define([
                 'artist' : 'Artist 2',
                 'cover' : '/images/mixes/bn.jpg',
                 'url' : '/tracks/BrownNoise.mp3',
-                'trackMarks' : [10, 20, 30, 40, 60,80]
+                'trackMarks' : [10, 20, 30, 40, 60,80],
+                'selected' : false
             },
             {
                 'trackId': 'michaelJackson',
@@ -39,7 +49,8 @@ define([
                 'artist' : 'Artist 3',
                 'cover' : '/images/mixes/mj.jpg',
                 'url' : '/tracks/MichaelJackson.mp3',
-                'trackMarks' : [2.5, 5.65, 30, 40, 60,80]
+                'trackMarks' : [2.5, 5.65, 30, 40, 60,80],
+                'selected' : false
             },
             {
                 'trackId': 'lilWayne',
@@ -47,7 +58,8 @@ define([
                 'artist' : 'Artist 4',
                 'cover' : '/images/mixes/lw.jpg',
                 'url' : '/tracks/LilWayne.mp3',
-                'trackMarks' : [10, 20, 30, 40, 60,80]
+                'trackMarks' : [10, 20, 30, 40, 60,80],
+                'selected' : false
             }           
 
         ];

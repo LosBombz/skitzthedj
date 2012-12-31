@@ -17,7 +17,7 @@ function( $, _, Backbone, soundManager ){
 		className: 'controls',
 		template: _.template($('#controlsTmpl').html()),
 		events: {
-			'click .controls #playBtn' : 'playTrack',
+			'click #playBtn' : 'playTrack',
 			'mousedown .tracking-container' : 'seek'
 		},
 		initialize: function(){
@@ -102,7 +102,7 @@ function( $, _, Backbone, soundManager ){
 		},
 		playTrack: function(){
 			var currTrack = soundManager.sounds.currTrack;
-
+			console.log('toggle play');
 			currTrack.togglePause();
 		},
 		seek: function( e ){

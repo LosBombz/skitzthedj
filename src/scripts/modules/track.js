@@ -18,7 +18,8 @@ function($, _, Backbone){
 			'atrist' : 'unknown',
 			'cover' : '',
 			'url' : '',
-			'trackMarks' : []
+			'trackMarks' : [],
+			'selected' : false
 		},
 		initialize : function(){
 

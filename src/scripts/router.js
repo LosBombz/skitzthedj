@@ -55,7 +55,7 @@ define([
             
         },
         contactPage : function(){
-            console.log(Contact.DJ.contact.isOpen);
+            console.log(Contact.contact.isOpen);
             Contact.contact.open();
         },
         musicDetail : function(id){

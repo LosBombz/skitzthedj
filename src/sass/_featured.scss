@@ -11,7 +11,7 @@
 	
 	.track-container {
 		width: 420px;
-		height: 250px;
+		height: 275px;
 		float: left;
 		position: relative;
 		overflow: hidden;
@@ -34,6 +34,17 @@
 				width: 100%;
 				height: 100%;
 				float: left;
+			}
+
+			h2 {
+				font-family: arial;
+				font-size: 14px;
+				color: white;
+				margin: 7px 0;
+				text-shadow: 0 0 6px #EEE;
+				float: left;
+				text-align: center;
+				width: 250px;
 			}
 		}
 

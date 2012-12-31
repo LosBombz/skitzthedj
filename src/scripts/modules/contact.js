@@ -45,12 +45,12 @@ function($, _, Backbone){
 			this.isOpen = true;
 
             this.$el.css({ bottom: ''});
-            this.$el.height($(window).height() - 63).css({top: $('.footer-wrap').height() + 30});
-            this.$el.animate({top: 63});
+            this.$el.height($(window).height() - 61).css({top: $('.footer-wrap').height() + 30});
+            this.$el.animate({top: 61});
 
 
             $(window).on('resize', function(){
-                 $('.footer-wrap').height($(window).height() - 63);
+                 $('.footer-wrap').height($(window).height() - 61);
             });
 
 		},
