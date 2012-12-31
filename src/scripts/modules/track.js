@@ -16,7 +16,7 @@ function($, _, Backbone){
 			'trackId' : '',
 			'title' : 'Track',
 			'atrist' : 'unknown',
-			'cover' : '',
+			'cover' : '/images/mixes/no-cover.jpg',
 			'url' : '',
 			'trackMarks' : [],
 			'selected' : false

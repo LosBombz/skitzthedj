@@ -38,10 +38,9 @@
 
 			h2 {
 				font-family: arial;
-				font-size: 14px;
-				color: white;
+				font-size: 16px;
 				margin: 7px 0;
-				text-shadow: 0 0 6px #EEE;
+				color: #000;
 				float: left;
 				text-align: center;
 				width: 250px;
@@ -114,8 +113,15 @@
 	float: right;
 	margin: 20px 2px 15px 10px;
 	@include transition(all, .5s);
-	background: #222;
-	color: #111;
+	width: 45px;
+	height: 45px;
+	color: #353535;
+	font-size: 24px;
+	font-weight: bold;
+	border: none;
+	text-shadow: 0 1px #555;
+	background: transparent;
+	cursor: pointer;
 }
 
 .prev {
@@ -123,11 +129,57 @@
 	float: left;
 	margin: 20px 10px 15px 0;
 	@include transition(all, .5s);
-	background: #222;
-	color: #111;
+	width: 45px;
+	height: 45px;
+	color: #353535;
+	font-size: 24px;
+	font-weight: bold;
+	border: none;
+	text-shadow: 0 1px #555;
+	background: transparent;
+	cursor: pointer;
+
+
 }
 
 .next:hover, .prev:hover {
 	opacity: 1;
+	color: #FF8330;
+	text-shadow: 0 0 5px rgba(252, 123, 37,.9);
+	-webkit-box-shadow: none;
+}
+
+.play-btn {
+		font-family:'icon';
+		width: 45px;
+
+		height: 45px;
+		float: left;
+		cursor: pointer;
+		margin: 7px 0 0 10px;
+		color: #1A1A1A;
+		border-radius: 5px;
+		font-size: 24px;
+		font-weight: bold;
+		text-transform: uppercase;
+		background: #333; /* Old browsers */
+		border: 1px solid #222;
+		text-shadow: 0 1px #555;
+		@include transition(all, .2s);
+		@include single-box-shadow(rgba(0,0,0,.8), 0, 0, 8px, 0, inset);
+		border-bottom: 1px solid #777;
+
+	}
+
+
+
+.play-btn:hover {
+	color: #FF8330;
+	text-shadow: 0 0 5px rgba(252, 123, 37,.9);
+	-webkit-box-shadow: none;
+	border-bottom: 1px solid #333;
+	background: #5f5f5f;
+	@include background(linear-gradient(top, #999 0%, #898989 1%, #454545 2%, #454545 97%, #111 100%));
+	
 }
 

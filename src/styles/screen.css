@@ -81,7 +81,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 /* line 19, ../sass/_base.scss */
 body {
-  background: #333;
+  background: #ddd;
   font-family: arial, helvetica, sans-serif;
 }
 
@@ -102,87 +102,51 @@ a:hover {
 
 /* main navigation */
 /* line 1, ../sass/_nav.scss */
+.nav-hook {
+  width: 960px;
+  margin: 0 auto;
+}
+
+/* line 5, ../sass/_nav.scss */
 .nav-list {
   width: 800px;
   list-style: none;
   float: left;
-  margin: 80px 0 60px 30px;
+  margin: 80px 0 60px 0;
 }
-/* line 7, ../sass/_nav.scss */
+/* line 11, ../sass/_nav.scss */
 .nav-list li {
   float: left;
   margin: 0 10px 0 0;
 }
-/* line 12, ../sass/_nav.scss */
+/* line 16, ../sass/_nav.scss */
 .nav-list a {
   float: left;
   padding: 10px 15px;
-  color: #1A1A1A;
-  font-size: 24px;
+  color: #353535;
+  font-size: 18px;
   font-weight: bold;
   text-transform: uppercase;
-  background: #333;
-  /* Old browsers */
-  border: 1px solid #222;
   text-shadow: 0 1px #555;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
-  border-radius: 5px;
   -webkit-transition: all, 0.2s;
   -moz-transition: all, 0.2s;
   -o-transition: all, 0.2s;
   transition: all, 0.2s;
-  -webkit-box-shadow: inset 0 0 8px 0 rgba(0, 0, 0, 0.8);
-  -moz-box-shadow: inset 0 0 8px 0 rgba(0, 0, 0, 0.8);
-  box-shadow: inset 0 0 8px 0 rgba(0, 0, 0, 0.8);
-  border-bottom: 1px solid #777;
 }
 /* line 34, ../sass/_nav.scss */
 .nav-list a:hover {
   color: #FF8330;
   text-shadow: 0 0 5px rgba(252, 123, 37, 0.9);
-  border-bottom: 1px solid #333;
-  background: #5f5f5f;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
-  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #999999), color-stop(1%, #898989), color-stop(2%, #454545), color-stop(97%, #454545), color-stop(100%, #111111));
-  background: -webkit-linear-gradient(top, #999999 0%, #898989 1%, #454545 2%, #454545 97%, #111111 100%);
-  background: -moz-linear-gradient(top, #999999 0%, #898989 1%, #454545 2%, #454545 97%, #111111 100%);
-  background: -o-linear-gradient(top, #999999 0%, #898989 1%, #454545 2%, #454545 97%, #111111 100%);
-  background: linear-gradient(top, #999999 0%, #898989 1%, #454545 2%, #454545 97%, #111111 100%);
 }
-/* line 44, ../sass/_nav.scss */
+/* line 40, ../sass/_nav.scss */
 .nav-list a:active {
   color: #FF8330;
-  background: #404040;
-  /* Old browsers */
   text-shadow: 0 0 10px rgba(255, 149, 79, 0.9);
-  border: 1px solid #333;
-  -webkit-box-shadow: inset 0 0 8px 0 rgba(0, 0, 0, 0.5);
-  -moz-box-shadow: inset 0 0 8px 0 rgba(0, 0, 0, 0.5);
-  box-shadow: inset 0 0 8px 0 rgba(0, 0, 0, 0.5);
-  -webkit-transition: all, 0.2s;
-  -moz-transition: all, 0.2s;
-  -o-transition: all, 0.2s;
-  transition: all, 0.2s;
 }
-/* line 53, ../sass/_nav.scss */
+/* line 45, ../sass/_nav.scss */
 .nav-list a.current {
   color: #FF8330;
   text-shadow: 0 0 5px rgba(252, 123, 37, 0.9);
-  border-bottom: 1px solid #333;
-  background: #5f5f5f;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
-  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #999999), color-stop(1%, #898989), color-stop(2%, #454545), color-stop(97%, #454545), color-stop(100%, #111111));
-  background: -webkit-linear-gradient(top, #999999 0%, #898989 1%, #454545 2%, #454545 97%, #111111 100%);
-  background: -moz-linear-gradient(top, #999999 0%, #898989 1%, #454545 2%, #454545 97%, #111111 100%);
-  background: -o-linear-gradient(top, #999999 0%, #898989 1%, #454545 2%, #454545 97%, #111111 100%);
-  background: linear-gradient(top, #999999 0%, #898989 1%, #454545 2%, #454545 97%, #111111 100%);
 }
 
 /* persistant player */
@@ -384,26 +348,25 @@ a:hover {
 /* line 39, ../sass/_featured.scss */
 .player-container .track-list .track h2 {
   font-family: arial;
-  font-size: 14px;
-  color: white;
+  font-size: 16px;
   margin: 7px 0;
-  text-shadow: 0 0 6px #EEE;
+  color: #000;
   float: left;
   text-align: center;
   width: 250px;
 }
-/* line 51, ../sass/_featured.scss */
+/* line 50, ../sass/_featured.scss */
 .player-container .track-list .track:hover {
   opacity: 1;
 }
-/* line 55, ../sass/_featured.scss */
+/* line 54, ../sass/_featured.scss */
 .player-container .track-list img {
   position: absolute;
   top: 0;
   left: 0;
   border-radius: 3px;
 }
-/* line 63, ../sass/_featured.scss */
+/* line 62, ../sass/_featured.scss */
 .player-container .track-list .track-play-btn {
   border: 15px solid #fff;
   color: #fff;
@@ -423,11 +386,11 @@ a:hover {
   margin: -77px 0 0 -77px;
   opacity: .7;
 }
-/* line 80, ../sass/_featured.scss */
+/* line 79, ../sass/_featured.scss */
 .player-container .track-list .track.selected {
   opacity: 1;
 }
-/* line 85, ../sass/_featured.scss */
+/* line 84, ../sass/_featured.scss */
 .player-container .track-list .selected:after {
   content: 'Current Track';
   background: rgba(0, 0, 0, 0.8);
@@ -446,7 +409,7 @@ a:hover {
   border-bottom: 1px solid rgba(255, 255, 255, 0.7);
 }
 
-/* line 112, ../sass/_featured.scss */
+/* line 111, ../sass/_featured.scss */
 .next {
   font-family: 'icon';
   float: right;
@@ -455,11 +418,18 @@ a:hover {
   -moz-transition: all, 0.5s;
   -o-transition: all, 0.5s;
   transition: all, 0.5s;
-  background: #222;
-  color: #111;
+  width: 45px;
+  height: 45px;
+  color: #353535;
+  font-size: 24px;
+  font-weight: bold;
+  border: none;
+  text-shadow: 0 1px #555;
+  background: transparent;
+  cursor: pointer;
 }
 
-/* line 121, ../sass/_featured.scss */
+/* line 127, ../sass/_featured.scss */
 .prev {
   font-family: 'icon';
   float: left;
@@ -468,13 +438,64 @@ a:hover {
   -moz-transition: all, 0.5s;
   -o-transition: all, 0.5s;
   transition: all, 0.5s;
-  background: #222;
-  color: #111;
+  width: 45px;
+  height: 45px;
+  color: #353535;
+  font-size: 24px;
+  font-weight: bold;
+  border: none;
+  text-shadow: 0 1px #555;
+  background: transparent;
+  cursor: pointer;
 }
 
-/* line 130, ../sass/_featured.scss */
+/* line 145, ../sass/_featured.scss */
 .next:hover, .prev:hover {
   opacity: 1;
+  color: #FF8330;
+  text-shadow: 0 0 5px rgba(252, 123, 37, 0.9);
+  -webkit-box-shadow: none;
+}
+
+/* line 152, ../sass/_featured.scss */
+.play-btn {
+  font-family: 'icon';
+  width: 45px;
+  height: 45px;
+  float: left;
+  cursor: pointer;
+  margin: 7px 0 0 10px;
+  color: #1A1A1A;
+  border-radius: 5px;
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+  background: #333;
+  /* Old browsers */
+  border: 1px solid #222;
+  text-shadow: 0 1px #555;
+  -webkit-transition: all, 0.2s;
+  -moz-transition: all, 0.2s;
+  -o-transition: all, 0.2s;
+  transition: all, 0.2s;
+  -webkit-box-shadow: inset 0 0 8px 0 rgba(0, 0, 0, 0.8);
+  -moz-box-shadow: inset 0 0 8px 0 rgba(0, 0, 0, 0.8);
+  box-shadow: inset 0 0 8px 0 rgba(0, 0, 0, 0.8);
+  border-bottom: 1px solid #777;
+}
+
+/* line 176, ../sass/_featured.scss */
+.play-btn:hover {
+  color: #FF8330;
+  text-shadow: 0 0 5px rgba(252, 123, 37, 0.9);
+  -webkit-box-shadow: none;
+  border-bottom: 1px solid #333;
+  background: #5f5f5f;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #999999), color-stop(1%, #898989), color-stop(2%, #454545), color-stop(97%, #454545), color-stop(100%, #111111));
+  background: -webkit-linear-gradient(top, #999999 0%, #898989 1%, #454545 2%, #454545 97%, #111111 100%);
+  background: -moz-linear-gradient(top, #999999 0%, #898989 1%, #454545 2%, #454545 97%, #111111 100%);
+  background: -o-linear-gradient(top, #999999 0%, #898989 1%, #454545 2%, #454545 97%, #111111 100%);
+  background: linear-gradient(top, #999999 0%, #898989 1%, #454545 2%, #454545 97%, #111111 100%);
 }
 
 /* Music page */
@@ -511,15 +532,14 @@ a:hover {
 /* line 26, ../sass/_music.scss */
 .music-container .music-list .track h2 {
   font-family: arial;
-  font-size: 14px;
-  color: white;
+  font-size: 16px;
   margin: 7px 0;
-  text-shadow: 0 0 6px #EEE;
+  color: #000;
   float: left;
   text-align: center;
   width: 250px;
 }
-/* line 38, ../sass/_music.scss */
+/* line 37, ../sass/_music.scss */
 .music-container .music-list .track:hover {
   opacity: 1;
 }
