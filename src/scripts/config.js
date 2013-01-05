@@ -25,34 +25,28 @@ require.config({
     },
     paths : {
         //Libraries
-        jquery       : 'libs/jquery-1.8.1.min',
-        soundmanager : 'libs/soundmanager2',
-        modernizr    : 'libs/modernizr',
-        underscore   : 'libs/underscore-min',
-        backbone     : 'libs/backbone-min',
-        skitzSlider  : 'libs/skitzSlider',
-        text         : 'libs/text',
+        jquery          : 'libs/jquery-1.8.1.min',
+        soundmanager    : 'libs/soundmanager2',
+        modernizr       : 'libs/modernizr',
+        underscore      : 'libs/underscore-min',
+        backbone        : 'libs/backbone-min',
+        skitzSlider     : 'libs/skitzSlider',
+        text            : 'libs/text',
 
         //Core
-        app          : 'app',
-        core         : 'core',
-        router       : 'router', 
-
-
-        //Sandbox
-        sandbox      : 'sandbox',
+        app             : 'app',
+        router          : 'router',
 
         //Modules
-        track        : 'modules/track',
-        player       : 'modules/player',
-        nav          : 'modules/nav',
+        player          : 'modules/player/main',
+        nav             : 'modules/navigation/main',
 
 
         //Pages
-        layout       : 'layout',
-        featured     : 'featured',
-        music        : 'music',
-        contact      : 'modules/contact'
+        page            : 'modules/page/main',
+        featured        : 'modules/featuredPage/main',
+        music           : 'modules/musicPage/main',
+        contact         : 'modules/contactPage/main'
     
     }
 });

@@ -7,7 +7,7 @@ define([
     'nav',
     'router'
 
-], function( soundManager, $, Backbone, Nav, Router) {
+], function( soundManager, $, Backbone, nav, router) {
     'use strict';
 
     soundManager.setup({
@@ -43,9 +43,8 @@ define([
     soundManager.beginDelayedInit();
     
     $(function() {
-        var nav = new Nav.NavV();
-        
-        var router = new Router.TrackRouter();
+
+        var appRouter = new router.TrackRouter();
 
         Backbone.history.start();
 

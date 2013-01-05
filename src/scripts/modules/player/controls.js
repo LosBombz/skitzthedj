@@ -12,16 +12,17 @@ define([
 function( $, _, Backbone, soundManager, controlsTmpl){
 'use strict';
 	var DJ = {};
-	DJ.PlayerM = Backbone.Model.extend({
-		defaults: {
-			currTrack: '',
-			durration: '',
-			trackMarks: ''
-		}
 
+	DJ.ControlsM = Backbone.Model.extend({
+		defaults: {
+			url: '',
+			durration: '',
+			trackMarks: [],
+			title: '..: DJ. Skitz --_[o - o]_-- DJ. Skitz :..'
+		}
 	});
 
-	DJ.PlayerV = Backbone.View.extend({
+	DJ.ControlsV = Backbone.View.extend({
 		tagName: 'div',
 		className: 'controls',
 		template: _.template(controlsTmpl),
@@ -30,12 +31,11 @@ function( $, _, Backbone, soundManager, controlsTmpl){
 			'mousedown .tracking-container' : 'seek'
 		},
 		initialize: function(){
-			this.currTrack = soundManager.sounds.currTrack;
+			//this.currTrack = soundManager.sounds.currTrack;
 
 		},
 		render: function(){
 			this.$el.html(this.template(this.model.toJSON()));
-			this.$el.fadeIn();
 
 			return this;
 		},
@@ -60,12 +60,12 @@ function( $, _, Backbone, soundManager, controlsTmpl){
 
 		},
 		loadTrack : function(){
-			var currTrack = this.currTrack;
-			if(currTrack) {
-				soundManager.destroySound('currTrack');
-			}
+			// var currTrack = this.currTrack;
+			// if(currTrack) {
+			// 	soundManager.destroySound('currTrack');
+			// }
 
-			var selfView = this;			
+			// var selfView = this;			
 
 			soundManager.createSound({
 				id: 'currTrack',
