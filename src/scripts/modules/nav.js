@@ -1,8 +1,8 @@
 /*global console: true,_:true,Backbone:true,define:true*/
 
-define(['jquery', 'underscore', 'backbone'],
+define(['jquery', 'underscore', 'backbone', 'text!templates/nav.html'],
 
-function($, _, Backbone){
+function($, _, Backbone, navTmpl){
 'use strict';
 
 	var DJ = {};
@@ -19,7 +19,7 @@ function($, _, Backbone){
 	DJ.NavV = Backbone.View.extend({
 		tagName: 'ul',
 		className: 'nav-list',
-		template: _.template($('#navTmpl').html()),
+		template: _.template(navTmpl),
 		events: {
 			'click a' : 'active'
 		},

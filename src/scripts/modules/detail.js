@@ -1,8 +1,8 @@
 /*global console: true,_:true,Backbone:true,define:true, window:true*/
 
-define(['jquery', 'underscore', 'backbone'],
+define(['jquery', 'underscore', 'backbone', 'text!templates/detail.html'],
 
-function($, _, Backbone){
+function($, _, Backbone, detailTmpl){
 'use strict';
 
 	var DJ = {};
@@ -11,7 +11,7 @@ function($, _, Backbone){
 	DJ.DetailV = Backbone.View.extend({
 		tagName: 'div',
 		className: 'header-wrap',
-		template: _.template($('#detailTmpl').html()),
+		template: _.template(detailTmpl),
 		initialize: function(){
 			this.isOpen = false;
 			this.render();

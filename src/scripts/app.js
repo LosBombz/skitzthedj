@@ -1,4 +1,4 @@
-/*global console: true,_:true,Backbone:true,require:true*/
+/*global console: true,_:true,Backbone:true,require:true, window*/
 
 define([
     'soundmanager',

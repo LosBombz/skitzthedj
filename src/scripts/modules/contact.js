@@ -1,8 +1,8 @@
 /*global console: true,_:true,Backbone:true,define:true, window:true*/
 
-define(['jquery', 'underscore', 'backbone'],
+define(['jquery', 'underscore', 'backbone','text!templates/contact.html'],
 
-function($, _, Backbone){
+function($, _, Backbone, contactTmpl){
 'use strict';
 
 	var DJ = {};
@@ -20,7 +20,7 @@ function($, _, Backbone){
 		tagName: 'div',
 		className: 'footer-wrap',
 		model: new DJ.ContactM(),
-		template: _.template($('#contactTmpl').html()),
+		template: _.template(contactTmpl),
 		events: {
 			'click .contact-btn' : 'openToggle'
 		},

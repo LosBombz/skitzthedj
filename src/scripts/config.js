@@ -31,11 +31,13 @@ require.config({
         underscore   : 'libs/underscore-min',
         backbone     : 'libs/backbone-min',
         skitzSlider  : 'libs/skitzSlider',
+        text         : 'libs/text',
 
         //Core
         app          : 'app',
         core         : 'core',
         router       : 'router', 
+
 
         //Sandbox
         sandbox      : 'sandbox',

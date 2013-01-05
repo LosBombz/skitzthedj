@@ -3,10 +3,12 @@
 define([
 	'jquery', 
 	'underscore', 
-	'backbone'
+	'backbone',
+	'text!templates/featuredTrack.html',
+	'text!templates/musicTrack.html'
 ],
 
-function($, _, Backbone){
+function($, _, Backbone, featuredTrackTmpl, musicTrackTmpl){
 'use strict';
 
 	var DJ = {};
@@ -29,7 +31,7 @@ function($, _, Backbone){
 	DJ.TrackV = Backbone.View.extend({
 		tagName: 'li',
 		className: 'track',
-		template: _.template($('#fTrackTmpl').html()),
+		template: _.template(featuredTrackTmpl),
 		events: {
 			'click' : 'select'
 		},
@@ -49,7 +51,7 @@ function($, _, Backbone){
 	DJ.MTrackV = Backbone.View.extend({
 		tagName: 'li',
 		className: 'track',
-		template: _.template($('#mTrackTmpl').html()),
+		template: _.template(musicTrackTmpl),
 		events: {
 			'click' : 'select'
 		},

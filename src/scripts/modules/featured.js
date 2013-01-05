@@ -7,9 +7,10 @@ define([
     'soundmanager', 
     'skitzSlider', 
     'track', 
-    'player'
+    'player',
+    'text!templates/featuredPage.html'
 ],
-    function($, _, Backbone, soundManager, skitzSlider, Track, Player){
+    function($, _, Backbone, soundManager, skitzSlider, Track, Player, featuredPageTmpl){
         'use strict';
 
        
@@ -80,7 +81,7 @@ define([
         DJ.FeaturedAppV = Backbone.View.extend({
             tagName: 'div',
             className: 'featured-container',
-            template: _.template($('#featuredTmpl').html()),
+            template: _.template(featuredPageTmpl),
             events: {
 
             },

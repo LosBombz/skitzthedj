@@ -5,27 +5,36 @@ define([
 	'jquery', 
 	'underscore', 
 	'backbone',
-	'soundmanager'
+	'soundmanager',
+	'text!templates/controls.html'
 ],
 
-function( $, _, Backbone, soundManager ){
+function( $, _, Backbone, soundManager, controlsTmpl){
 'use strict';
 	var DJ = {};
+	DJ.PlayerM = Backbone.Model.extend({
+		defaults: {
+			currTrack: '',
+			durration: '',
+			trackMarks: ''
+		}
+
+	});
 
 	DJ.PlayerV = Backbone.View.extend({
 		tagName: 'div',
 		className: 'controls',
-		template: _.template($('#controlsTmpl').html()),
+		template: _.template(controlsTmpl),
 		events: {
 			'click #playBtn' : 'playTrack',
 			'mousedown .tracking-container' : 'seek'
 		},
 		initialize: function(){
-			this.render();
+			this.currTrack = soundManager.sounds.currTrack;
 
 		},
 		render: function(){
-			this.$el.html(this.template(this.model.toJSON())).appendTo('.controls-container');
+			this.$el.html(this.template(this.model.toJSON()));
 			this.$el.fadeIn();
 
 			return this;
@@ -51,7 +60,7 @@ function( $, _, Backbone, soundManager ){
 
 		},
 		loadTrack : function(){
-			var currTrack = soundManager.sounds.currTrack;
+			var currTrack = this.currTrack;
 			if(currTrack) {
 				soundManager.destroySound('currTrack');
 			}
@@ -76,15 +85,9 @@ function( $, _, Backbone, soundManager ){
 						width: pos + '%'
 					});
 					console.log(this.waveformData.left);
-					
-					var pixel = $('.pixel');
 					var scale = 32;
-
 					for(var i = 0; i < 256; i++){
-						console.log(pixel[i], scale+Math.ceil(this.waveformData.left[i]*-scale));
-						pixel[i].animate({
-							top: (scale+Math.ceil(this.waveformData.left[i]*-scale))+'px'
-						});
+						console.log(scale+Math.ceil(this.waveformData.left[i]*-scale));
 
 					}
 					
@@ -101,13 +104,13 @@ function( $, _, Backbone, soundManager ){
 			});
 		},
 		playTrack: function(){
-			var currTrack = soundManager.sounds.currTrack;
+			var currTrack = this.currTrack;
 			console.log('toggle play');
 			currTrack.togglePause();
 		},
 		seek: function( e ){
 			console.log( e );
-			var currTrack = soundManager.sounds.currTrack;
+			var currTrack = this.currTrack;
 			var pos = e.offsetX / $('.tracking-container').width() * 100;
 			var setPos = pos * currTrack.duration / 100;
 			console.log(pos * currTrack.duration / 100);
