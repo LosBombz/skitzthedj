@@ -19,34 +19,35 @@ define([
             console.log('we messed up');
         },
         flash9Options : {
-            useWaveformData: true
+            useWaveformData: false
         }
         
     });
 
     soundManager.defaultOptions = {
-            autoLoad: true,
-            onplay: function(){
-                $('#playBtn').text('"');
-            },
-            onstop: function(){
-                $('#playBtn').text('!');
-            },
-            onpause: function(){
-                $('#playBtn').text('!');
-            },
-            onresume : function(){
-                $('#playBtn').text('"');
-            }
-        };
+        autoLoad: true,
+        onplay: function(){
+            $('#playBtn').text('"');
+        },
+        onstop: function(){
+            $('#playBtn').text('!');
+        },
+        onpause: function(){
+            $('#playBtn').text('!');
+        },
+        onresume : function(){
+            $('#playBtn').text('"');
+        }
+    };
 
     soundManager.beginDelayedInit();
+
+    var appRouter = new router.TrackRouter();
+    Backbone.history.start();
     
     $(function() {
 
-        var appRouter = new router.TrackRouter();
-
-        Backbone.history.start();
+        
 
     });
 

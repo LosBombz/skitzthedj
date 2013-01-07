@@ -11,16 +11,11 @@ require.config({
             exports : '_'
         },
         'backbone': {
-            deps : [
-                'underscore',
-                'jquery'
-            ],
+            deps : ['underscore', 'jquery'],
             exports : 'Backbone'    
         },
         'skitzSlider' : {
-            deps : [
-                'jquery'
-            ]
+            deps : ['jquery']
         }
     },
     paths : {
@@ -38,7 +33,7 @@ require.config({
         router          : 'router',
 
         //Modules
-        player          : 'modules/player/main',
+        player          : 'modules/player/player',
         nav             : 'modules/navigation/main',
 
 

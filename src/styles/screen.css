@@ -3,7 +3,7 @@
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 /* Base Styles */
-/* line 17, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 17, /Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -25,45 +25,45 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 22, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 22, /Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1;
 }
 
-/* line 24, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 24, /Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 26, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 26, /Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 28, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 28, /Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 30, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 30, /Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 103, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 103, /Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 32, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 32, /Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 116, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 116, /Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
   display: block;
 }
@@ -72,20 +72,20 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 /* Defaults */
 /* Mixins */
 /* Elements */
-/* line 15, ../sass/_base.scss */
+/* line 15, /Users/carlosescobar/Desktop/Dev/skitz-backboned/src/sass/_base.scss */
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-/* line 19, ../sass/_base.scss */
+/* line 19, /Users/carlosescobar/Desktop/Dev/skitz-backboned/src/sass/_base.scss */
 body {
   background: #ddd;
   font-family: arial, helvetica, sans-serif;
 }
 
-/* line 25, ../sass/_base.scss */
+/* line 25, /Users/carlosescobar/Desktop/Dev/skitz-backboned/src/sass/_base.scss */
 a {
   color: #fff;
   text-decoration: none;
@@ -95,31 +95,31 @@ a {
   transition-duration: 0.5s;
 }
 
-/* line 31, ../sass/_base.scss */
+/* line 31, /Users/carlosescobar/Desktop/Dev/skitz-backboned/src/sass/_base.scss */
 a:hover {
   text-decoration: none;
 }
 
 /* main navigation */
-/* line 1, ../sass/_nav.scss */
+/* line 1, /Users/carlosescobar/Desktop/Dev/skitz-backboned/src/sass/_nav.scss */
 .nav-hook {
   width: 960px;
   margin: 0 auto;
 }
 
-/* line 5, ../sass/_nav.scss */
+/* line 5, /Users/carlosescobar/Desktop/Dev/skitz-backboned/src/sass/_nav.scss */
 .nav-list {
   width: 800px;
   list-style: none;
   float: left;
   margin: 80px 0 60px 0;
 }
-/* line 11, ../sass/_nav.scss */
+/* line 11, /Users/carlosescobar/Desktop/Dev/skitz-backboned/src/sass/_nav.scss */
 .nav-list li {
   float: left;
   margin: 0 10px 0 0;
 }
-/* line 16, ../sass/_nav.scss */
+/* line 16, /Users/carlosescobar/Desktop/Dev/skitz-backboned/src/sass/_nav.scss */
 .nav-list a {
   float: left;
   padding: 10px 15px;
@@ -133,24 +133,24 @@ a:hover {
   -o-transition: all, 0.2s;
   transition: all, 0.2s;
 }
-/* line 34, ../sass/_nav.scss */
+/* line 34, /Users/carlosescobar/Desktop/Dev/skitz-backboned/src/sass/_nav.scss */
 .nav-list a:hover {
   color: #FF8330;
   text-shadow: 0 0 5px rgba(252, 123, 37, 0.9);
 }
-/* line 40, ../sass/_nav.scss */
+/* line 40, /Users/carlosescobar/Desktop/Dev/skitz-backboned/src/sass/_nav.scss */
 .nav-list a:active {
   color: #FF8330;
   text-shadow: 0 0 10px rgba(255, 149, 79, 0.9);
 }
-/* line 45, ../sass/_nav.scss */
+/* line 45, /Users/carlosescobar/Desktop/Dev/skitz-backboned/src/sass/_nav.scss */
 .nav-list a.current {
   color: #FF8330;
   text-shadow: 0 0 5px rgba(252, 123, 37, 0.9);
 }
 
 /* persistant player */
-/* line 1, ../sass/_controls.scss */
+/* line 1, /Users/carlosescobar/Desktop/Dev/skitz-backboned/src/sass/_controls.scss */
 .controls-container {
   width: 100%;
   height: 60px;
@@ -165,14 +165,13 @@ a:hover {
   z-index: 110;
 }
 
-/* line 13, ../sass/_controls.scss */
+/* line 13, /Users/carlosescobar/Desktop/Dev/skitz-backboned/src/sass/_controls.scss */
 .controls {
   width: 960px;
   height: 60px;
   margin: 0 auto;
-  display: none;
 }
-/* line 19, ../sass/_controls.scss */
+/* line 19, /Users/carlosescobar/Desktop/Dev/skitz-backboned/src/sass/_controls.scss */
 .controls h2 {
   font-family: arial;
   font-size: 12px;
@@ -180,19 +179,19 @@ a:hover {
   margin: 8px 0 0 13px;
   text-shadow: 0 0 6px #eee;
 }
-/* line 28, ../sass/_controls.scss */
+/* line 28, /Users/carlosescobar/Desktop/Dev/skitz-backboned/src/sass/_controls.scss */
 .controls .current-time {
   font-family: arial;
   font-size: 12px;
   color: #fff;
 }
-/* line 34, ../sass/_controls.scss */
+/* line 34, /Users/carlosescobar/Desktop/Dev/skitz-backboned/src/sass/_controls.scss */
 .controls .title-container {
   width: 785px;
   float: left;
   margin: 0 0 0 10px;
 }
-/* line 40, ../sass/_controls.scss */
+/* line 40, /Users/carlosescobar/Desktop/Dev/skitz-backboned/src/sass/_controls.scss */
 .controls .tracking-container {
   background: #222;
   height: 25px;
@@ -214,17 +213,17 @@ a:hover {
   -moz-user-select: none;
   user-select: none;
 }
-/* line 56, ../sass/_controls.scss */
+/* line 56, /Users/carlosescobar/Desktop/Dev/skitz-backboned/src/sass/_controls.scss */
 .controls .marks-container {
   height: 25px;
   width: 100%;
   position: relative;
 }
-/* line 61, ../sass/_controls.scss */
+/* line 61, /Users/carlosescobar/Desktop/Dev/skitz-backboned/src/sass/_controls.scss */
 .controls .marks-container div {
   left: 0;
 }
-/* line 66, ../sass/_controls.scss */
+/* line 66, /Users/carlosescobar/Desktop/Dev/skitz-backboned/src/sass/_controls.scss */
 .controls .progress-bar {
   height: 25px;
   width: 0;
@@ -243,7 +242,7 @@ a:hover {
   box-shadow: inset 0 0 1px 1px #9e4711;
 }
 
-/* line 81, ../sass/_controls.scss */
+/* line 81, /Users/carlosescobar/Desktop/Dev/skitz-backboned/src/sass/_controls.scss */
 .play-btn {
   font-family: 'icon';
   width: 45px;
@@ -270,7 +269,7 @@ a:hover {
   border-bottom: 1px solid #777;
 }
 
-/* line 104, ../sass/_controls.scss */
+/* line 104, /Users/carlosescobar/Desktop/Dev/skitz-backboned/src/sass/_controls.scss */
 .play-btn:hover {
   color: #FF8330;
   text-shadow: 0 0 5px rgba(252, 123, 37, 0.9);
@@ -284,7 +283,7 @@ a:hover {
   background: linear-gradient(top, #999999 0%, #898989 1%, #454545 2%, #454545 97%, #111111 100%);
 }
 
-/* line 114, ../sass/_controls.scss */
+/* line 114, /Users/carlosescobar/Desktop/Dev/skitz-backboned/src/sass/_controls.scss */
 .play-btn:active {
   color: #FF8330;
   background: #404040;
@@ -300,20 +299,20 @@ a:hover {
 }
 
 /* Home page featured section */
-/* line 1, ../sass/_featured.scss */
+/* line 1, /Users/carlosescobar/Desktop/Dev/skitz-backboned/src/sass/_featured.scss */
 .featured-container {
   width: 960px;
   margin: 0 auto;
 }
 
-/* line 6, ../sass/_featured.scss */
+/* line 6, /Users/carlosescobar/Desktop/Dev/skitz-backboned/src/sass/_featured.scss */
 .player-container {
   width: 960px;
   float: left;
   position: relative;
   margin: 10px 0 0 0;
 }
-/* line 12, ../sass/_featured.scss */
+/* line 12, /Users/carlosescobar/Desktop/Dev/skitz-backboned/src/sass/_featured.scss */
 .player-container .track-container {
   width: 420px;
   height: 275px;
@@ -321,11 +320,11 @@ a:hover {
   position: relative;
   overflow: hidden;
 }
-/* line 20, ../sass/_featured.scss */
+/* line 20, /Users/carlosescobar/Desktop/Dev/skitz-backboned/src/sass/_featured.scss */
 .player-container .track-list {
   position: absolute;
 }
-/* line 23, ../sass/_featured.scss */
+/* line 23, /Users/carlosescobar/Desktop/Dev/skitz-backboned/src/sass/_featured.scss */
 .player-container .track-list .track {
   float: left;
   position: relative;
@@ -339,13 +338,13 @@ a:hover {
   transition: all, 0.5s;
   margin: 0 15px;
 }
-/* line 33, ../sass/_featured.scss */
+/* line 33, /Users/carlosescobar/Desktop/Dev/skitz-backboned/src/sass/_featured.scss */
 .player-container .track-list .track a {
   width: 100%;
   height: 100%;
   float: left;
 }
-/* line 39, ../sass/_featured.scss */
+/* line 39, /Users/carlosescobar/Desktop/Dev/skitz-backboned/src/sass/_featured.scss */
 .player-container .track-list .track h2 {
   font-family: arial;
   font-size: 16px;
@@ -355,18 +354,18 @@ a:hover {
   text-align: center;
   width: 250px;
 }
-/* line 50, ../sass/_featured.scss */
+/* line 50, /Users/carlosescobar/Desktop/Dev/skitz-backboned/src/sass/_featured.scss */
 .player-container .track-list .track:hover {
   opacity: 1;
 }
-/* line 54, ../sass/_featured.scss */
+/* line 54, /Users/carlosescobar/Desktop/Dev/skitz-backboned/src/sass/_featured.scss */
 .player-container .track-list img {
   position: absolute;
   top: 0;
   left: 0;
   border-radius: 3px;
 }
-/* line 62, ../sass/_featured.scss */
+/* line 62, /Users/carlosescobar/Desktop/Dev/skitz-backboned/src/sass/_featured.scss */
 .player-container .track-list .track-play-btn {
   border: 15px solid #fff;
   color: #fff;
@@ -386,11 +385,11 @@ a:hover {
   margin: -77px 0 0 -77px;
   opacity: .7;
 }
-/* line 79, ../sass/_featured.scss */
+/* line 79, /Users/carlosescobar/Desktop/Dev/skitz-backboned/src/sass/_featured.scss */
 .player-container .track-list .track.selected {
   opacity: 1;
 }
-/* line 84, ../sass/_featured.scss */
+/* line 84, /Users/carlosescobar/Desktop/Dev/skitz-backboned/src/sass/_featured.scss */
 .player-container .track-list .selected:after {
   content: 'Current Track';
   background: rgba(0, 0, 0, 0.8);
@@ -409,7 +408,7 @@ a:hover {
   border-bottom: 1px solid rgba(255, 255, 255, 0.7);
 }
 
-/* line 111, ../sass/_featured.scss */
+/* line 111, /Users/carlosescobar/Desktop/Dev/skitz-backboned/src/sass/_featured.scss */
 .next {
   font-family: 'icon';
   float: right;
@@ -429,7 +428,7 @@ a:hover {
   cursor: pointer;
 }
 
-/* line 127, ../sass/_featured.scss */
+/* line 127, /Users/carlosescobar/Desktop/Dev/skitz-backboned/src/sass/_featured.scss */
 .prev {
   font-family: 'icon';
   float: left;
@@ -449,7 +448,7 @@ a:hover {
   cursor: pointer;
 }
 
-/* line 145, ../sass/_featured.scss */
+/* line 145, /Users/carlosescobar/Desktop/Dev/skitz-backboned/src/sass/_featured.scss */
 .next:hover, .prev:hover {
   opacity: 1;
   color: #FF8330;
@@ -457,7 +456,7 @@ a:hover {
   -webkit-box-shadow: none;
 }
 
-/* line 152, ../sass/_featured.scss */
+/* line 152, /Users/carlosescobar/Desktop/Dev/skitz-backboned/src/sass/_featured.scss */
 .play-btn {
   font-family: 'icon';
   width: 45px;
@@ -484,7 +483,7 @@ a:hover {
   border-bottom: 1px solid #777;
 }
 
-/* line 176, ../sass/_featured.scss */
+/* line 176, /Users/carlosescobar/Desktop/Dev/skitz-backboned/src/sass/_featured.scss */
 .play-btn:hover {
   color: #FF8330;
   text-shadow: 0 0 5px rgba(252, 123, 37, 0.9);
@@ -499,17 +498,17 @@ a:hover {
 }
 
 /* Music page */
-/* line 1, ../sass/_music.scss */
+/* line 1, /Users/carlosescobar/Desktop/Dev/skitz-backboned/src/sass/_music.scss */
 .music-container {
   width: 900px;
   margin: 0 auto;
 }
-/* line 5, ../sass/_music.scss */
+/* line 5, /Users/carlosescobar/Desktop/Dev/skitz-backboned/src/sass/_music.scss */
 .music-container .music-list {
   width: 900px;
   float: left;
 }
-/* line 9, ../sass/_music.scss */
+/* line 9, /Users/carlosescobar/Desktop/Dev/skitz-backboned/src/sass/_music.scss */
 .music-container .music-list .track {
   float: left;
   position: relative;
@@ -523,13 +522,13 @@ a:hover {
   transition: all, 0.5s;
   margin: 0 5px 35px 5px;
 }
-/* line 19, ../sass/_music.scss */
+/* line 19, /Users/carlosescobar/Desktop/Dev/skitz-backboned/src/sass/_music.scss */
 .music-container .music-list .track a {
   width: 100%;
   height: 100%;
   float: left;
 }
-/* line 26, ../sass/_music.scss */
+/* line 26, /Users/carlosescobar/Desktop/Dev/skitz-backboned/src/sass/_music.scss */
 .music-container .music-list .track h2 {
   font-family: arial;
   font-size: 16px;
@@ -539,13 +538,13 @@ a:hover {
   text-align: center;
   width: 250px;
 }
-/* line 37, ../sass/_music.scss */
+/* line 37, /Users/carlosescobar/Desktop/Dev/skitz-backboned/src/sass/_music.scss */
 .music-container .music-list .track:hover {
   opacity: 1;
 }
 
 /* contact / footer */
-/* line 11, ../sass/_footer.scss */
+/* line 11, /Users/carlosescobar/Desktop/Dev/skitz-backboned/src/sass/_footer.scss */
 .footer-wrap {
   width: 100%;
   position: fixed;
@@ -555,7 +554,7 @@ a:hover {
   bottom: 0;
 }
 
-/* line 20, ../sass/_footer.scss */
+/* line 20, /Users/carlosescobar/Desktop/Dev/skitz-backboned/src/sass/_footer.scss */
 .footer-top {
   height: 30px;
   width: 100%;
@@ -568,7 +567,7 @@ a:hover {
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.7);
   border-bottom: 1px solid #333;
 }
-/* line 30, ../sass/_footer.scss */
+/* line 30, /Users/carlosescobar/Desktop/Dev/skitz-backboned/src/sass/_footer.scss */
 .footer-top .contact-btn {
   float: right;
   font-family: arial;
@@ -578,7 +577,7 @@ a:hover {
   text-shadow: 0 0 6px #eee;
 }
 
-/* line 41, ../sass/_footer.scss */
+/* line 41, /Users/carlosescobar/Desktop/Dev/skitz-backboned/src/sass/_footer.scss */
 .contact-content {
   padding: 40px;
   font-size: 100px;
