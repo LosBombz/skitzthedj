@@ -30,33 +30,11 @@ function( $, _, Backbone, soundManager ){
 
 			return this;
 		},
-		setMarks : function(){
-			
-			var marks = this.model.get('trackMarks');
-
-			$(marks).each(function(i,v){
-
-				$('<div />', {
-					'css' : {
-						'width' : 0,
-						'-webkit-box-shadow':'1px 0 1px 1px rgba(255,255,255,.9)',
-						'height' : '60px',
-						'position' : 'absolute',
-						'top' : 0,
-						'background' : '#fff'
-					},
-					'class' : 'mark'
-				}).appendTo('.marks-container').animate({left : v + '%'});
-			});
-
-		},
 		loadTrack : function(){
 			var currTrack = soundManager.sounds.currTrack;
 			if(currTrack) {
 				soundManager.destroySound('currTrack');
-			}
-
-			var selfView = this;			
+			}		
 
 			soundManager.createSound({
 				id: 'currTrack',
@@ -67,7 +45,6 @@ function( $, _, Backbone, soundManager ){
 				},
 				onload: function(){
 					$('#loadingBar').text('');
-					selfView.setMarks();
 				},
 				whileplaying : function(){
 					currTrack = soundManager.sounds.currTrack;
@@ -75,18 +52,6 @@ function( $, _, Backbone, soundManager ){
 					$('#progressBar').css({
 						width: pos + '%'
 					});
-					console.log(this.waveformData.left);
-					
-					var pixel = $('.pixel');
-					var scale = 32;
-
-					for(var i = 0; i < 256; i++){
-						console.log(pixel[i], scale+Math.ceil(this.waveformData.left[i]*-scale));
-						pixel[i].animate({
-							top: (scale+Math.ceil(this.waveformData.left[i]*-scale))+'px'
-						});
-
-					}
 					
 				},
 				onfinish : function(){
@@ -107,10 +72,17 @@ function( $, _, Backbone, soundManager ){
 		},
 		seek: function( e ){
 			console.log( e );
+
+			//fix for firefox
+			if (e.offsetX === undefined) {
+				e.offsetX = e.pageX-$('.tracking-container').offset().left;
+			}
+
 			var currTrack = soundManager.sounds.currTrack;
+
 			var pos = e.offsetX / $('.tracking-container').width() * 100;
-			var setPos = pos * currTrack.duration / 100;
-			console.log(pos * currTrack.duration / 100);
+			var setPos = parseInt(pos * currTrack.duration / 100, 10);
+			console.log(e);
 
 			currTrack.setPosition(setPos);
 			$('#progressBar').css({

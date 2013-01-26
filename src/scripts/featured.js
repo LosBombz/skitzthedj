@@ -19,6 +19,7 @@ define([
                 'trackId': 'td-4-27-12',
                 'title' : 'Tommy doyles live set - 4/27/2012 ',
                 'artist' : 'Artist 4',
+                'cover' : '/images/mixes/td.jpg',
                 'url' : '/tracks/td-4-27-12.mp3',
                 'trackMarks' : [10, 20, 30, 40, 60,80],
                 'selected' : false

@@ -247,6 +247,7 @@ a:hover {
 .play-btn {
   font-family: 'icon';
   width: 45px;
+  padding: 9px 0 0 9px;
   height: 45px;
   float: left;
   cursor: pointer;
@@ -542,6 +543,16 @@ a:hover {
 /* line 37, ../sass/_music.scss */
 .music-container .music-list .track:hover {
   opacity: 1;
+}
+
+/* contact / footer */
+/* line 3, ../sass/_contact.scss */
+.contact-content .contact-column-left h2 {
+  font-size: 14px;
+}
+/* line 6, ../sass/_contact.scss */
+.contact-content .contact-column-left li {
+  font-size: 12px;
 }
 
 /* contact / footer */

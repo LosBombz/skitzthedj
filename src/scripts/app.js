@@ -19,7 +19,7 @@ define([
             console.log('we messed up');
         },
         flash9Options : {
-            useWaveformData: true
+            useWaveformData: false
         }
         
     });
