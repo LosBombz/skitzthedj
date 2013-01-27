@@ -49,3 +49,7 @@ Thumbs.db
 #sass#
 ######
 .sass-cache
+
+#node modules#
+##############
+node_modules
