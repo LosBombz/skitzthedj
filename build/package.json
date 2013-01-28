@@ -1,16 +1,24 @@
 {
-  "title": "skitzthedj.com",
-  "name" : "",
-  "author": {
-  	"name": "Carlos Escobar"
-  	},
-  "version": "2.5.0",
-  "devDependencies": {
-    "grunt": "~0.3.0",
-    "grunt-contrib-requirejs": "0.3.x",
-    "grunt-contrib-clean" : "0.4.x",
-    "grunt-contrib-copy" : "0.3.x",
-    "grunt-contrib-imagemin" : "0.1.x",
-    "grunt-contrib-sass" : "0.2.x"
-  }
+	"title": "skitzthedj.com",
+	"name" : "Skitzthedj",
+	"author": {
+		"name": "Carlos Escobar"
+	},
+	"version": "2.5.0",
+	"devDependencies": {
+		"grunt": "~0.3.0",
+		"grunt-contrib-requirejs": "0.3.x",
+		"grunt-contrib-clean" : "0.4.x",
+		"grunt-contrib-copy" : "0.3.x",
+		"grunt-contrib-imagemin" : "0.1.x",
+		"grunt-compass" : "0.3.x"
+	},
+	"paths" : {
+		"css" : "/styles",
+		"images" : "/images",
+		"sass" : "/sass",
+		"js" : "/scripts",
+		"src" : "../src",
+		"dist" : "../dist"
+	}
 }
