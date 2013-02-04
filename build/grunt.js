@@ -5,7 +5,7 @@ module.exports = function(grunt) {
     grunt.initConfig({
         pkg: '<json:package.json>',
         lint: {
-            files: ['<%= pkg.paths.src %>' + '<%= pkg:paths.js %>' + '**']
+            files: ['<%= pkg.paths.src %>' + '<%= pkg.paths.js %>' + '/*.js']
         },
         compass : {
             dev : {
@@ -29,8 +29,17 @@ module.exports = function(grunt) {
 
             }
         },
+        requirejs: {
+            compile: {
+                options: {
+                    baseUrl: '<%= pkg.paths.src %>' + '<%= pkg.paths.js %>',
+                    mainConfigFile: '<%= pkg.paths.src %>' + '<%= pkg.paths.js %>' + '/config.js',
+                    out: '<%= pkg.paths.dist %>' + '<%= pkg.paths.js %>' + '/min.js'
+                }
+            }
+        },
         watch: {
-            files: ['<%= pkg.paths.src %>' + '<%= pkg.paths.sass %>' + '/*.scss'],
+            files: ['grunt.js','<%= pkg.paths.src %>' + '<%= pkg.paths.sass %>' + '/**/*.scss'],
             tasks: ['compass:dev']
         },
         jshint: {
@@ -58,9 +67,10 @@ module.exports = function(grunt) {
             }
         }
     });
+    grunt.loadNpmTasks('grunt-contrib-requirejs');
     grunt.loadNpmTasks( 'grunt-compass' );
 
     // Default task.
-    grunt.registerTask('default', 'lint compass:prod');
+    grunt.registerTask('default', 'lint requirejs compass:prod');
 
 };
