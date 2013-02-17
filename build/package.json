@@ -8,10 +8,11 @@
 	"devDependencies": {
 		"grunt": "~0.3.0",
 		"grunt-contrib-requirejs": "0.3.x",
-		"grunt-contrib-clean" : "0.4.x",
+		"grunt-contrib-clean" : "0.3.x",
 		"grunt-contrib-copy" : "0.3.x",
 		"grunt-contrib-imagemin" : "0.1.x",
-		"grunt-compass" : "0.3.x"
+		"grunt-compass" : "0.3.x",
+		"grunt-text-replace": "0.2.x"
 	},
 	"paths" : {
 		"css" : "/styles",
