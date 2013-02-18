@@ -6,11 +6,10 @@ define([
     'backbone', 
     'soundmanager', 
     'track', 
-    'player', 
-    'contact', 
-    'router'
+    'player',
+    'text!templates/music.html'
 ],
-    function($, _, Backbone, soundManager, Track, Player, Contact, Router){
+    function($, _, Backbone, soundManager, Track, Player, musicTmpl){
         'use strict';
 
         
@@ -83,7 +82,7 @@ define([
         DJ.MusicAppV = Backbone.View.extend({
             tagName: 'div',
             className: 'music-container',
-            template: _.template($('#musicTmpl').html()),
+            template: _.template(musicTmpl),
             events: {
 
             },

@@ -64,7 +64,8 @@ module.exports = function(grunt) {
                     name: 'app',
                     include: ['almond'],
                     insertRequire : ['app'],
-                    out: '<%= pkg.paths.dist %><%= pkg.paths.js %>/app-build.js'
+                    out: '<%= pkg.paths.dist %><%= pkg.paths.js %>/app-build.js',
+                    inlineText: true
                 }
             }
         },

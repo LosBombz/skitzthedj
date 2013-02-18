@@ -5,17 +5,18 @@ define([
 	'jquery', 
 	'underscore', 
 	'backbone',
-	'soundmanager'
+	'soundmanager',
+	'text!modules/player/templates/controls.html'
 ],
 
-function( $, _, Backbone, soundManager ){
+function( $, _, Backbone, soundManager, controlsTmpl ){
 'use strict';
 	var DJ = {};
 
 	DJ.PlayerV = Backbone.View.extend({
 		tagName: 'div',
 		className: 'controls',
-		template: _.template($('#controlsTmpl').html()),
+		template: _.template(controlsTmpl),
 		events: {
 			'click #playBtn' : 'playTrack',
 			'mousedown .tracking-container' : 'seek'

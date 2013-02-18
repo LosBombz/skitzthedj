@@ -67,10 +67,6 @@ define(['jquery', 'underscore', 'backbone', 'track'],
                 });
 
 
-            },
-            changeTrack: function(){
-
-
             }
         });
 
