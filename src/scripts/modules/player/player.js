@@ -13,6 +13,7 @@ function( $, _, Backbone, soundManager, controlsTmpl ){
 'use strict';
 	var DJ = {};
 
+
 	DJ.PlayerV = Backbone.View.extend({
 		tagName: 'div',
 		className: 'controls',
@@ -22,16 +23,15 @@ function( $, _, Backbone, soundManager, controlsTmpl ){
 			'mousedown .tracking-container' : 'seek'
 		},
 		initialize: function(){
-			this.render();
 
 		},
 		render: function(){
-			this.$el.html(this.template(this.model.toJSON())).appendTo('.controls-container');
-			this.$el.fadeIn();
+			this.$el.html(this.template(this.model.toJSON()));
 
 			return this;
 		},
 		loadTrack : function(){
+			console.log(this.model);
 			var currTrack = soundManager.sounds.currTrack;
 			if(currTrack) {
 				soundManager.destroySound('currTrack');
@@ -39,7 +39,7 @@ function( $, _, Backbone, soundManager, controlsTmpl ){
 
 			soundManager.createSound({
 				id: 'currTrack',
-				url: this.model.get('url'),
+				url: this.model.get('downloadUrl'),
 				whileloading: function() {
 					$('#loadingBar').text('LOADING');
 

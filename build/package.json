@@ -12,7 +12,8 @@
 		"grunt-contrib-copy" : "0.3.x",
 		"grunt-contrib-imagemin" : "0.1.x",
 		"grunt-compass" : "0.3.x",
-		"grunt-text-replace": "0.2.x"
+		"grunt-text-replace": "0.2.x",
+		"grunt-strip" : "0.2.x"
 	},
 	"paths" : {
 		"css" : "/styles",

@@ -5,11 +5,12 @@ define([
     'underscore', 
     'backbone', 
     'soundmanager', 
-    'track', 
+    'track',
+    'trackList', 
     'player',
     'text!templates/music.html'
 ],
-    function($, _, Backbone, soundManager, Track, Player, musicTmpl){
+    function($, _, Backbone, soundManager, Track, TrackList, Player, musicTmpl){
         'use strict';
 
         
@@ -65,19 +66,19 @@ define([
 
         var DJ = {};
         
-        DJ.MusicAppC = Backbone.Collection.extend({
-            model: Track.TrackM,
-            initialize: function(){
+        // DJ.MusicAppC = Backbone.Collection.extend({
+        //     model: Track.TrackM,
+        //     initialize: function(){
 
-            },
-            filterList: function(id){
-                var track = this.filter(function(model){ 
-                    return model.get('trackId') === id; 
-                });
+        //     },
+        //     filterList: function(id){
+        //         var track = this.filter(function(model){ 
+        //             return model.get('trackId') === id; 
+        //         });
 
-                return track[0];
-            }
-        });
+        //         return track[0];
+        //     }
+        // });
 
         DJ.MusicAppV = Backbone.View.extend({
             tagName: 'div',
@@ -88,7 +89,7 @@ define([
             },
             initialize: function(){
                 console.log('Music App Init');
-                this.trackList = new DJ.MusicAppC(tracks);
+                this.trackList = new TrackList.TrackListC(tracks);
 
 
 

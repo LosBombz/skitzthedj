@@ -73,6 +73,16 @@ module.exports = function(grunt) {
             files: ['grunt.js','<%= pkg.paths.src %><%= pkg.paths.sass %>/**/*.scss'],
             tasks: ['compass:dev']
         },
+        strip: {
+
+            main : {
+                src : '<%= pkg.paths.dist %><%= pkg.paths.js %>/app-build.js',
+                options : {
+                  inline : true
+                }
+            }
+        
+        },
         jshint: {
             options: {
                 curly: true,
@@ -102,9 +112,10 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-text-replace');
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-copy');
+    grunt.loadNpmTasks( 'grunt-strip' );
     grunt.loadNpmTasks( 'grunt-compass' );
 
     // Default task.
-    grunt.registerTask('default', 'clean copy replace lint requirejs compass:prod');
+    grunt.registerTask('default', 'clean copy replace lint requirejs strip compass:prod');
 
 };

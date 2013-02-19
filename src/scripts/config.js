@@ -44,14 +44,15 @@ require.config({
         sandbox      : 'sandbox',
 
         //Modules
+        trackList    : 'modules/tracks/trackList',
         track        : 'modules/tracks/track',
         player       : 'modules/player/player',
         nav          : 'modules/nav/nav',
 
 
         //Pages
-        layout       : 'layout',
-        featured     : 'featured',
+        //layout       : 'layout',
+        index        : 'index',
         music        : 'music',
         contact      : 'modules/contact/contact'
     

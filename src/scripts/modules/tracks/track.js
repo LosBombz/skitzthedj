@@ -4,11 +4,10 @@ define([
 	'jquery', 
 	'underscore', 
 	'backbone',
-	'text!modules/tracks/templates/featuredTrack.html',
-	'text!modules/tracks/templates/musicTrack.html'
+	'text!modules/tracks/templates/track.html'
 ],
 
-function($, _, Backbone, featuredTmpl, musicTmpl){
+function($, _, Backbone, trackTmpl){
 'use strict';
 
 	var DJ = {};
@@ -16,10 +15,11 @@ function($, _, Backbone, featuredTmpl, musicTmpl){
 	DJ.TrackM = Backbone.Model.extend({
 		defaults : {
 			'trackId' : '',
+			'trackUrl' : '',
 			'title' : 'Track',
-			'atrist' : 'unknown',
+			'artist' : 'unknown',
 			'cover' : '/images/mixes/no-cover.jpg',
-			'url' : '',
+			'downloadUrl' : '',
 			'trackMarks' : [],
 			'selected' : false
 		},
@@ -31,7 +31,7 @@ function($, _, Backbone, featuredTmpl, musicTmpl){
 	DJ.TrackV = Backbone.View.extend({
 		tagName: 'li',
 		className: 'track',
-		template: _.template(featuredTmpl),
+		template: _.template(trackTmpl),
 		events: {
 			'click' : 'select'
 		},
@@ -51,7 +51,7 @@ function($, _, Backbone, featuredTmpl, musicTmpl){
 	DJ.MTrackV = Backbone.View.extend({
 		tagName: 'li',
 		className: 'track',
-		template: _.template(musicTmpl),
+		template: _.template(trackTmpl),
 		events: {
 			'click' : 'select'
 		},
