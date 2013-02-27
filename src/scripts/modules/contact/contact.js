@@ -5,47 +5,59 @@ define(['jquery', 'underscore', 'backbone', 'text!modules/contact/templates/cont
 function($, _, Backbone, contactTmpl){
 'use strict';
 
-	var DJ = {};
+    var DJ = {};
 
-	DJ.ContactM = Backbone.Model.extend({
-		defaults : {
-			'content': ''
-		},
-		initialize : function(){
+    DJ.ContactM = Backbone.Model.extend({
+        defaults : {
+            'content': '',
+            'open': false
+        },
+        initialize : function(){
 
-		}
-	});
+        }
+    });
 
-	DJ.ContactV = Backbone.View.extend({
-		tagName: 'div',
-		className: 'footer-wrap',
-		model: new DJ.ContactM(),
-		template: _.template(contactTmpl),
-		events: {
-			'click .contact-btn' : 'openToggle'
-		},
-		initialize: function(){
-			this.isOpen = false;
-			this.render();
-		},
-		render: function(){
-			this.$el.html(this.template(this.model.toJSON())).appendTo('.footer-hook');
-			return this;
-		},
-		openToggle : function(){
+    DJ.ContactV = Backbone.View.extend({
+        tagName: 'div',
+        className: 'footer-wrap',
+        template: _.template(contactTmpl),
+        events: {
+            'click .contact-btn' : 'openToggle'
+        },
+        initialize : function(){
+            this.model.on('change:open', this.openToggle, this);
+        },
+        render : function(){
+            this.$el.html(this.template(this.model.toJSON()));
+            return this;
+        },
+        openToggle : function(){
 
-			if(this.isOpen){
+            if(this.model.get('open')){
+
                 this.close();
+
             } else {
+
                 this.open();
+
             }
 
-		},
-		open : function(){
-			this.isOpen = true;
+        },
+        open : function(){
+            var $el = this.$el;
+            this.model.set({
+                    open:true
+                }, 
+                {
+                    silent:true
+            });
 
             this.$el.css({ bottom: ''});
-            this.$el.height($(window).height() - 61).css({top: $('.footer-wrap').height() + 30});
+            this.$el.height($(window).height() - 61)
+                .css({
+                    top: $el.height() + 30
+                });
             this.$el.animate({top: 61});
 
 
@@ -53,23 +65,24 @@ function($, _, Backbone, contactTmpl){
                  $('.footer-wrap').height($(window).height() - 61);
             });
 
-		},
-		close : function(){
-			this.isOpen = false;
+        },
+        close : function(){
+            var $el = this.$el;
+            this.model.set({open:false}, {silent:true});
 
             $(window).off('resize');
 
             this.$el.animate({top: $(window).height() + -30}, function(){
-                $('.footer-wrap').height(30);
-                  $('.footer-wrap').css({top: '', bottom: 0});
+                $el.height(30);
+                $el.css({top: '', bottom: 0});
             });
-		}
-	
-	});
-	
-	DJ.contact = new DJ.ContactV();
+        }
+    
+    });
 
 
-	return DJ;
+
+
+    return DJ;
 
 });

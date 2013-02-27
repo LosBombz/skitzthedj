@@ -1,71 +1,68 @@
-/*global console: true,_:true,Backbone:true,define:true*/
+/*global console: true,_:true,Backbone:true,define:true,window:true*/
 
 
 define([
     'jquery', 
     'underscore', 
-    'backbone', 
-    'track', 
-    'player', 
-    'index',
-    'music', 
-    'contact'
+    'backbone',
+    'soundmanager',
+    'player',
+    'track',
+    'trackList',
+    'contact',
+    'tracks'
     ],
-    function($, _, Backbone, Track, Player, Index, MusicApp, Contact){
+    function($, _, Backbone, soundManager, Player, Track, TrackList, Contact, Tracks){
     'use strict';
     
     var DJ = {};
+
+    window.trackListC = new TrackList.TrackListC(Tracks);
+
+    window.trackListV = new TrackList.TrackListV({
+        collection: window.trackListC
+    });
+
+    $('.music-list').append(window.trackListV.render().el);
+    
+    window.playerM = new Player.PlayerM();
+
+    window.playerV = new Player.PlayerV({
+        model: window.playerM
+    });
+
+
+    $('.controls-container').append(window.playerV.render().el);
     
     DJ.TrackRouter = Backbone.Router.extend({
         routes : {
-        ''                   : 'index',
-        'music/:id'          : 'index',
-        'contact'            : 'contactPage',
-        // 'featured/:id'       : 'selectFeaturedTrack',
-        // 'music/:id'          : 'selectMusicTrack',
-        'music/:id/detail'   : 'musicDetail'
-        // 'music'              : 'musicPage'
+            ''                   : 'index',
+            'tracks/:id'         : 'loadTrack',
+            'tracks/:id/detail'  : 'trackDetail',
+            'contact'            : 'contact'
         },
-        // selectMusicTrack : function(id) {
-        //     if(Contact.contact.isOpen){
-        //         Contact.contact.close();
-        //     }
-        //     MusicApp.musicApp.loadTrack(id);
-        //     MusicApp.musicApp.changePage();
-        //     console.log(id);
-        // },
-        // selectFeaturedTrack : function(id){
-        //     if(Contact.contact.isOpen){
-        //         Contact.contact.close();
-        //     }
-        //     FeaturedApp.featuredApp.loadTrack(id);
-        //     FeaturedApp.featuredApp.changePage();
-        // },
-        index : function(id) {
-            if(Contact.contact.isOpen){
-                Contact.contact.close();
-            }
-            if(id){
-                Index.appView.loadTrack(id);
-            }
+        index : function() {
+            
+            
         },
-        // ,
-        // musicPage : function(){
-            
-        //     if(Contact.contact.isOpen){
-        //         Contact.contact.close();
-        //     }
-        //     MusicApp.musicApp.changePage();
-            
-        // },
-        contactPage : function(){
-            console.log(Contact.contact.isOpen);
-            Contact.contact.open();
-        }
-        // musicDetail : function(id){
-        //     console.log(id);
+        loadTrack : function(id){
+            console.log(id);
+            var currentTrack = _.find(window.trackListC.models, function(track){
+                return track.get('trackId') === id;
+            }, this);
+
+            console.log(currentTrack);
+
+            window.playerM.set(currentTrack.toJSON());
+
+        },
+        trackDetail : function(id){
+            console.log(id);
            
-        // }
+        },
+        contact : function(){
+
+        }
 
     });
 

@@ -53,9 +53,51 @@ require.config({
         //Pages
         //layout       : 'layout',
         index        : 'index',
-        music        : 'music',
         contact      : 'modules/contact/contact'
     
     }
 });
-define( function() { /* Define call for enforce define */ } );
+define( ['soundmanager'], function(soundManager) { 
+
+    soundManager.setup({
+        url: 'media/flash/soundmanager2_flash9.swf',
+        flashVersion: 9,
+        useFlashBlock: false,
+        ontimeout: function(error) {
+        // uh-oh, SM2 failed to start - error, unsupported or other issue
+            console.log('we messed up: ', error);
+        },
+        flash9Options : {
+            useWaveformData: false
+        }
+        
+    });
+
+    soundManager.defaultOptions = {
+        autoLoad: true,
+        autoPlay: true,
+        onplay: function(){
+            $('#playBtn').text('"');
+        },
+        onstop: function(){
+            $('#playBtn').text('!');
+        },
+        onpause: function(){
+            $('#playBtn').text('!');
+        },
+        onresume : function(){
+            $('#playBtn').text('"');
+        },
+        onfinish : function(){
+
+            this.setPosition( 0 );
+            this.stop();
+            $('#progressBar').css({
+                width: 0
+            });
+            $('#playBtn').text('!');
+        }
+    };
+
+    soundManager.beginDelayedInit();
+});

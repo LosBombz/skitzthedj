@@ -75,20 +75,19 @@ define(['jquery', 'underscore', 'backbone', 'track'],
 
             },
             initialize: function(){
-                // this.tracklist = new DJ.TrackListC(tracks);
-                // this.render();
+               
 
             },
             render: function(){
                 _.each(this.collection.models, function(trackM){
-                    var trackItem = new track.DJ.TrackV({
+                    var trackItem = new track.TrackV({
                         model: trackM
                     });
-                    this.$el.appendTo('body');
-                    trackItem.$el.appendTo(this.$el);
+                    this.$el.append(trackItem.render().el);
 
                 }, this);
                 
+                return this;
 
             }
 

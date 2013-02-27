@@ -21,6 +21,7 @@ function($, _, Backbone, trackTmpl){
 			'cover' : '/images/mixes/no-cover.jpg',
 			'downloadUrl' : '',
 			'trackMarks' : [],
+			'type' : 'Live Set',
 			'selected' : false
 		},
 		initialize : function(){

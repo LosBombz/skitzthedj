@@ -83,8 +83,7 @@ define([
             },
             initialize: function(){
                 console.log('Featured App Init');
-                this.recentList = new TrackList.TrackListC(recentTracks);
-                this.trackList = new TrackList.TrackListC(tracks);
+
 
             },
             render: function(){
