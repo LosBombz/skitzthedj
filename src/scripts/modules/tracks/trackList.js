@@ -59,18 +59,37 @@ define(['jquery', 'underscore', 'backbone', 'track'],
             initialize: function(){
             
 
-            },
-            filterList: function(id){
-                var track = this.filter(function(model){ 
-                    return model.get('trackId') === id; 
-                });
-                return track[0];
             }
         });
 
         DJ.TrackListV = Backbone.View.extend({
             tagName: 'ul',
-            className: 'track-list',
+            className: 'music-list',
+            events: {
+
+            },
+            initialize: function(){
+               
+
+            },
+            render: function(){
+                _.each(this.collection.models, function(trackM){
+                    var trackItem = new track.TrackV({
+                        model: trackM
+                    });
+                    this.$el.append(trackItem.render().el);
+
+                }, this);
+                
+                return this;
+
+            }
+
+        });
+
+        DJ.RecentListV = Backbone.View.extend({
+            tagName: 'ul',
+            className: 'featured-list',
             events: {
 
             },

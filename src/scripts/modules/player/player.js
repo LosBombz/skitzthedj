@@ -92,10 +92,20 @@ function( $, _, Backbone, soundManager, controlsTmpl ){
         },
         playTrack: function(){
             var currentTrack = this.model.get('currentTrack');
+
+            if(!currentTrack){
+                return false;
+            }
+            
             console.log('toggle play');
             currentTrack.togglePause();
         },
         seek: function( e ){
+
+            if(!this.model.get('currentTrack')){
+                return false;
+            }
+
             console.log( e );
 
             //fix for firefox

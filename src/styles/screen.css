@@ -174,9 +174,9 @@ a:hover {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitz-backboned\/src\/sass\/_controls\.scss}line{font-family:\0000318}}
 .controls h2 {
   font-family: 'dots', arial;
-  font-size: 18px;
+  font-size: 16px;
   color: #fff;
-  margin: 12px 0 0 13px;
+  margin: 12px 0 0 3px;
   text-shadow: 0 0 8px #eee;
   letter-spacing: 1px;
   float: left;
@@ -205,18 +205,18 @@ a:hover {
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitz-backboned\/src\/sass\/_controls\.scss}line{font-family:\0000351}}
 .controls .tracking-container {
-  background: #222;
-  height: 15px;
+  background: rgba(0, 0, 0, 0.4);
+  height: 16px;
   width: 100%;
   position: relative;
   float: left;
-  margin: 5px 0 0 0;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
-  border-radius: 5px;
-  border-bottom: 1px solid #888;
+  margin: 4px 0 0 0;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
+  border-bottom: 1px solid #717171;
   border-top: 1px solid #000;
   border-left: 1px solid #444;
   overflow: hidden;
@@ -237,24 +237,19 @@ a:hover {
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitz-backboned\/src\/sass\/_controls\.scss}line{font-family:\0000377}}
 .controls .progress-bar {
-  height: 15px;
+  height: 18px;
   width: 0;
   position: absolute;
   left: 0;
-  top: 0;
-  background: #e87122;
-  border-radius: 5px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
-  border-radius: 5px;
-  -webkit-box-shadow: inset 0 0 1px 1px #9e4711;
-  -moz-box-shadow: inset 0 0 1px 1px #9e4711;
-  box-shadow: inset 0 0 1px 1px #9e4711;
+  top: -5px;
+  overflow: hidden;
+  font-family: 'dots', arial;
+  font-size: 18px;
+  color: #FF8330;
+  text-shadow: 0 0 5px rgba(252, 123, 37, 0.9);
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitz-backboned\/src\/sass\/_controls\.scss}line{font-family:\0000392}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitz-backboned\/src\/sass\/_controls\.scss}line{font-family:\0000399}}
 .play-btn {
   font-family: 'icon';
   width: 45px;
@@ -282,7 +277,7 @@ a:hover {
   border-bottom: 1px solid #777;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitz-backboned\/src\/sass\/_controls\.scss}line{font-family:\00003115}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitz-backboned\/src\/sass\/_controls\.scss}line{font-family:\00003122}}
 .play-btn:hover {
   color: #FF8330;
   text-shadow: 0 0 5px rgba(252, 123, 37, 0.9);
@@ -296,7 +291,7 @@ a:hover {
   background: linear-gradient(top, #999999 0%, #898989 1%, #454545 2%, #454545 97%, #111111 100%);
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitz-backboned\/src\/sass\/_controls\.scss}line{font-family:\00003125}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitz-backboned\/src\/sass\/_controls\.scss}line{font-family:\00003132}}
 .play-btn:active {
   color: #FF8330;
   background: #404040;
@@ -513,13 +508,13 @@ a:hover {
 /* Music page */
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitz-backboned\/src\/sass\/_music\.scss}line{font-family:\000031}}
 .music-container {
-  width: 900px;
-  margin: 0 auto;
+  width: 960px;
+  margin: 85px auto;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitz-backboned\/src\/sass\/_music\.scss}line{font-family:\000035}}
 .music-container .music-list {
-  width: 900px;
-  float: left;
+  width: 825px;
+  margin: 0 auto;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitz-backboned\/src\/sass\/_music\.scss}line{font-family:\000039}}
 .music-container .music-list .track {

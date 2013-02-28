@@ -17,9 +17,9 @@
 
 	h2 {
 		font-family: 'dots', arial;
-		font-size: 18px;
+		font-size: 16px;
 		color: #fff;
-		margin: 12px 0 0 13px;
+		margin: 12px 0 0 3px;
 		text-shadow: 0 0 8px #eee;
 		letter-spacing: 1px;
 		float: left;
@@ -49,14 +49,14 @@
 	}
 
 	.tracking-container {
-		background: #222;
-		height: 15px;
+		background: rgba(0,0,0,.4);
+		height: 16px;
 		width: 100%;
 		position: relative;
 		float: left;
-		margin: 5px 0 0 0;
-		@include border-radius(5px);
-		border-bottom: 1px solid #888;
+		margin: 4px 0 0 0;
+		@include border-radius(2px);
+		border-bottom: 1px solid #717171;
 		border-top: 1px solid #000;
 		border-left: 1px solid #444;
 		overflow: hidden;
@@ -75,15 +75,22 @@
 	}
 
 	.progress-bar{
-		height: 15px;
+		height: 18px;
 		width: 0;
 		position: absolute;
 		left: 0;
-		top: 0;
-		background: #e87122;
-		border-radius: 5px;
-		@include border-radius(5px);
-		@include single-box-shadow(#9E4711, 0, 0, 1px, 1px, inset);
+		top: -5px;
+		overflow: hidden;
+		font-family: 'dots', arial;
+		font-size: 18px;
+		color: #FF8330;
+		text-shadow: 0 0 5px rgba(252, 123, 37, 0.9);
+		// color: #fff;
+		// text-shadow: 0 0 8px #eee;
+		// background: #e87122;
+		// border-radius: 5px;
+		// @include border-radius(5px);
+		// @include single-box-shadow(#9E4711, 0, 0, 1px, 1px, inset);
 	}
 
 	
