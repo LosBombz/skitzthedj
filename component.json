@@ -5,9 +5,10 @@
     "jquery": "~1.8.3",
     "backbone": "0.9.x",
     "soundmanager": "*",
-    "requirejs":"*",
-    "requirejs-text" : "*",
+    "requirejs": "*",
+    "requirejs-text": "*",
     "underscore": "*",
-   	"almond" : "*"
+    "almond": "*",
+    "d3": "~3.0.6"
   }
 }

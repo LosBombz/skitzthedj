@@ -33,6 +33,7 @@ require.config({
         almond       : 'libs/almond/almond',
         text         : 'libs/requirejs-text/text',
         skitzSlider  : 'libs/skitzSlider',
+        d3           : 'libs/d3/d3',
 
 
         //Core
@@ -68,7 +69,7 @@ define( ['soundmanager'], function(soundManager) {
             console.log('we messed up: ', error);
         },
         flash9Options : {
-            useWaveformData: false
+            useWaveformData: true
         }
         
     });

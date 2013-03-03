@@ -1,4 +1,4 @@
-/*global console: true,_:true,Backbone:true,define:true*/
+/*global console: true,_:true,Backbone:true,define:true, d3:true*/
 
 
 define([
@@ -6,7 +6,8 @@ define([
     'underscore', 
     'backbone',
     'soundmanager',
-    'text!modules/player/templates/controls.html'
+    'text!modules/player/templates/controls.html',
+    'd3'
 ],
 
 function( $, _, Backbone, soundManager, controlsTmpl ){
@@ -49,6 +50,7 @@ function( $, _, Backbone, soundManager, controlsTmpl ){
             var title = this.model.get('title');
 
             this.$('.title').text(title);
+
         },
         loadTrack : function(track){
 
@@ -74,12 +76,27 @@ function( $, _, Backbone, soundManager, controlsTmpl ){
                 },
                 whileplaying : function(){
                     var currentTrack = this;
+                    var waveData = this.waveformData;
+                    var waveScale = 10;
                     var pos = ( currentTrack.position / currentTrack.duration ) * 100;
+                    
                     $('#duration').text(toMinutes(this.position) + ' / ' + toMinutes(this.duration) );
 
                     $('#progressBar').css({
                         width: pos + '%'
                     });
+
+                    // $.each(waveData, function(i,v){
+                    //      visualizer(v);
+                    
+                    //     //console.log(i,v);
+                    // });
+
+                   visualizer(waveData.left, waveData.right);
+
+                    //console.log(waveData);
+
+        
                 }
 
             });
@@ -90,13 +107,14 @@ function( $, _, Backbone, soundManager, controlsTmpl ){
             this.model.set({currentTrack: currentTrack}, {silent:true});
 
         },
-        playTrack: function(){
+        playTrack: function(e){
+            e.preventDefault();
             var currentTrack = this.model.get('currentTrack');
 
             if(!currentTrack){
                 return false;
             }
-            
+
             console.log('toggle play');
             currentTrack.togglePause();
         },
@@ -123,11 +141,117 @@ function( $, _, Backbone, soundManager, controlsTmpl ){
             $('#progressBar').css({
                 width: pos + '%'
             });
+
+
                 
             
         }
 
     });
+
+    
+
+    function visualizer (wavedataL, wavedataR) {
+        // console.log(wavedata);
+
+        var w = 10;
+        var h = 100;
+        var barPadding = 20;
+
+        var scale = d3.scale.linear();
+
+        var svg = d3.select('svg');
+
+        var circlesL = svg.selectAll(".left")
+            .data(wavedataL);
+
+        var circlesR = svg.selectAll(".right")
+            .data(wavedataR);
+            
+           
+
+        
+
+        svg.attr("width", 100 + '%')
+            .attr("height", 100 + '%');
+            
+
+        circlesL.enter()
+            .append("circle")
+            .classed('left', true);
+        
+
+
+        circlesL.exit().remove();
+
+        circlesL
+            .attr('fill', function(d, i){
+                var colorData =  Math.round(Math.abs(d) * 300);
+                if (colorData < 100) {
+                    colorData = 150;
+                }
+
+                if(i < 150) {
+                    i = 100;
+                }
+                return 'rgba(' + i + ',20,' + colorData + ', .4)';
+            })
+            .transition()           
+            .attr('r', function(d){
+                //console.log(d);
+                return Math.abs(d) * 300 + 5;
+            })
+            .attr('cx', function(d, i){
+                //console.log(d);
+                return (Math.random() * 200 ) * d  + i * 5 + 'px';
+            })
+            .attr('cy', function(d){
+                //console.log(d);
+                return (Math.random() * 500 ) * d + 400 + 'px';
+            });
+
+
+        circlesR.enter()
+            .append("circle")
+            .classed('right', true);
+        
+
+
+        circlesR.exit().remove();
+
+        circlesR
+            .attr('fill', function(d, i){
+                var colorData =  Math.round(Math.abs(d) * 300);
+                if (colorData < 100) {
+                    colorData = 150;
+                }
+
+                if(i < 100) {
+                    i = 100;
+                }
+                return 'rgba(' + colorData + ', 20 ,' + i + ', .4)';
+            })
+            .transition()           
+            .attr('r', function(d){
+                //console.log(d);
+                return Math.abs(d) * 300 + 5;
+            })
+            .attr('cx', function(d, i){
+                //console.log(d);
+                return (Math.random() * 200 ) * d  + i * 5 + 'px';
+            })
+            .attr('cy', function(d){
+                //console.log(d);
+                return (Math.random() * 500 ) * d + 400 + 'px';
+            });
+
+
+            
+            
+
+        
+
+    }
 
 
     function pad( number, width ) {
