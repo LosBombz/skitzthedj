@@ -61,9 +61,9 @@ module.exports = function(grunt) {
                 options: {
                     baseUrl: '<%= pkg.paths.src %><%= pkg.paths.js %>',
                     mainConfigFile: '<%= pkg.paths.src %><%= pkg.paths.js %>/config.js',
-                    name: 'app',
+                    name: 'config',
                     include: ['almond'],
-                    insertRequire : ['app'],
+                    insertRequire : ['config'],
                     out: '<%= pkg.paths.dist %><%= pkg.paths.js %>/app-build.js',
                     inlineText: true
                 }
@@ -73,16 +73,17 @@ module.exports = function(grunt) {
             files: ['grunt.js','<%= pkg.paths.src %><%= pkg.paths.sass %>/**/*.scss'],
             tasks: ['compass:dev']
         },
-        strip: {
+        // strip: {
 
-            main : {
-                src : '<%= pkg.paths.dist %><%= pkg.paths.js %>/app-build.js',
-                options : {
-                  inline : true
-                }
-            }
+        //     main : {
+        //         src : '<%= pkg.paths.dist %><%= pkg.paths.js %>/app-build.js',
+        //             options : {
+        //             inline : true,
+        //             nodes: ['console']
+        //         }
+        //     }
         
-        },
+        // },
         jshint: {
             options: {
                 curly: true,
@@ -116,6 +117,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks( 'grunt-compass' );
 
     // Default task.
-    grunt.registerTask('default', 'clean copy replace lint requirejs strip compass:prod');
+    grunt.registerTask('default', 'clean copy replace lint requirejs compass:prod');
 
 };

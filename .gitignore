@@ -53,3 +53,6 @@ Thumbs.db
 #node modules#
 ##############
 node_modules
+
+#components#
+libs

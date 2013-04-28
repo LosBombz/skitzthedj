@@ -251,11 +251,23 @@ a:hover {
   overflow: hidden;
   font-family: 'dots', arial;
   font-size: 18px;
-  color: #FF8330;
+  color: #ff7921;
   text-shadow: 0 0 5px rgba(252, 123, 37, 0.9);
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitz-backboned\/src\/sass\/_controls\.scss}line{font-family:\0000390}}
+.controls .loading-bar {
+  height: 18px;
+  width: 0;
+  position: absolute;
+  left: 0;
+  top: -5px;
+  overflow: hidden;
+  font-family: 'dots', arial;
+  font-size: 18px;
+  color: #6b390a;
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitz-backboned\/src\/sass\/_controls\.scss}line{font-family:\0000399}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitz-backboned\/src\/sass\/_controls\.scss}line{font-family:\00003105}}
 .play-btn {
   font-family: 'icon';
   width: 45px;
@@ -283,7 +295,7 @@ a:hover {
   border-bottom: 1px solid #777;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitz-backboned\/src\/sass\/_controls\.scss}line{font-family:\00003122}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitz-backboned\/src\/sass\/_controls\.scss}line{font-family:\00003128}}
 .play-btn:hover {
   color: #FF8330;
   text-shadow: 0 0 5px rgba(252, 123, 37, 0.9);
@@ -297,7 +309,7 @@ a:hover {
   background: linear-gradient(top, #999999 0%, #898989 1%, #454545 2%, #454545 97%, #111111 100%);
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitz-backboned\/src\/sass\/_controls\.scss}line{font-family:\00003132}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitz-backboned\/src\/sass\/_controls\.scss}line{font-family:\00003138}}
 .play-btn:active {
   color: #FF8330;
   background: #404040;

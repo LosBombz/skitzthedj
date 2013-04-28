@@ -61,7 +61,7 @@ require.config({
 define( ['soundmanager'], function(soundManager) { 
 
     soundManager.setup({
-        url: 'media/flash/soundmanager2_flash9.swf',
+        url: '/media/flash/soundmanager2_flash9.swf',
         flashVersion: 9,
         useFlashBlock: false,
         ontimeout: function(error) {
@@ -75,7 +75,6 @@ define( ['soundmanager'], function(soundManager) {
     });
 
     soundManager.defaultOptions = {
-        autoLoad: true,
         autoPlay: true,
         onplay: function(){
             $('#playBtn').text('"');

@@ -53,7 +53,7 @@ function( $, _, Backbone, soundManager, controlsTmpl ){
 
         },
         loadTrack : function(track){
-
+            console.log('LOAD TRACK');
             var trackId = track.get('trackId');
             var url = track.get('trackUrl');
             var trackModel = this.model;
@@ -67,17 +67,16 @@ function( $, _, Backbone, soundManager, controlsTmpl ){
                 id: trackId,
                 url: url,
                 whileloading: function(){
-                    $('.title').text(Math.round(this.bytesLoaded/this.bytesTotal *100) + '%');
+                    $('#loadingBar').css({
+                        width: Math.round(this.bytesLoaded/this.bytesTotal * 100) + '%'
+                    });
 
-                    if(this.bytesLoaded === this.bytesTotal) {
-                        console.log('loaded');
-                        track.trigger('change');
-                    }
+                    console.log(this.buffered);
                 },
                 whileplaying : function(){
                     var currentTrack = this;
                     var waveData = this.waveformData;
-                    var waveScale = 10;
+
                     var pos = ( currentTrack.position / currentTrack.duration ) * 100;
                     
                     $('#duration').text(toMinutes(this.position) + ' / ' + toMinutes(this.duration) );
@@ -86,17 +85,13 @@ function( $, _, Backbone, soundManager, controlsTmpl ){
                         width: pos + '%'
                     });
 
-                    // $.each(waveData, function(i,v){
-                    //      visualizer(v);
-                    
-                    //     //console.log(i,v);
-                    // });
 
                    visualizer(waveData.left, waveData.right);
 
-                    //console.log(waveData);
-
         
+                },
+                onload : function(){
+                    console.log('LOADED');
                 }
 
             });
@@ -107,7 +102,7 @@ function( $, _, Backbone, soundManager, controlsTmpl ){
             this.model.set({currentTrack: currentTrack}, {silent:true});
 
         },
-        playTrack: function(e){
+        playTrack: function( e ){
             e.preventDefault();
             var currentTrack = this.model.get('currentTrack');
 
@@ -124,11 +119,9 @@ function( $, _, Backbone, soundManager, controlsTmpl ){
                 return false;
             }
 
-            console.log( e );
-
             //fix for firefox
             if (e.offsetX === undefined) {
-                e.offsetX = e.pageX-$('.tracking-container').offset().left;
+                e.offsetX = e.pageX - $('.tracking-container').offset().left;
             }
 
             var currentTrack = this.model.get('currentTrack');
@@ -152,104 +145,8 @@ function( $, _, Backbone, soundManager, controlsTmpl ){
     
 
     function visualizer (wavedataL, wavedataR) {
-        // console.log(wavedata);
-
-        var w = 10;
-        var h = 100;
-        var barPadding = 20;
-
-        var scale = d3.scale.linear();
-
-        var svg = d3.select('svg');
-
-        var circlesL = svg.selectAll(".left")
-            .data(wavedataL);
-
-        var circlesR = svg.selectAll(".right")
-            .data(wavedataR);
-            
-           
-
         
 
-        svg.attr("width", 100 + '%')
-            .attr("height", 100 + '%');
-            
-
-        circlesL.enter()
-            .append("circle")
-            .classed('left', true);
-        
-
-
-        circlesL.exit().remove();
-
-        circlesL
-            .attr('fill', function(d, i){
-                var colorData =  Math.round(Math.abs(d) * 300);
-                if (colorData < 100) {
-                    colorData = 150;
-                }
-
-                if(i < 150) {
-                    i = 100;
-                }
-                return 'rgba(' + i + ',20,' + colorData + ', .4)';
-            })
-            .transition()           
-            .attr('r', function(d){
-                //console.log(d);
-                return Math.abs(d) * 300 + 5;
-            })
-            .attr('cx', function(d, i){
-                //console.log(d);
-                return (Math.random() * 200 ) * d  + i * 5 + 'px';
-            })
-            .attr('cy', function(d){
-                //console.log(d);
-                return (Math.random() * 500 ) * d + 400 + 'px';
-            });
-
-
-        circlesR.enter()
-            .append("circle")
-            .classed('right', true);
-        
-
-
-        circlesR.exit().remove();
-
-        circlesR
-            .attr('fill', function(d, i){
-                var colorData =  Math.round(Math.abs(d) * 300);
-                if (colorData < 100) {
-                    colorData = 150;
-                }
-
-                if(i < 100) {
-                    i = 100;
-                }
-                return 'rgba(' + colorData + ', 20 ,' + i + ', .4)';
-            })
-            .transition()           
-            .attr('r', function(d){
-                //console.log(d);
-                return Math.abs(d) * 300 + 5;
-            })
-            .attr('cx', function(d, i){
-                //console.log(d);
-                return (Math.random() * 200 ) * d  + i * 5 + 'px';
-            })
-            .attr('cy', function(d){
-                //console.log(d);
-                return (Math.random() * 500 ) * d + 400 + 'px';
-            });
-
-
-            
-            
-
-        
 
     }
 
@@ -259,7 +156,7 @@ function( $, _, Backbone, soundManager, controlsTmpl ){
         if ( width > 0 ) {
             return new Array( width + (/\./.test( number ) ? 2 : 1) ).join( '0' ) + number;
         }
-        return number + ""; // always return a string
+        return number + ''; // always return a string
     }
 
     function toMinutes (milliseconds) {
