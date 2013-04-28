@@ -1,9 +1,0 @@
-{
-  "name": "soundmanager",
-  "version": "0.0.0",
-  "commit": "1bcc22e1e36c8db89da59e34e1519fc58dbe1489",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/scottschiller/SoundManager2.git"
-  }
-}

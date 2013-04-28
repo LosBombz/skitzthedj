@@ -25,15 +25,15 @@ require.config({
     },
     paths : {
         //Libraries
-        jquery       : 'libs/jquery/jquery',
-        soundmanager : 'libs/soundmanager/script/soundmanager2',
-        // modernizr    : 'libs/modernizr',
-        underscore   : 'libs/underscore/underscore',
-        backbone     : 'libs/backbone/backbone',
-        almond       : 'libs/almond/almond',
-        text         : 'libs/requirejs-text/text',
-        skitzSlider  : 'libs/skitzSlider',
-        d3           : 'libs/d3/d3',
+        jquery       : 'components/jquery/jquery',
+        soundmanager : 'components/soundmanager/script/soundmanager2',
+        // modernizr    : 'components/modernizr',
+        underscore   : 'components/underscore/underscore',
+        backbone     : 'components/backbone/backbone',
+        almond       : 'components/almond/almond',
+        text         : 'components/requirejs-text/text',
+        skitzSlider  : 'components/skitzSlider',
+        d3           : 'components/d3/d3',
 
 
         //Core
