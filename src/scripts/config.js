@@ -1,9 +1,9 @@
 /*global console: true,_:true,Backbone:true,require:true*/
 
 require.config({
-    enforceDefine : true,
     deps: ['app'],
     shim : {
+        'greenSock' : ['jquery'],
         'soundmanager' : {
             exports: 'soundManager'
         },
@@ -27,13 +27,16 @@ require.config({
         //Libraries
         jquery       : 'components/jquery/jquery',
         soundmanager : 'components/soundmanager/script/soundmanager2',
+
+
         // modernizr    : 'components/modernizr',
         underscore   : 'components/underscore/underscore',
         backbone     : 'components/backbone/backbone',
         almond       : 'components/almond/almond',
         text         : 'components/requirejs-text/text',
-        skitzSlider  : 'components/skitzSlider',
+        //skitzSlider  : 'components/skitzSlider',
         d3           : 'components/d3/d3',
+        greenSock    : 'components/GreenSock-JS/src/minified/jquery.gsap.min',
 
 
         //Core
@@ -58,7 +61,7 @@ require.config({
     
     }
 });
-define( ['soundmanager'], function(soundManager) { 
+define( ['jquery', 'soundmanager', 'greenSock'], function($, soundManager) { 
 
     soundManager.setup({
         url: '/media/flash/soundmanager2_flash9.swf',

@@ -10,8 +10,7 @@ define([
     'track',
     'trackList',
     'contact',
-    'tracks',
-    'skitzSlider'
+    'tracks'
     ],
     function($, _, Backbone, soundManager, Player, Track, TrackList, Contact, Tracks){
     'use strict';

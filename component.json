@@ -9,6 +9,7 @@
     "requirejs-text": "*",
     "underscore": "*",
     "almond": "*",
-    "d3": "~3.0.6"
+    "d3": "~3.0.6",
+    "GreenSock-JS": "https://github.com/greensock/GreenSock-JS.git#~1.9.4"
   }
 }
