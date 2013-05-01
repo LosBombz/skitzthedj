@@ -5,23 +5,14 @@ define([
     'jquery', 
     'underscore', 
     'backbone',
-    'soundmanager',
-    'player',
-    'track',
-    'trackList',
-    'contact',
-    'tracks'
+    'playerController',
+    'contact'
     ],
-    function($, _, Backbone, soundManager, Player, Track, TrackList, Contact, Tracks){
+    function($, _, Backbone, playerController, Contact){
     'use strict';
     
     var DJ = {};
 
-    window.trackListC = new TrackList.TrackListC(Tracks);
-
-    window.trackListV = new TrackList.TrackListV({
-        collection: window.trackListC
-    });
 
     window.contactM = new Contact.ContactM();
 
@@ -31,26 +22,6 @@ define([
 
     $('.footer-hook').append(window.contactV.render().el);
 
-    // window.recentListC = new TrackList.TrackListC(Tracks);
-
-    // window.recentListV = new TrackList.RecentListV({
-    //     collection: window.recentListC 
-    // });
-
-    // $('.featured-container').append(window.recentListV.render().el);
-    
-    $('.music-container').append(window.trackListV.render().el);
-    
-    // $('.featured-container').skitzSlider();
-
-    window.playerM = new Player.PlayerM();
-
-    window.playerV = new Player.PlayerV({
-        model: window.playerM
-    });
-
-
-    $('.controls-container').append(window.playerV.render().el);
     
     DJ.TrackRouter = Backbone.Router.extend({
         routes : {
@@ -64,22 +35,18 @@ define([
             
         },
         loadTrack : function(id){
-            console.log(id);
-            var currentTrack = _.find(window.trackListC.models, function(track){
-                return track.get('trackId') === id;
-            }, this);
 
-            console.log(currentTrack);
 
-            window.playerM.set(currentTrack.toJSON());
+            playerController.load(id);
 
         },
         trackDetail : function(id){
             console.log(id);
+            playerController.detail(id);
            
         },
         contact : function(){
-
+            console.log('contact');
         }
 
     });

@@ -1,6 +1,6 @@
-/*global console: true,_:true,Backbone:true,define:true, window:true*/
+/*global console: true, define:true*/
 
-define(['jquery', 'underscore', 'backbone', 'text!modules/contact/templates/contact.html'],
+define(['jquery', 'underscore', 'backbone', 'text!modules/contact/templates/contact.html', 'greensockJquery'],
 
 function($, _, Backbone, contactTmpl){
 'use strict';
@@ -72,10 +72,17 @@ function($, _, Backbone, contactTmpl){
 
             $(window).off('resize');
 
-            this.$el.animate({top: $(window).height() + -30}, function(){
-                $el.height(30);
-                $el.css({top: '', bottom: 0});
-            });
+            this.$el.animate(
+                {
+                    top: $(window).height() + -30
+                }, {
+                    complete : function(){
+                        $el.height(30);
+                        $el.css({top: '', bottom: 0});
+                    },
+                    easing: 'easeOutQuad'
+                }
+            );
         }
     
     });

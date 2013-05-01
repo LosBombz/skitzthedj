@@ -8,7 +8,7 @@
 	"devDependencies": {
 		"grunt": "~0.3.0",
 		"grunt-contrib-requirejs": "0.3.x",
-		"grunt-contrib-clean" : "0.3.x",
+		"grunt-contrib-clean" : "0.3.2",
 		"grunt-contrib-copy" : "0.3.x",
 		"grunt-contrib-imagemin" : "0.1.x",
 		"grunt-compass" : "0.3.x",
@@ -20,7 +20,7 @@
 		"images" : "/images",
 		"sass" : "/sass",
 		"js" : "/scripts",
-		"src" : "../src",
-		"dist" : "../dist"
+		"src" : "src",
+		"dist" : "dist"
 	}
 }

@@ -572,12 +572,35 @@ a:hover {
 }
 
 /* contact / footer */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitz-backboned\/src\/sass\/_contact\.scss}line{font-family:\000033}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitz-backboned\/src\/sass\/_contact\.scss}line{font-family:\000032}}
+.contact-content .contact-column-left {
+  float: left;
+  width: 400px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitz-backboned\/src\/sass\/_contact\.scss}line{font-family:\000035}}
+.contact-content .contact-column-left h1 {
+  font-size: 14px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitz-backboned\/src\/sass\/_contact\.scss}line{font-family:\0000310}}
 .contact-content .contact-column-left h2 {
   font-size: 14px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitz-backboned\/src\/sass\/_contact\.scss}line{font-family:\000036}}
-.contact-content .contact-column-left li {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitz-backboned\/src\/sass\/_contact\.scss}line{font-family:\0000314}}
+.contact-content .contact-column-left a {
+  font-size: 12px;
+  display: block;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitz-backboned\/src\/sass\/_contact\.scss}line{font-family:\0000321}}
+.contact-content .contact-column-right {
+  float: left;
+  width: 500px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitz-backboned\/src\/sass\/_contact\.scss}line{font-family:\0000324}}
+.contact-content .contact-column-right > h2 {
+  font-size: 14px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitz-backboned\/src\/sass\/_contact\.scss}line{font-family:\0000327}}
+.contact-content .contact-column-right li {
   font-size: 12px;
   color: #fff;
 }

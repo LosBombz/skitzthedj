@@ -28,7 +28,7 @@ module.exports = function(grunt) {
                 src: ['<%= pkg.paths.dist %>/index.html' ],
                 overwrite: true,
                 replacements: [{
-                    from: '<script data-main="scripts/config" src="scripts/libs/requirejs/require.js"></script>',
+                    from: '<script data-main="scripts/config" src="scripts/components/requirejs/require.js"></script>',
                     to: '<script src="scripts/app-build.js"></script>'
                 }]
                 
@@ -70,7 +70,7 @@ module.exports = function(grunt) {
             }
         },
         watch: {
-            files: ['grunt.js','<%= pkg.paths.src %><%= pkg.paths.sass %>/**/*.scss'],
+            files: ['<%= compass.dev.src %>/*.scss'],
             tasks: ['compass:dev']
         },
         // strip: {

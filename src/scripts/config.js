@@ -3,7 +3,10 @@
 require.config({
     deps: ['app'],
     shim : {
-        'greenSock' : ['jquery'],
+        'greensockTweenmax' : {
+            exports: 'TweenMax'
+        },
+        'greensockJquery' : ['jquery', 'greensockTweenmax'],
         'soundmanager' : {
             exports: 'soundManager'
         },
@@ -36,7 +39,8 @@ require.config({
         text         : 'components/requirejs-text/text',
         //skitzSlider  : 'components/skitzSlider',
         d3           : 'components/d3/d3',
-        greenSock    : 'components/GreenSock-JS/src/minified/jquery.gsap.min',
+        greensockTweenmax  : 'components/GreenSock-JS/src/minified/TweenMax.min',
+        greensockJquery    : 'components/GreenSock-JS/src/minified/jquery.gsap.min',
 
 
         //Core
@@ -54,6 +58,10 @@ require.config({
         nav          : 'modules/nav/nav',
 
 
+        //Controllers
+        playerController : 'controllers/playerController',
+
+
         //Pages
         //layout       : 'layout',
         index        : 'index',
@@ -61,7 +69,7 @@ require.config({
     
     }
 });
-define( ['jquery', 'soundmanager', 'greenSock'], function($, soundManager) { 
+define( ['jquery', 'soundmanager'], function($, soundManager) { 
 
     soundManager.setup({
         url: '/media/flash/soundmanager2_flash9.swf',

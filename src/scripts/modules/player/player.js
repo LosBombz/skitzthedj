@@ -168,6 +168,7 @@ function( $, _, Backbone, soundManager, controlsTmpl ){
 
         return pad(numMinutes, 2) + ':' + pad(numSeconds, 2); 
     }
+    
     return DJ;
 
 });
