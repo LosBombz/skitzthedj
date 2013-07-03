@@ -1,6 +1,6 @@
 /*global console: true, define:true*/
 
-define(['jquery', 'underscore', 'backbone', 'text!modules/contact/templates/contact.html', 'greensockJquery'],
+define(['jquery', 'underscore', 'backbone', 'text!modules/contact/templates/contact.html'],
 
 function($, _, Backbone, contactTmpl){
 'use strict';
@@ -79,8 +79,7 @@ function($, _, Backbone, contactTmpl){
                     complete : function(){
                         $el.height(30);
                         $el.css({top: '', bottom: 0});
-                    },
-                    easing: 'easeOutQuad'
+                    }
                 }
             );
         }

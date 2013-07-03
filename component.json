@@ -10,6 +10,6 @@
     "underscore": "*",
     "almond": "*",
     "d3": "~3.0.6",
-    "GreenSock-JS": "https://github.com/greensock/GreenSock-JS.git#~1.9.4"
+    "GreenSock-JS": "https://github.com/greensock/GreenSock-JS.git#~1.9.7"
   }
 }

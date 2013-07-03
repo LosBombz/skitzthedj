@@ -1,6 +1,6 @@
 /*global console: true,_:true,Backbone:true,require:true, window:true*/
 
-define([
+require([
     'soundmanager',
     'jquery',
     'backbone',
@@ -22,15 +22,7 @@ define([
 
     
     $(function() {
-        // app.nav = new Nav.NavV();
         
-        // app.skitzApp = new Index.AppV();
-        
-        // $('.page-hook').prepend(app.skitzApp.render().el);
-
-        // $('.track-container').skitzSlider({
-        //     display: 3
-        // });
         
 
 
@@ -38,7 +30,5 @@ define([
 
 
     });
-
-    return app;
 
 });

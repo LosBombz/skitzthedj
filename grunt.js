@@ -28,7 +28,7 @@ module.exports = function(grunt) {
                 src: ['<%= pkg.paths.dist %>/index.html' ],
                 overwrite: true,
                 replacements: [{
-                    from: '<script data-main="scripts/config" src="scripts/components/requirejs/require.js"></script>',
+                    from: '<script data-main="scripts/require.config" src="scripts/components/requirejs/require.js"></script>',
                     to: '<script src="scripts/app-build.js"></script>'
                 }]
                 
@@ -60,10 +60,10 @@ module.exports = function(grunt) {
             compile: {
                 options: {
                     baseUrl: '<%= pkg.paths.src %><%= pkg.paths.js %>',
-                    mainConfigFile: '<%= pkg.paths.src %><%= pkg.paths.js %>/config.js',
-                    name: 'config',
-                    include: ['almond'],
-                    insertRequire : ['config'],
+                    mainConfigFile: '<%= pkg.paths.src %><%= pkg.paths.js %>/require.config.js',
+                    name: 'almond',
+                    include: ['require.config'],
+                    insertRequire : ['require.config'],
                     out: '<%= pkg.paths.dist %><%= pkg.paths.js %>/app-build.js',
                     inlineText: true
                 }
@@ -104,8 +104,7 @@ module.exports = function(grunt) {
                 'Backbone' : true,
                 'require' : true,
                 'define' : true,
-                'soundManager' : true,
-                'console' : true
+                'soundManager' : true
             }
         }
     });

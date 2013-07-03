@@ -4,11 +4,12 @@ define([
     'backbone',
     'soundmanager',
     'player',
+    'controls',
     'trackList',
     'tracks',
     'd3'
     
-],  function( $, _, Backbone, soundManager, Player, Tracklist, tracks){
+],  function( $, _, Backbone, soundManager, Player, controls, Tracklist, tracks){
     'use strict';
 
     var player = {};
@@ -29,9 +30,9 @@ define([
         console.log('detail for: ', id);
     };
 
-    player.model = new Player.PlayerM();
+    player.model = new controls.PlayerM();
 
-    player.view = new Player.PlayerV({
+    player.view = new controls.PlayerV({
         model: player.model
     });
 
