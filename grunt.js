@@ -116,6 +116,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks( 'grunt-compass' );
 
     // Default task.
-    grunt.registerTask('default', 'clean copy replace lint requirejs compass:prod');
+    grunt.registerTask('default', 'copy replace lint requirejs compass:prod');
 
 };
