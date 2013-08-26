@@ -6,10 +6,14 @@ require.config({
         'tweenmax' : {
             exports: 'TweenMax'
         },
-        'timelinemax' : {
-            deps : ['tweenmax'],
-            exports: 'TimelineMax'
+        'jquery.tm' : {
+            deps: ['jquery', 'tweenmax'],
+            exports: '$'
         },
+            // 'timelinemax' : {
+            //     deps : ['tweenmax'],
+            //     exports: 'TimelineMax'
+            // },
         'soundmanager' : {
             exports: 'soundManager'
         },
@@ -38,7 +42,8 @@ require.config({
         text         : 'components/requirejs-text/text',
         d3           : 'components/d3/d3',
         tweenmax     : 'components/GreenSock-JS/src/minified/TweenMax.min',
-        timelinemax  : 'components/GreenSock-JS/src/minified/TimelineMax',
+        'jquery.tm'  : 'components/GreenSock-JS/src/minified/jquery.gsap.min',
+        // timelinemax  : 'components/GreenSock-JS/src/minified/TimelineMax',
 
 
         //Core

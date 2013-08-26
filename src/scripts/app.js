@@ -7,7 +7,7 @@ require([
     'nav',
     'router',
     'player',
-    'track'
+    'jquery.tm'
 
 ], function( soundManager, $, Backbone, Nav, Router, Player) {
     'use strict';
