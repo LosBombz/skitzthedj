@@ -30,7 +30,6 @@ html {
 a {
 	color: #fff;
 	text-decoration: none;
-	@include transition-duration(.5s);
 }
 
 a:hover {

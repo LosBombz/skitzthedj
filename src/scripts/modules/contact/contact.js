@@ -58,7 +58,12 @@ function($, _, Backbone, contactTmpl){
                 .css({
                     top: $el.height() + 30
                 });
-            this.$el.animate({top: 61});
+            this.$el.animate({
+                    top: 61
+                }, {
+                    duration: 800,
+                    easing: 'Power3.easeOut'
+                });
 
 
             $(window).on('resize', function(){
@@ -76,6 +81,8 @@ function($, _, Backbone, contactTmpl){
                 {
                     top: $(window).height() + -30
                 }, {
+                    duration: 800,
+                    easing: 'Power3.easeOut',
                     complete : function(){
                         $el.height(30);
                         $el.css({top: '', bottom: 0});

@@ -14,13 +14,26 @@ define([
 
     var player = {};
 
+    var current;
+
     player.load = function(id) {
         console.log(id);
+
+        if(current) {
+            current.set({selected:false});
+        }
+
         var track = _.find(player.tracks.models, function(track){
             return track.get('trackId') === id;
         }, this);
 
+        track.set({selected:true});
+        
+        current = track;
 
+
+
+        console.log(current);
 
         player.model.set(track.toJSON());
     };

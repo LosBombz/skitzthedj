@@ -13,8 +13,6 @@
 			height:250px;
 			width: 250px;
 			cursor: pointer;
-			opacity: .7;
-			@include transition(all, .5s);
 			margin: 0 5px 35px 5px;
 
 			a{
@@ -36,7 +34,7 @@
 		}
 
 		.track:hover{
-			opacity: 1;
+			
 		}
 	}
 }
