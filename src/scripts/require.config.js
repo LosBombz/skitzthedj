@@ -1,4 +1,4 @@
-/*global console: true,_:true,Backbone:true,require:true*/
+/*global require*/
 
 require.config({
     deps: ['app'],
@@ -25,7 +25,7 @@ require.config({
                 'underscore',
                 'jquery'
             ],
-            exports : 'Backbone'    
+            exports : 'Backbone'
         }
     },
     paths : {
@@ -50,7 +50,7 @@ require.config({
         app          : 'app',
         core         : 'core/core',
         logger       : 'core/logger',
-        router       : 'router', 
+        router       : 'router',
 
         //Sandbox
         sandbox      : 'sandbox',
@@ -62,19 +62,18 @@ require.config({
         controls     : 'modules/player/controls',
         nav          : 'modules/nav/nav',
 
-
         //Controllers
         playerController : 'controllers/playerController',
 
 
         //Pages
         //layout       : 'layout',
-        index        : 'index',
+        // index        : 'index',
         contact      : 'modules/contact/contact'
     
     }
 });
-require( ['jquery', 'soundmanager'], function($, soundManager) { 
+require( ['jquery', 'soundmanager'], function($, soundManager) {
 
     soundManager.setup({
         url: '/media/flash/soundmanager2_flash9.swf',

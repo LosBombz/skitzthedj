@@ -1,176 +1,140 @@
-/*global console: true,_:true,Backbone:true,define:true, d3:true*/
+/*global define*/
 
 
 define([
-    'jquery', 
-    'underscore', 
+    'jquery',
+    'underscore',
     'backbone',
-    'core',
     'soundmanager',
     'text!modules/player/templates/controls.html',
     'd3'
 ],
 
-function( $, _, Backbone, core, soundManager, controlsTmpl ){
+function( $, _, Backbone, soundManager){
 'use strict';
-    function Player(){
 
+    /**
+     * returns a 0 padded string number
+     * @param  {number} number      the number to pad
+     * @param  {number} width       number of 0's to pad with
+     * @return {string}             string representation of the new number
+     */
+    function pad( number, width ) {
+        width -= number.toString().length;
+        if ( width > 0 ) {
+            return new Array( width + (/\./.test( number ) ? 2 : 1) ).join( '0' ) + number;
+        }
+        return number + ''; // always return a string
     }
 
-    Player.prototype.play = function(id) {
+    /**
+     * take a number in miliseconds and convert it to minutes
+     * 
+     * @param  {number} milliseconds    time in miliseconds
+     * @return {string}                 time in minutes
+     */
+    function toMinutes (milliseconds) {
+        var seconds = milliseconds / 1000;
+
+        var numSeconds = Math.floor((((seconds % 31536000) % 86400) % 3600) % 60);
+        var numMinutes = Math.floor((((seconds % 31536000) % 86400) % 3600) / 60);
+
+
+        return pad(numMinutes, 2) + ':' + pad(numSeconds, 2);
+    }
+
+
+    function Player(opts){
+        this.model = opts.model;
+
+        this.model.on('change:trackUrl', this.loadTrack, this);
+        this.model.on('change:playing', this.playToggle, this);
+        this.model.on('change:position', this.seek, this);
+
+        return this;
+    }
+
+    Player.prototype.togglePlay = function() {
+
+        var currentTrack = this.model.get('currentTrack');
+
+        if(!currentTrack){
+            return false;
+        }
+
+        currentTrack.togglePause();
 
     };
 
-    Player.prototype.load = function(track) {
+    /**
+     * create a sound object
+     * 
+     * @param  {object} track   track model
+     */
+    Player.prototype.loadTrack = function(track) {
+        var trackId = track.get('trackId');
+        var url = track.get('trackUrl');
+        var currentTrack;
+        var self = this;
 
-    };
-    
+        if (this.model.get('currentTrack')) {
+            this.model.get('currentTrack').destruct();
+        }
 
-    Player.prototype.seek = function() {
-
-    };
-
-
-    // DJ.PlayerV = Backbone.View.extend({
-    //     tagName: 'div',
-    //     className: 'controls',
-    //     template: _.template(controlsTmpl),
-    //     events: {
-    //         'click #playBtn' : 'playTrack',
-    //         'mousedown .tracking-container' : 'seek'
-    //     },
-    //     initialize: function(){
-    //         this.model.on('change:trackUrl', this.loadTrack, this);
-    //         this.model.on('change', this.renderDisplay,this);
-    //     },
-    //     render: function(){
-    //         this.$el.html(this.template(this.model.toJSON()));
-
-    //         return this;
-    //     },
-    //     renderDisplay : function(){
-
-    //         var title = this.model.get('title');
-
-    //         this.$('.title').text(title);
-
-    //     },
-    //     loadTrack : function(track){
-    //         console.log('LOAD TRACK');
-    //         var trackId = track.get('trackId');
-    //         var url = track.get('trackUrl');
-    //         var trackModel = this.model;
-    //         var currentTrack;
-
-    //         if(track.get('currentTrack')) {
-    //             track.get('currentTrack').destruct();
-    //         }
-           
-    //         soundManager.createSound({
-    //             id: trackId,
-    //             url: url,
-    //             whileloading: function(){
-    //                 $('#loadingBar').css({
-    //                     width: Math.round(this.bytesLoaded/this.bytesTotal * 100) + '%'
-    //                 });
-
-    //                 console.log(this.buffered);
-    //             },
-    //             whileplaying : function(){
-    //                 var currentTrack = this;
-    //                 var waveData = this.waveformData;
-
-    //                 var pos = ( currentTrack.position / currentTrack.duration ) * 100;
+        soundManager.createSound({
+                id: trackId,
+                url: url,
+                whileloading: function(){
+                    var loaded = Math.round(this.bytesLoaded / this.bytesTotal * 100) + '%';
                     
-    //                 $('#duration').text(toMinutes(this.position) + ' / ' + toMinutes(this.duration) );
+                    self.model.set({
+                        loaded: loaded
+                    });
 
-    //                 $('#progressBar').css({
-    //                     width: pos + '%'
-    //                 });
-
-
-    //                visualizer(waveData.left, waveData.right);
-
-        
-    //             },
-    //             onload : function(){
-    //                 console.log('LOADED');
-    //             }
-
-    //         });
-            
-
-    //         currentTrack = soundManager.getSoundById(trackId);
-
-    //         this.model.set({currentTrack: currentTrack}, {silent:true});
-
-    //     },
-    //     playTrack: function( e ){
-    //         e.preventDefault();
-    //         var currentTrack = this.model.get('currentTrack');
-
-    //         if(!currentTrack){
-    //             return false;
-    //         }
-
-    //         console.log('toggle play');
-    //         currentTrack.togglePause();
-    //     },
-    //     seek: function( e ){
-
-    //         if(!this.model.get('currentTrack')){
-    //             return false;
-    //         }
-
-    //         //fix for firefox
-    //         if (e.offsetX === undefined) {
-    //             e.offsetX = e.pageX - $('.tracking-container').offset().left;
-    //         }
-
-    //         var currentTrack = this.model.get('currentTrack');
-
-    //         var pos = e.offsetX / this.$('.tracking-container').width() * 100;
-    //         var setPos = parseInt(pos * currentTrack.duration / 100, 10);
-
-    //         currentTrack.setPosition(setPos);
-
-    //         $('#progressBar').css({
-    //             width: pos + '%'
-    //         });
+                    //console.log(this.buffered);
+                },
+                whileplaying : function(){
+                    var currentTrack = this;
 
 
-                
-            
-    //     }
-
-    // });
+                    var pos = ( currentTrack.position / currentTrack.duration ) * 100;
+                    
+                    self.model.set({
+                        time: toMinutes(this.position) + ' / ' + toMinutes(this.duration),
+                        progress: pos + '%'
+                    });
 
     
 
-    // function visualizer (wavedataL, wavedataR) {
+
+                   //visualizer(waveData.left, waveData.right);
+
         
+                },
+                onload : function(){
+                    //console.log('LOADED');
+                }
 
+            });
 
-    // }
+            currentTrack = soundManager.getSoundById(trackId);
 
+            this.model.set({currentTrack: currentTrack}, {silent:true});
 
-    // function pad( number, width ) {
-    //     width -= number.toString().length;
-    //     if ( width > 0 ) {
-    //         return new Array( width + (/\./.test( number ) ? 2 : 1) ).join( '0' ) + number;
-    //     }
-    //     return number + ''; // always return a string
-    // }
+    };
+    
+    /**
+     * seek a track
+     * 
+     */
+    Player.prototype.seek = function() {
+        var currentTrack = this.model.get('currentTrack');
+        var setPos = this.model.get('position');
 
-    // function toMinutes (milliseconds) {
-    //     var seconds = milliseconds / 1000;
+        currentTrack.setPosition(setPos);
 
-    //     var numSeconds = Math.floor((((seconds % 31536000) % 86400) % 3600) % 60);
-    //     var numMinutes = Math.floor((((seconds % 31536000) % 86400) % 3600) / 60);
+    };
 
-
-    //     return pad(numMinutes, 2) + ':' + pad(numSeconds, 2); 
-    // }
     
     return Player;
 

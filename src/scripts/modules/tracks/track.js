@@ -1,87 +1,87 @@
-/*global console: true,_:true,Backbone:true,define:true*/
+/*global define*/
 
 define([
-	'jquery', 
-	'underscore', 
-	'backbone',
-	'tweenmax',
-	'text!modules/tracks/templates/track.html'
+    'jquery',
+    'underscore',
+    'backbone',
+    'tweenmax',
+    'text!modules/tracks/templates/track.html'
 ],
 
 function($, _, Backbone, TweenMax, trackTmpl){
 'use strict';
 
-	var DJ = {};
+    var track = {};
 
-	DJ.TrackM = Backbone.Model.extend({
-		defaults : {
-			'trackId' : '',
-			'trackUrl' : '',
-			'title' : 'Track',
-			'artist' : 'unknown',
-			'cover' : '/images/mixes/no-cover.jpg',
-			'downloadUrl' : '',
-			'trackMarks' : [],
-			'type' : 'Live Set',
-			'selected' : false
-		},
-		initialize : function(){
+    track.TrackModel = Backbone.Model.extend({
+        defaults : {
+            'trackId' : '',
+            'trackUrl' : '',
+            'title' : 'Track',
+            'artist' : 'unknown',
+            'cover' : '/images/mixes/no-cover.jpg',
+            'downloadUrl' : '',
+            'trackMarks' : [],
+            'type' : 'Live Set',
+            'selected' : false
+        },
+        initialize : function(){
 
-		}
-	});
+        }
+    });
 
-	DJ.TrackV = Backbone.View.extend({
-		tagName: 'li',
-		className: 'track',
-		template: _.template(trackTmpl),
-		events: {
-			'mouseenter' : 'over',
-			'mouseleave' : 'out'
-		},
-		initialize: function(){
-			this.render();
-			this.model.on('change:selected', function(model){
+    track.TrackView = Backbone.View.extend({
+        tagName: 'li',
+        className: 'track',
+        template: _.template(trackTmpl),
+        events: {
+            'mouseenter' : 'over',
+            'mouseleave' : 'out'
+        },
+        initialize: function(){
+            this.render();
+            this.model.on('change:selected', function(model){
 
-				this[model.get('selected') ? 'select' : 'deselect']();
+                this[model.get('selected') ? 'select' : 'deselect']();
 
-			}, this);
-		},
-		render: function(){
-			this.$el.html(this.template(this.model.toJSON()));
-			return this;
-		},
-		select: function(){
+            }, this);
+        },
+        render: function(){
+            this.$el.html(this.template(this.model.toJSON()));
 
-			console.log(this.model.toJSON());
-			this.$el.append($('<div />', {
-				text: 'SELECTED!',
-				'class' : 'selected',
-				css: {
-					position: 'absolute',
-					zIndex: '99'
-				}
-			}));
-		},
-		deselect: function(){
+            return this;
+        },
+        select: function(){
 
-			console.log(this.model.toJSON());
-			this.$el.find('.selected').remove('');
+            this.$el.append($('<div />', {
+                text: 'SELECTED!',
+                'class' : 'selected',
+                css: {
+                    position: 'absolute',
+                    zIndex: '99'
+                }
+            }));
+        },
+        deselect: function(){
 
-		},
-		over : function(){
-			TweenMax.to(this.$el.find('a'), 0.4, {
-				boxShadow: '0px 8px 11px rgba(50, 50, 50, 0.92)',
-				scale: 1.05
-			});
-		},
-		out: function() {
-			TweenMax.to(this.$el.find('a'), 0.4, {
-				boxShadow: 0,
-				scale: 1
-			});
-		}
-	});
+            console.log(this.model.toJSON());
+            this.$el.find('.selected').remove('');
 
-	return DJ;
+        },
+        over : function(){
+            TweenMax.to(this.$el.find('a'), 0.4, {
+                boxShadow: '0px 8px 11px rgba(50, 50, 50, 0.92)',
+                scale: 1.05
+            });
+        },
+        out: function() {
+            TweenMax.to(this.$el.find('a'), 0.4, {
+                boxShadow: 0,
+                scale: 1
+            });
+        }
+    });
+
+    return track;
 
 });

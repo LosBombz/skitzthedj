@@ -1,15 +1,13 @@
-/*global console: true,_:true,Backbone:true,require:true, window:true*/
+/*global require*/
 
 require([
     'soundmanager',
     'jquery',
     'backbone',
-    'nav',
     'router',
-    'player',
     'jquery.tm'
 
-], function( soundManager, $, Backbone, Nav, Router, Player) {
+], function( soundManager, $, Backbone, Router) {
     'use strict';
 
     var app = {};
@@ -23,9 +21,6 @@ require([
     
     $(function() {
         
-        
-
-
         
 
 

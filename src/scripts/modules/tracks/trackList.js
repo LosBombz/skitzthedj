@@ -1,20 +1,19 @@
-/*global console: true,_:true,Backbone:true,define:true*/
+/*global define*/
 
 define(['jquery', 'underscore', 'backbone', 'track'],
     function($, _, Backbone, track){
         'use strict';
 
-        var DJ = {};
+        var trackList = {};
         
-        DJ.TrackListC = Backbone.Collection.extend({
-            model: track.TrackM,
+        trackList.TrackListCollection = Backbone.Collection.extend({
+            model: track.TrackModel,
             initialize: function(){
-            
 
             }
         });
 
-        DJ.TrackListV = Backbone.View.extend({
+        trackList.TrackListView = Backbone.View.extend({
             tagName: 'ul',
             className: 'music-list',
             events: {
@@ -26,9 +25,10 @@ define(['jquery', 'underscore', 'backbone', 'track'],
             },
             render: function(){
                 _.each(this.collection.models, function(trackM){
-                    var trackItem = new track.TrackV({
+                    var trackItem = new track.TrackView({
                         model: trackM
                     });
+
                     this.$el.append(trackItem.render().el);
 
                 }, this);
@@ -39,5 +39,5 @@ define(['jquery', 'underscore', 'backbone', 'track'],
 
         });
 
-        return DJ;
+        return trackList;
 });
