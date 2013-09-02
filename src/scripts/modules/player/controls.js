@@ -79,8 +79,11 @@ function( $, _, Backbone, core, soundManager, controlsTmpl ){
         playTrack: function( e ){
             e.preventDefault();
             
-
-            this.model.set({playing: true});
+            if(this.model.get('playing')){
+                this.model.set({playing: false});
+            } else {
+                this.model.set({playing: true});
+            }
 
             //console.log('toggle play');
             
