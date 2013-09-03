@@ -52,7 +52,7 @@ function( $, _, Backbone, soundManager){
         this.model = opts.model;
 
         this.model.on('change:trackUrl', this.loadTrack, this);
-        this.model.on('change:playing', this.playToggle, this);
+        this.model.on('change:playing', this.togglePlay, this);
         this.model.on('change:position', this.seek, this);
 
         return this;

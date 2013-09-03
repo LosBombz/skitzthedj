@@ -46,7 +46,7 @@ function( $, _, Backbone, core, soundManager, controlsTmpl ){
 
         },
         render: function(){
-            this.$el.html(this.template(this.model.toJSON()));
+            this.$el.html( this.template( this.model.toJSON() ) );
 
             return this;
         },
@@ -84,11 +84,11 @@ function( $, _, Backbone, core, soundManager, controlsTmpl ){
             e.preventDefault();
             
             if(this.model.get('playing')){
-                
+                console.log('pause');
                 this.model.set({playing: false});
             
             } else {
-                
+                console.log('play');
                 this.model.set({playing: true});
             
             }

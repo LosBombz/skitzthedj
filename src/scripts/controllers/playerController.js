@@ -22,10 +22,6 @@ define([
         if(current) {
             current.set({selected:false});
         }
-
-        // var loadedTrack = _.find(player.tracks.models, function(track){
-        //     return track.get('trackId') === id;
-        // }, this);
         
         var loadedTrack = player.tracks.select(id);
 
