@@ -44,6 +44,10 @@ function( $, _, Backbone, soundManager){
     }
 
 
+    /**
+     * @class
+     * @param {[type]} opts [description]
+     */
     function Player(opts){
         this.model = opts.model;
 

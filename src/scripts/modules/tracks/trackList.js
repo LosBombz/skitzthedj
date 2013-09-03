@@ -10,6 +10,9 @@ define(['jquery', 'underscore', 'backbone', 'track'],
             model: track.TrackModel,
             initialize: function(){
 
+            },
+            select : function(id){
+               return this.findWhere({trackId : id});
             }
         });
 

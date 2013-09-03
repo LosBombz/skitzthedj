@@ -70,19 +70,27 @@ function( $, _, Backbone, core, soundManager, controlsTmpl ){
             var progress = this.model.get('progress');
 
             this.$('#progressBar').css({
+                
                 width: progress
+            
             });
         },
+        
         renderTime : function() {
             this.$('#duration').text(this.model.get('time'));
         },
+        
         playTrack: function( e ){
             e.preventDefault();
             
             if(this.model.get('playing')){
+                
                 this.model.set({playing: false});
+            
             } else {
+                
                 this.model.set({playing: true});
+            
             }
 
             //console.log('toggle play');

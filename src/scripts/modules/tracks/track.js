@@ -64,7 +64,6 @@ function($, _, Backbone, TweenMax, trackTmpl){
         },
         deselect: function(){
 
-            console.log(this.model.toJSON());
             this.$el.find('.selected').remove('');
 
         },
