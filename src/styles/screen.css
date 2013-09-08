@@ -629,6 +629,27 @@ a:hover {
   -o-border-radius: 2px;
   border-radius: 2px;
   margin: 5px 0 15px 0;
+  width: 520px;
+  float: left;
+  position: relative;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitzthedj\/src\/sass\/_contact\.scss}line{font-family:\0000346}}
+.contact-content .contact-column-right li:before {
+  content: " ";
+  width: 4px;
+  height: 100%;
+  background: #ff8330;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitzthedj\/src\/sass\/_contact\.scss}line{font-family:\0000357}}
+.contact-content .contact-column-right .content-left {
+  float: left;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitzthedj\/src\/sass\/_contact\.scss}line{font-family:\0000361}}
+.contact-content .contact-column-right .bar {
+  float: right;
 }
 
 /* contact / footer */

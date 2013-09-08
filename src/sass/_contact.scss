@@ -39,6 +39,27 @@
 			padding: 15px;
 			@include border-radius(2px);
 			margin: 5px 0 15px 0;
+			width: 520px;
+			float: left;
+			position: relative;
+
+			&:before {
+				content: " ";
+				width: 4px;
+				height: 100%;
+				background: $orange1;
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+		}
+
+		.content-left {
+			float: left;
+		}
+
+		.bar {
+			float: right;
 		}
 	}
 	
