@@ -53,18 +53,20 @@ function($, _, Backbone, TweenMax, trackTmpl){
         },
         select: function(){
 
-            this.$el.append($('<div />', {
-                text: 'SELECTED!',
-                'class' : 'selected',
-                css: {
-                    position: 'absolute',
-                    zIndex: '99'
-                }
-            }));
+            this.$el.find('a').addClass('selected');
+
+            // this.$el.append($('<div />', {
+            //     text: 'SELECTED!',
+            //     'class' : 'selected',
+            //     css: {
+            //         position: 'absolute',
+            //         zIndex: '99'
+            //     }
+            // }));
         },
         deselect: function(){
 
-            this.$el.find('.selected').remove('');
+            this.$el.find('a').removeClass('selected');
 
         },
         over : function(){

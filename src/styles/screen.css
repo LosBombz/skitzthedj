@@ -400,17 +400,13 @@ a:hover {
   width: 250px;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitzthedj\/src\/sass\/_featured\.scss}line{font-family:\0000352}}
-.player-container .track-list .track:hover {
-  opacity: 1;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitzthedj\/src\/sass\/_featured\.scss}line{font-family:\0000356}}
 .player-container .track-list img {
   position: absolute;
   top: 0;
   left: 0;
   border-radius: 3px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitzthedj\/src\/sass\/_featured\.scss}line{font-family:\0000364}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitzthedj\/src\/sass\/_featured\.scss}line{font-family:\0000360}}
 .player-container .track-list .track-play-btn {
   border: 15px solid #fff;
   color: #fff;
@@ -430,11 +426,7 @@ a:hover {
   margin: -77px 0 0 -77px;
   opacity: .7;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitzthedj\/src\/sass\/_featured\.scss}line{font-family:\0000381}}
-.player-container .track-list .track.selected {
-  opacity: 1;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitzthedj\/src\/sass\/_featured\.scss}line{font-family:\0000386}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitzthedj\/src\/sass\/_featured\.scss}line{font-family:\0000382}}
 .player-container .track-list .selected:after {
   content: 'Current Track';
   background: rgba(0, 0, 0, 0.8);
@@ -453,7 +445,7 @@ a:hover {
   border-bottom: 1px solid rgba(255, 255, 255, 0.7);
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitzthedj\/src\/sass\/_featured\.scss}line{font-family:\00003113}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitzthedj\/src\/sass\/_featured\.scss}line{font-family:\00003109}}
 .next {
   font-family: 'icon';
   float: right;
@@ -473,7 +465,7 @@ a:hover {
   cursor: pointer;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitzthedj\/src\/sass\/_featured\.scss}line{font-family:\00003129}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitzthedj\/src\/sass\/_featured\.scss}line{font-family:\00003125}}
 .prev {
   font-family: 'icon';
   float: left;
@@ -493,7 +485,7 @@ a:hover {
   cursor: pointer;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitzthedj\/src\/sass\/_featured\.scss}line{font-family:\00003147}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitzthedj\/src\/sass\/_featured\.scss}line{font-family:\00003143}}
 .next:hover, .prev:hover {
   opacity: 1;
   color: #FF8330;
@@ -501,7 +493,7 @@ a:hover {
   -webkit-box-shadow: none;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitzthedj\/src\/sass\/_featured\.scss}line{font-family:\00003154}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitzthedj\/src\/sass\/_featured\.scss}line{font-family:\00003150}}
 .play-btn {
   font-family: 'icon';
   width: 45px;
@@ -528,7 +520,7 @@ a:hover {
   border-bottom: 1px solid #777;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitzthedj\/src\/sass\/_featured\.scss}line{font-family:\00003178}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitzthedj\/src\/sass\/_featured\.scss}line{font-family:\00003174}}
 .play-btn:hover {
   color: #FF8330;
   text-shadow: 0 0 5px rgba(252, 123, 37, 0.9);
@@ -569,7 +561,25 @@ a:hover {
   height: 100%;
   float: left;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitzthedj\/src\/sass\/_music\.scss}line{font-family:\0000325}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitzthedj\/src\/sass\/_music\.scss}line{font-family:\0000323}}
+.music-container .music-list .track a.selected:after {
+  content: 'Playing Now';
+  font-size: 12px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  text-transform: uppercase;
+  font-family: arial;
+  padding: 8px 8px 5px 8px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitzthedj\/src\/sass\/_music\.scss}line{font-family:\0000340}}
 .music-container .music-list .track h2 {
   font-family: arial;
   font-size: 16px;
