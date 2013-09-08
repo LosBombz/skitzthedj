@@ -609,15 +609,16 @@ a:hover {
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitzthedj\/src\/sass\/_contact\.scss}line{font-family:\0000327}}
 .contact-content .contact-column-right > h2 {
-  font-size: 32px;
+  font-size: 24px;
   text-transform: uppercase;
+  margin: 0 0 8px 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitzthedj\/src\/sass\/_contact\.scss}line{font-family:\0000331}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitzthedj\/src\/sass\/_contact\.scss}line{font-family:\0000332}}
 .contact-content .contact-column-right h3 {
   font-size: 18px;
   margin: 0 0 4px 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitzthedj\/src\/sass\/_contact\.scss}line{font-family:\0000335}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitzthedj\/src\/sass\/_contact\.scss}line{font-family:\0000336}}
 .contact-content .contact-column-right li {
   font-size: 12px;
   color: #fff;
@@ -633,7 +634,7 @@ a:hover {
   float: left;
   position: relative;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitzthedj\/src\/sass\/_contact\.scss}line{font-family:\0000346}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitzthedj\/src\/sass\/_contact\.scss}line{font-family:\0000347}}
 .contact-content .contact-column-right li:before {
   content: " ";
   width: 4px;
@@ -643,11 +644,11 @@ a:hover {
   top: 0;
   left: 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitzthedj\/src\/sass\/_contact\.scss}line{font-family:\0000357}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitzthedj\/src\/sass\/_contact\.scss}line{font-family:\0000358}}
 .contact-content .contact-column-right .content-left {
   float: left;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitzthedj\/src\/sass\/_contact\.scss}line{font-family:\0000361}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitzthedj\/src\/sass\/_contact\.scss}line{font-family:\0000362}}
 .contact-content .contact-column-right .bar {
   float: right;
 }
