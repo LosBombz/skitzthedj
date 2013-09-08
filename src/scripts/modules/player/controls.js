@@ -1,9 +1,9 @@
-/*global console: true,_:true,Backbone:true,define:true, d3:true*/
+/*global define*/
 
 
 define([
-    'jquery', 
-    'underscore', 
+    'jquery',
+    'underscore',
     'backbone',
     'core',
     'soundmanager',
@@ -38,101 +38,83 @@ function( $, _, Backbone, core, soundManager, controlsTmpl ){
             'mousedown .tracking-container' : 'seek'
         },
         initialize: function(){
-            this.model.on('change:trackUrl', this.loadTrack, this);
-            this.model.on('change', this.renderDisplay,this);
+            //this.model.on('change:trackUrl', this.loadTrack, this);
+            this.model.on('change:title', this.renderTitle ,this);
+            this.model.on('change:time', this.renderTime , this);
+            this.model.on('change:progress', this.renderProgress , this);
+            this.model.on('change:loaded', this.renderLoaded , this);
+
         },
         render: function(){
-            this.$el.html(this.template(this.model.toJSON()));
+            this.$el.html( this.template( this.model.toJSON() ) );
 
             return this;
         },
-        renderDisplay : function(){
+        renderTitle : function(){
 
             var title = this.model.get('title');
 
             this.$('.title').text(title);
 
+
         },
-        loadTrack : function(track){
-            console.log('LOAD TRACK');
-            var trackId = track.get('trackId');
-            var url = track.get('trackUrl');
-            var trackModel = this.model;
-            var currentTrack;
+        renderLoaded : function() {
+            var loaded = this.model.get('loaded');
 
-            if(track.get('currentTrack')) {
-                track.get('currentTrack').destruct();
-            }
-           
-            soundManager.createSound({
-                id: trackId,
-                url: url,
-                whileloading: function(){
-                    $('#loadingBar').css({
-                        width: Math.round(this.bytesLoaded/this.bytesTotal * 100) + '%'
-                    });
-
-                    console.log(this.buffered);
-                },
-                whileplaying : function(){
-                    var currentTrack = this;
-                    var waveData = this.waveformData;
-
-                    var pos = ( currentTrack.position / currentTrack.duration ) * 100;
-                    
-                    $('#duration').text(toMinutes(this.position) + ' / ' + toMinutes(this.duration) );
-
-                    $('#progressBar').css({
-                        width: pos + '%'
-                    });
-
-
-                   //visualizer(waveData.left, waveData.right);
-
-        
-                },
-                onload : function(){
-                    console.log('LOADED');
-                }
-
+            this.$('#loadingBar').css({
+                width: loaded
             });
-            
-
-            currentTrack = soundManager.getSoundById(trackId);
-
-            this.model.set({currentTrack: currentTrack}, {silent:true});
 
         },
+        renderProgress : function(){
+            var progress = this.model.get('progress');
+
+            this.$('#progressBar').css({
+                
+                width: progress
+            
+            });
+        },
+        
+        renderTime : function() {
+            this.$('#duration').text(this.model.get('time'));
+        },
+        
         playTrack: function( e ){
             e.preventDefault();
+            
+            if(this.model.get('playing')){
+  
+                this.model.set({playing: false});
+            
+            } else {
+
+                this.model.set({playing: true});
+            
+            }
+
+            //console.log('toggle play');
+            
+        },
+        seek: function( e ){
+
             var currentTrack = this.model.get('currentTrack');
 
             if(!currentTrack){
                 return false;
             }
 
-            console.log('toggle play');
-            currentTrack.togglePause();
-        },
-        seek: function( e ){
-
-            if(!this.model.get('currentTrack')){
-                return false;
-            }
-
             //fix for firefox
-            if (e.offsetX === undefined) {
-                e.offsetX = e.pageX - $('.tracking-container').offset().left;
+            if (typeof e.offsetX === 'undefined') {
+                e.offsetX = e.pageX - this.$('.tracking-container').offset().left;
             }
-
-            var currentTrack = this.model.get('currentTrack');
 
             var pos = e.offsetX / this.$('.tracking-container').width() * 100;
             var setPos = parseInt(pos * currentTrack.duration / 100, 10);
 
-            currentTrack.setPosition(setPos);
+            this.model.set({position: setPos});
 
-            $('#progressBar').css({
+            this.$('#progressBar').css({
                 width: pos + '%'
             });
 
@@ -144,31 +126,6 @@ function( $, _, Backbone, core, soundManager, controlsTmpl ){
     });
 
     
-
-    function visualizer (wavedataL, wavedataR) {
-        
-
-
-    }
-
-
-    function pad( number, width ) {
-        width -= number.toString().length;
-        if ( width > 0 ) {
-            return new Array( width + (/\./.test( number ) ? 2 : 1) ).join( '0' ) + number;
-        }
-        return number + ''; // always return a string
-    }
-
-    function toMinutes (milliseconds) {
-        var seconds = milliseconds / 1000;
-
-        var numSeconds = Math.floor((((seconds % 31536000) % 86400) % 3600) % 60);
-        var numMinutes = Math.floor((((seconds % 31536000) % 86400) % 3600) / 60);
-
-
-        return pad(numMinutes, 2) + ':' + pad(numSeconds, 2); 
-    }
     
     return DJ;
 

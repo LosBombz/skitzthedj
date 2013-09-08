@@ -1,6 +1,7 @@
+/*global define*/
 define([
-    'jquery', 
-    'underscore', 
+    'jquery',
+    'underscore',
     'backbone',
     'soundmanager',
     'player',
@@ -17,25 +18,22 @@ define([
     var current;
 
     player.load = function(id) {
-        console.log(id);
 
         if(current) {
             current.set({selected:false});
         }
-
-        var track = _.find(player.tracks.models, function(track){
-            return track.get('trackId') === id;
-        }, this);
-
-        track.set({selected:true});
         
-        current = track;
+        var loadedTrack = player.tracks.select(id);
+
+        loadedTrack.set({selected:true});
+        
+        current = loadedTrack;
 
 
 
-        console.log(current);
+        //console.log(current);
 
-        player.model.set(track.toJSON());
+        player.model.set(loadedTrack.toJSON());
     };
 
 
@@ -49,10 +47,14 @@ define([
         model: player.model
     });
 
-    player.tracks = new Tracklist.TrackListC(tracks);
+    player.tracks = new Tracklist.TrackListCollection(tracks);
 
-    player.tracksView = new Tracklist.TrackListV({
+    player.tracksView = new Tracklist.TrackListView({
         collection: player.tracks
+    });
+
+    player.player = new Player({
+        model: player.model
     });
 
 

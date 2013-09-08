@@ -10,6 +10,25 @@
 	z-index: 110;
 }
 
+.logo {
+	font-family: 'skitz', arial;
+	width: 45px;
+	float: left;
+	cursor: pointer;
+	margin: 4px 0 0 10px;
+	color: #1A1A1A;
+	font-size: 52px;
+	font-weight: bold;
+	text-shadow: 0 1px #555;
+	@include transition(all, .2s);
+
+	&:hover {
+		color: #FF8330;
+		text-shadow: 0 0 25px rgba(252, 123, 37,.9);	
+	}
+
+}
+
 .controls {
 	width: 960px;
 	height: 60px;
