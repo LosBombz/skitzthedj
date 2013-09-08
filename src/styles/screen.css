@@ -72,56 +72,56 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 /* Defaults */
 /* Mixins */
 /* Elements */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitz-backboned\/src\/sass\/_base\.scss}line{font-family:\0000315}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitzthedj\/src\/sass\/_base\.scss}line{font-family:\0000315}}
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitz-backboned\/src\/sass\/_base\.scss}line{font-family:\0000319}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitzthedj\/src\/sass\/_base\.scss}line{font-family:\0000319}}
 body {
   background: #ddd;
   font-family: arial, helvetica, sans-serif;
   height: 100%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitz-backboned\/src\/sass\/_base\.scss}line{font-family:\0000326}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitzthedj\/src\/sass\/_base\.scss}line{font-family:\0000326}}
 html {
   height: 100%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitz-backboned\/src\/sass\/_base\.scss}line{font-family:\0000330}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitzthedj\/src\/sass\/_base\.scss}line{font-family:\0000330}}
 a {
   color: #fff;
   text-decoration: none;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitz-backboned\/src\/sass\/_base\.scss}line{font-family:\0000335}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitzthedj\/src\/sass\/_base\.scss}line{font-family:\0000335}}
 a:hover {
   text-decoration: none;
 }
 
 /* main navigation */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitz-backboned\/src\/sass\/_nav\.scss}line{font-family:\000031}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitzthedj\/src\/sass\/_nav\.scss}line{font-family:\000031}}
 .nav-hook {
   width: 960px;
   margin: 0 auto;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitz-backboned\/src\/sass\/_nav\.scss}line{font-family:\000035}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitzthedj\/src\/sass\/_nav\.scss}line{font-family:\000035}}
 .nav-list {
   width: 800px;
   list-style: none;
   float: left;
   margin: 80px 0 60px 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitz-backboned\/src\/sass\/_nav\.scss}line{font-family:\0000311}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitzthedj\/src\/sass\/_nav\.scss}line{font-family:\0000311}}
 .nav-list li {
   float: left;
   margin: 0 10px 0 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitz-backboned\/src\/sass\/_nav\.scss}line{font-family:\0000316}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitzthedj\/src\/sass\/_nav\.scss}line{font-family:\0000316}}
 .nav-list a {
   float: left;
   padding: 10px 15px;
@@ -135,24 +135,24 @@ a:hover {
   -o-transition: all, 0.2s;
   transition: all, 0.2s;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitz-backboned\/src\/sass\/_nav\.scss}line{font-family:\0000334}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitzthedj\/src\/sass\/_nav\.scss}line{font-family:\0000334}}
 .nav-list a:hover {
   color: #FF8330;
   text-shadow: 0 0 5px rgba(252, 123, 37, 0.9);
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitz-backboned\/src\/sass\/_nav\.scss}line{font-family:\0000340}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitzthedj\/src\/sass\/_nav\.scss}line{font-family:\0000340}}
 .nav-list a:active {
   color: #FF8330;
   text-shadow: 0 0 10px rgba(255, 149, 79, 0.9);
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitz-backboned\/src\/sass\/_nav\.scss}line{font-family:\0000345}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitzthedj\/src\/sass\/_nav\.scss}line{font-family:\0000345}}
 .nav-list a.current {
   color: #FF8330;
   text-shadow: 0 0 5px rgba(252, 123, 37, 0.9);
 }
 
 /* persistant player */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitz-backboned\/src\/sass\/_controls\.scss}line{font-family:\000031}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitzthedj\/src\/sass\/_controls\.scss}line{font-family:\000031}}
 .controls-container {
   width: 100%;
   height: 60px;
@@ -167,13 +167,13 @@ a:hover {
   z-index: 110;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitz-backboned\/src\/sass\/_controls\.scss}line{font-family:\0000313}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitzthedj\/src\/sass\/_controls\.scss}line{font-family:\0000313}}
 .controls {
   width: 960px;
   height: 60px;
   margin: 0 auto;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitz-backboned\/src\/sass\/_controls\.scss}line{font-family:\0000318}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitzthedj\/src\/sass\/_controls\.scss}line{font-family:\0000318}}
 .controls h2 {
   font-family: 'dots', arial;
   font-size: 16px;
@@ -183,7 +183,7 @@ a:hover {
   letter-spacing: 1px;
   float: left;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitz-backboned\/src\/sass\/_controls\.scss}line{font-family:\0000329}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitzthedj\/src\/sass\/_controls\.scss}line{font-family:\0000329}}
 .controls #duration {
   font-family: 'dots', arial;
   font-size: 10px;
@@ -193,19 +193,19 @@ a:hover {
   letter-spacing: 1px;
   float: right;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitz-backboned\/src\/sass\/_controls\.scss}line{font-family:\0000339}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitzthedj\/src\/sass\/_controls\.scss}line{font-family:\0000339}}
 .controls .current-time {
   font-family: arial;
   font-size: 12px;
   color: #fff;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitz-backboned\/src\/sass\/_controls\.scss}line{font-family:\0000345}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitzthedj\/src\/sass\/_controls\.scss}line{font-family:\0000345}}
 .controls .title-container {
   width: 785px;
   float: left;
   margin: 0 0 0 10px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitz-backboned\/src\/sass\/_controls\.scss}line{font-family:\0000351}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitzthedj\/src\/sass\/_controls\.scss}line{font-family:\0000351}}
 .controls .tracking-container {
   background: rgba(0, 0, 0, 0.4);
   height: 16px;
@@ -227,17 +227,17 @@ a:hover {
   -moz-user-select: none;
   user-select: none;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitz-backboned\/src\/sass\/_controls\.scss}line{font-family:\0000367}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitzthedj\/src\/sass\/_controls\.scss}line{font-family:\0000367}}
 .controls .marks-container {
   height: 15px;
   width: 100%;
   position: relative;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitz-backboned\/src\/sass\/_controls\.scss}line{font-family:\0000372}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitzthedj\/src\/sass\/_controls\.scss}line{font-family:\0000372}}
 .controls .marks-container div {
   left: 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitz-backboned\/src\/sass\/_controls\.scss}line{font-family:\0000377}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitzthedj\/src\/sass\/_controls\.scss}line{font-family:\0000377}}
 .controls .progress-bar {
   height: 18px;
   width: 0;
@@ -250,7 +250,7 @@ a:hover {
   color: #ff7921;
   text-shadow: 0 0 5px rgba(252, 123, 37, 0.9);
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitz-backboned\/src\/sass\/_controls\.scss}line{font-family:\0000390}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitzthedj\/src\/sass\/_controls\.scss}line{font-family:\0000390}}
 .controls .loading-bar {
   height: 18px;
   width: 0;
@@ -263,7 +263,7 @@ a:hover {
   color: #6b390a;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitz-backboned\/src\/sass\/_controls\.scss}line{font-family:\00003105}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitzthedj\/src\/sass\/_controls\.scss}line{font-family:\00003105}}
 .play-btn {
   font-family: 'icon';
   width: 45px;
@@ -291,7 +291,7 @@ a:hover {
   border-bottom: 1px solid #777;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitz-backboned\/src\/sass\/_controls\.scss}line{font-family:\00003128}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitzthedj\/src\/sass\/_controls\.scss}line{font-family:\00003128}}
 .play-btn:hover {
   color: #FF8330;
   text-shadow: 0 0 5px rgba(252, 123, 37, 0.9);
@@ -305,7 +305,7 @@ a:hover {
   background: linear-gradient(top, #999999 0%, #898989 1%, #454545 2%, #454545 97%, #111111 100%);
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitz-backboned\/src\/sass\/_controls\.scss}line{font-family:\00003138}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitzthedj\/src\/sass\/_controls\.scss}line{font-family:\00003138}}
 .play-btn:active {
   color: #FF8330;
   background: #404040;
@@ -321,21 +321,21 @@ a:hover {
 }
 
 /* Home page featured section */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitz-backboned\/src\/sass\/_featured\.scss}line{font-family:\000031}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitzthedj\/src\/sass\/_featured\.scss}line{font-family:\000031}}
 .featured-container {
   position: absolute;
   z-index: 0;
   background: #ddd;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitz-backboned\/src\/sass\/_featured\.scss}line{font-family:\000038}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitzthedj\/src\/sass\/_featured\.scss}line{font-family:\000038}}
 .player-container {
   width: 960px;
   float: left;
   position: relative;
   margin: 10px 0 0 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitz-backboned\/src\/sass\/_featured\.scss}line{font-family:\0000314}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitzthedj\/src\/sass\/_featured\.scss}line{font-family:\0000314}}
 .player-container .track-container {
   width: 420px;
   height: 275px;
@@ -343,11 +343,11 @@ a:hover {
   position: relative;
   overflow: hidden;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitz-backboned\/src\/sass\/_featured\.scss}line{font-family:\0000322}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitzthedj\/src\/sass\/_featured\.scss}line{font-family:\0000322}}
 .player-container .track-list {
   position: absolute;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitz-backboned\/src\/sass\/_featured\.scss}line{font-family:\0000325}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitzthedj\/src\/sass\/_featured\.scss}line{font-family:\0000325}}
 .player-container .track-list .track {
   float: left;
   position: relative;
@@ -361,13 +361,13 @@ a:hover {
   transition: all, 0.5s;
   margin: 0 15px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitz-backboned\/src\/sass\/_featured\.scss}line{font-family:\0000335}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitzthedj\/src\/sass\/_featured\.scss}line{font-family:\0000335}}
 .player-container .track-list .track a {
   width: 100%;
   height: 100%;
   float: left;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitz-backboned\/src\/sass\/_featured\.scss}line{font-family:\0000341}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitzthedj\/src\/sass\/_featured\.scss}line{font-family:\0000341}}
 .player-container .track-list .track h2 {
   font-family: arial;
   font-size: 16px;
@@ -377,18 +377,18 @@ a:hover {
   text-align: center;
   width: 250px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitz-backboned\/src\/sass\/_featured\.scss}line{font-family:\0000352}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitzthedj\/src\/sass\/_featured\.scss}line{font-family:\0000352}}
 .player-container .track-list .track:hover {
   opacity: 1;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitz-backboned\/src\/sass\/_featured\.scss}line{font-family:\0000356}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitzthedj\/src\/sass\/_featured\.scss}line{font-family:\0000356}}
 .player-container .track-list img {
   position: absolute;
   top: 0;
   left: 0;
   border-radius: 3px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitz-backboned\/src\/sass\/_featured\.scss}line{font-family:\0000364}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitzthedj\/src\/sass\/_featured\.scss}line{font-family:\0000364}}
 .player-container .track-list .track-play-btn {
   border: 15px solid #fff;
   color: #fff;
@@ -408,11 +408,11 @@ a:hover {
   margin: -77px 0 0 -77px;
   opacity: .7;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitz-backboned\/src\/sass\/_featured\.scss}line{font-family:\0000381}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitzthedj\/src\/sass\/_featured\.scss}line{font-family:\0000381}}
 .player-container .track-list .track.selected {
   opacity: 1;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitz-backboned\/src\/sass\/_featured\.scss}line{font-family:\0000386}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitzthedj\/src\/sass\/_featured\.scss}line{font-family:\0000386}}
 .player-container .track-list .selected:after {
   content: 'Current Track';
   background: rgba(0, 0, 0, 0.8);
@@ -431,7 +431,7 @@ a:hover {
   border-bottom: 1px solid rgba(255, 255, 255, 0.7);
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitz-backboned\/src\/sass\/_featured\.scss}line{font-family:\00003113}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitzthedj\/src\/sass\/_featured\.scss}line{font-family:\00003113}}
 .next {
   font-family: 'icon';
   float: right;
@@ -451,7 +451,7 @@ a:hover {
   cursor: pointer;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitz-backboned\/src\/sass\/_featured\.scss}line{font-family:\00003129}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitzthedj\/src\/sass\/_featured\.scss}line{font-family:\00003129}}
 .prev {
   font-family: 'icon';
   float: left;
@@ -471,7 +471,7 @@ a:hover {
   cursor: pointer;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitz-backboned\/src\/sass\/_featured\.scss}line{font-family:\00003147}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitzthedj\/src\/sass\/_featured\.scss}line{font-family:\00003147}}
 .next:hover, .prev:hover {
   opacity: 1;
   color: #FF8330;
@@ -479,7 +479,7 @@ a:hover {
   -webkit-box-shadow: none;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitz-backboned\/src\/sass\/_featured\.scss}line{font-family:\00003154}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitzthedj\/src\/sass\/_featured\.scss}line{font-family:\00003154}}
 .play-btn {
   font-family: 'icon';
   width: 45px;
@@ -506,7 +506,7 @@ a:hover {
   border-bottom: 1px solid #777;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitz-backboned\/src\/sass\/_featured\.scss}line{font-family:\00003178}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitzthedj\/src\/sass\/_featured\.scss}line{font-family:\00003178}}
 .play-btn:hover {
   color: #FF8330;
   text-shadow: 0 0 5px rgba(252, 123, 37, 0.9);
@@ -521,18 +521,18 @@ a:hover {
 }
 
 /* Music page */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitz-backboned\/src\/sass\/_music\.scss}line{font-family:\000031}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitzthedj\/src\/sass\/_music\.scss}line{font-family:\000031}}
 .music-container {
   width: 100%;
   margin: 85px 0;
   float: left;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitz-backboned\/src\/sass\/_music\.scss}line{font-family:\000036}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitzthedj\/src\/sass\/_music\.scss}line{font-family:\000036}}
 .music-container .music-list {
   width: 825px;
   margin: 0 auto;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitz-backboned\/src\/sass\/_music\.scss}line{font-family:\0000310}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitzthedj\/src\/sass\/_music\.scss}line{font-family:\0000310}}
 .music-container .music-list .track {
   float: left;
   position: relative;
@@ -541,13 +541,13 @@ a:hover {
   cursor: pointer;
   margin: 0 5px 35px 5px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitz-backboned\/src\/sass\/_music\.scss}line{font-family:\0000318}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitzthedj\/src\/sass\/_music\.scss}line{font-family:\0000318}}
 .music-container .music-list .track a {
   width: 100%;
   height: 100%;
   float: left;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitz-backboned\/src\/sass\/_music\.scss}line{font-family:\0000325}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitzthedj\/src\/sass\/_music\.scss}line{font-family:\0000325}}
 .music-container .music-list .track h2 {
   font-family: arial;
   font-size: 16px;
@@ -559,41 +559,41 @@ a:hover {
 }
 
 /* contact / footer */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitz-backboned\/src\/sass\/_contact\.scss}line{font-family:\000032}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitzthedj\/src\/sass\/_contact\.scss}line{font-family:\000032}}
 .contact-content .contact-column-left {
   float: left;
   width: 400px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitz-backboned\/src\/sass\/_contact\.scss}line{font-family:\000035}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitzthedj\/src\/sass\/_contact\.scss}line{font-family:\000035}}
 .contact-content .contact-column-left h1 {
   font-size: 14px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitz-backboned\/src\/sass\/_contact\.scss}line{font-family:\0000310}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitzthedj\/src\/sass\/_contact\.scss}line{font-family:\0000310}}
 .contact-content .contact-column-left h2 {
   font-size: 14px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitz-backboned\/src\/sass\/_contact\.scss}line{font-family:\0000314}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitzthedj\/src\/sass\/_contact\.scss}line{font-family:\0000314}}
 .contact-content .contact-column-left a {
   font-size: 12px;
   display: block;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitz-backboned\/src\/sass\/_contact\.scss}line{font-family:\0000321}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitzthedj\/src\/sass\/_contact\.scss}line{font-family:\0000321}}
 .contact-content .contact-column-right {
   float: left;
   width: 500px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitz-backboned\/src\/sass\/_contact\.scss}line{font-family:\0000324}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitzthedj\/src\/sass\/_contact\.scss}line{font-family:\0000324}}
 .contact-content .contact-column-right > h2 {
   font-size: 14px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitz-backboned\/src\/sass\/_contact\.scss}line{font-family:\0000327}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitzthedj\/src\/sass\/_contact\.scss}line{font-family:\0000327}}
 .contact-content .contact-column-right li {
   font-size: 12px;
   color: #fff;
 }
 
 /* contact / footer */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitz-backboned\/src\/sass\/_footer\.scss}line{font-family:\0000311}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitzthedj\/src\/sass\/_footer\.scss}line{font-family:\0000311}}
 .footer-wrap {
   width: 100%;
   position: fixed;
@@ -603,7 +603,7 @@ a:hover {
   bottom: 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitz-backboned\/src\/sass\/_footer\.scss}line{font-family:\0000320}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitzthedj\/src\/sass\/_footer\.scss}line{font-family:\0000320}}
 .footer-top {
   height: 30px;
   width: 100%;
@@ -616,7 +616,7 @@ a:hover {
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.7);
   border-bottom: 1px solid #333;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitz-backboned\/src\/sass\/_footer\.scss}line{font-family:\0000330}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitzthedj\/src\/sass\/_footer\.scss}line{font-family:\0000330}}
 .footer-top .contact-btn {
   float: right;
   font-family: arial;
@@ -626,7 +626,7 @@ a:hover {
   text-shadow: 0 0 6px #eee;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitz-backboned\/src\/sass\/_footer\.scss}line{font-family:\0000341}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitzthedj\/src\/sass\/_footer\.scss}line{font-family:\0000341}}
 .contact-content {
   padding: 40px;
   font-size: 100px;
