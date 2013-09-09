@@ -1,4 +1,4 @@
-/*global console: true, define:true*/
+/*global window, define*/
 
 define(['jquery', 'underscore', 'backbone', 'text!modules/contact/templates/contact.html'],
 
@@ -21,9 +21,6 @@ function($, _, Backbone, contactTmpl){
         tagName: 'div',
         className: 'footer-wrap',
         template: _.template(contactTmpl),
-        events: {
-            'click .contact-btn' : 'openToggle'
-        },
         initialize : function(){
             this.model.on('change:open', this.openToggle, this);
         },
@@ -35,23 +32,19 @@ function($, _, Backbone, contactTmpl){
 
             if(this.model.get('open')){
 
-                this.close();
+                this.open();
 
             } else {
 
-                this.open();
+                this.close();
 
             }
 
         },
         open : function(){
             var $el = this.$el;
-            this.model.set({
-                    open:true
-                }, 
-                {
-                    silent:true
-            });
+            this.$('.contact-btn').attr('href', '#/').text('Close');
+            this.model.set({open:true}, {silent:true});
 
             this.$el.css({ bottom: ''});
             this.$el.height($(window).height() - 61)
@@ -73,6 +66,7 @@ function($, _, Backbone, contactTmpl){
         },
         close : function(){
             var $el = this.$el;
+            this.$('.contact-btn').attr('href', '#/contact').text('Contact Me');
             this.model.set({open:false}, {silent:true});
 
             $(window).off('resize');
