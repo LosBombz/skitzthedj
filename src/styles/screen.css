@@ -601,34 +601,38 @@ a:hover {
   font-size: 32px;
   text-transform: uppercase;
   margin: 0 0 2px 0;
+  font-family: 'dots', arial;
+  text-shadow: 0 0 4px #eee;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitzthedj\/src\/sass\/_contact\.scss}line{font-family:\0000312}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitzthedj\/src\/sass\/_contact\.scss}line{font-family:\0000314}}
 .contact-content .contact-column-left h2 {
   font-size: 18px;
   margin: 0 0 5px 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitzthedj\/src\/sass\/_contact\.scss}line{font-family:\0000317}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitzthedj\/src\/sass\/_contact\.scss}line{font-family:\0000319}}
 .contact-content .contact-column-left a {
   font-size: 12px;
   display: block;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitzthedj\/src\/sass\/_contact\.scss}line{font-family:\0000324}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitzthedj\/src\/sass\/_contact\.scss}line{font-family:\0000326}}
 .contact-content .contact-column-right {
   float: left;
   width: 500px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitzthedj\/src\/sass\/_contact\.scss}line{font-family:\0000327}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitzthedj\/src\/sass\/_contact\.scss}line{font-family:\0000329}}
 .contact-content .contact-column-right > h2 {
-  font-size: 24px;
+  font-size: 28px;
   text-transform: uppercase;
   margin: 0 0 8px 0;
+  font-family: 'dots', arial;
+  text-shadow: 0 0 4px #eee;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitzthedj\/src\/sass\/_contact\.scss}line{font-family:\0000332}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitzthedj\/src\/sass\/_contact\.scss}line{font-family:\0000336}}
 .contact-content .contact-column-right h3 {
   font-size: 18px;
   margin: 0 0 4px 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitzthedj\/src\/sass\/_contact\.scss}line{font-family:\0000336}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitzthedj\/src\/sass\/_contact\.scss}line{font-family:\0000340}}
 .contact-content .contact-column-right li {
   font-size: 12px;
   color: #fff;
@@ -644,7 +648,7 @@ a:hover {
   float: left;
   position: relative;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitzthedj\/src\/sass\/_contact\.scss}line{font-family:\0000347}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitzthedj\/src\/sass\/_contact\.scss}line{font-family:\0000351}}
 .contact-content .contact-column-right li:before {
   content: " ";
   width: 4px;
@@ -654,13 +658,18 @@ a:hover {
   top: 0;
   left: 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitzthedj\/src\/sass\/_contact\.scss}line{font-family:\0000358}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitzthedj\/src\/sass\/_contact\.scss}line{font-family:\0000362}}
 .contact-content .contact-column-right .content-left {
   float: left;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitzthedj\/src\/sass\/_contact\.scss}line{font-family:\0000362}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitzthedj\/src\/sass\/_contact\.scss}line{font-family:\0000366}}
 .contact-content .contact-column-right .bar {
   float: right;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/carlosescobar\/Desktop\/Dev\/skitzthedj\/src\/sass\/_contact\.scss}line{font-family:\0000370}}
+.contact-content .contact-column-right .web-link {
+  margin: 10px 0 0 0;
+  float: left;
 }
 
 /* contact / footer */

@@ -1,37 +1,32 @@
-/*global console: true,_:true,Backbone:true,define:true,window:true*/
+/*global define*/
 
 
 define([
-    'jquery', 
-    'underscore', 
+    'jquery',
+    'underscore',
     'backbone',
     'playerController',
-    'contact'
+    'contactController'
     ],
-    function($, _, Backbone, playerController, Contact){
+    function($, _, Backbone, playerController, contactController){
     'use strict';
     
     var DJ = {};
 
-
-    window.contactM = new Contact.ContactM();
-
-    window.contactV = new Contact.ContactV({
-        model: window.contactM
-    });
-
-    $('.footer-hook').append(window.contactV.render().el);
+    // $('.footer-hook').append(contactV.render().el);
 
     
     DJ.TrackRouter = Backbone.Router.extend({
         routes : {
             ''                   : 'index',
+            '/'                  : 'index',
             'tracks/:id'         : 'loadTrack',
             'tracks/:id/detail'  : 'trackDetail',
             'contact'            : 'contact'
         },
         index : function() {
             
+            contactController.close();
             
         },
         loadTrack : function(id){
@@ -39,14 +34,18 @@ define([
 
             playerController.load(id);
 
+            contactController.close();
+
         },
         trackDetail : function(id){
             console.log(id);
             playerController.detail(id);
+
+            contactController.close();
            
         },
         contact : function(){
-            console.log('contact');
+            contactController.open();
         }
 
     });

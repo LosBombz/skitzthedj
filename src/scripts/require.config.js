@@ -64,6 +64,7 @@ require.config({
 
         //Controllers
         playerController : 'controllers/playerController',
+        contactController : 'controllers/contactController',
 
 
         //Pages

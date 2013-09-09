@@ -6,6 +6,8 @@
 			font-size: 32px;
 			text-transform: uppercase;
 			margin: 0 0 2px 0;
+			font-family: 'dots', arial;
+			text-shadow:0 0 4px #eee;
 
 		}
 
@@ -25,9 +27,11 @@
 		float: left;
 		width: 500px;
 		&>h2 {
-			font-size: 24px;
+			font-size: 28px;
 			text-transform: uppercase;
 			margin: 0 0 8px 0;
+			font-family: 'dots', arial;
+			text-shadow:0 0 4px #eee;
 		}
 		h3 {
 			font-size: 18px;
@@ -61,6 +65,11 @@
 
 		.bar {
 			float: right;
+		}
+
+		.web-link {
+			margin: 10px 0 0 0;
+			float:left;
 		}
 	}
 	
