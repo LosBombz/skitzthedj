@@ -38,7 +38,7 @@ define([
 
         },
         trackDetail : function(id){
-            console.log(id);
+            //console.log(id);
             playerController.detail(id);
 
             contactController.close();

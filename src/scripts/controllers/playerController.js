@@ -38,7 +38,7 @@ define([
 
 
     player.detail = function(id){
-        console.log('detail for: ', id);
+        //console.log('detail for: ', id);
     };
 
     player.model = new controls.PlayerM();

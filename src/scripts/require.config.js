@@ -80,9 +80,9 @@ require( ['jquery', 'soundmanager'], function($, soundManager) {
         url: '/media/flash/soundmanager2_flash9.swf',
         flashVersion: 9,
         useFlashBlock: false,
-        ontimeout: function(error) {
+        ontimeout: function(/*error*/) {
         // uh-oh, SM2 failed to start - error, unsupported or other issue
-            console.log('we messed up: ', error);
+            //console.log('we messed up: ', error);
         },
         flash9Options : {
             useWaveformData: true
