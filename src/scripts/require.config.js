@@ -68,8 +68,6 @@ require.config({
 
 
         //Pages
-        //layout       : 'layout',
-        // index        : 'index',
         contact      : 'modules/contact/contact'
     
     }
@@ -80,17 +78,20 @@ require( ['jquery', 'soundmanager'], function($, soundManager) {
         url: '/media/flash/soundmanager2_flash9.swf',
         flashVersion: 9,
         useFlashBlock: false,
+        debugMode: false,
         ontimeout: function(/*error*/) {
         // uh-oh, SM2 failed to start - error, unsupported or other issue
             //console.log('we messed up: ', error);
         },
         flash9Options : {
-            useWaveformData: true
+            useWaveformData: false,
+            bufferTime: 0
         }
         
     });
 
     soundManager.defaultOptions = {
+        autoLoad: true,
         autoPlay: true,
         stream: true,
         onplay: function(){
@@ -116,5 +117,5 @@ require( ['jquery', 'soundmanager'], function($, soundManager) {
         }
     };
 
-    soundManager.beginDelayedInit();
+    //soundManager.beginDelayedInit();
 });

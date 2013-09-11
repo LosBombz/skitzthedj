@@ -1,17 +1,11 @@
-define(['jquery', 'underscore', 'logger', 'backbone'], function($, _, Logger, Backbone){
+/*global define*/
+define(['jquery', 'underscore', 'backbone'], function($, _, Backbone){
 	var core = {};
 
 	core.debug = true;
 
-	core.Logger = Logger;
-
-	var logger = new core.Logger('Core');
-
 	// extend backbone events into the cor object
 	_.extend(core, Backbone.Events);
-
-
-	logger.log('App Starting');
 	 
 
 	return core;

@@ -37,7 +37,7 @@ define([
     };
 
 
-    player.detail = function(id){
+    player.detail = function(/*id*/){
         //console.log('detail for: ', id);
     };
 

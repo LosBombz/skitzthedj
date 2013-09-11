@@ -99,9 +99,6 @@ module.exports = function(grunt) {
                 browser: true
             },
             globals: {
-                '$' : true,
-                '_' : true,
-                'Backbone' : true,
                 'require' : true,
                 'define' : true,
                 'soundManager' : true
