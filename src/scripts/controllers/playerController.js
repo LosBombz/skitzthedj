@@ -2,15 +2,13 @@
 define([
     'jquery',
     'underscore',
-    'backbone',
-    'soundmanager',
     'player',
     'controls',
-    'trackList',
-    'tracks',
-    'd3'
+    'tracklist.collection',
+    'tracklist.view',
+    'tracks'
     
-],  function( $, _, Backbone, soundManager, Player, controls, Tracklist, tracks){
+],  function( $, _, Player, controls, TracklistCollection, TracklistView, tracks){
     'use strict';
 
     var player = {};
@@ -47,9 +45,9 @@ define([
         model: player.model
     });
 
-    player.tracks = new Tracklist.TrackListCollection(tracks);
+    player.tracks = new TracklistCollection(tracks);
 
-    player.tracksView = new Tracklist.TrackListView({
+    player.tracksView = new TracklistView({
         collection: player.tracks
     });
 

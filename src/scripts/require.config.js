@@ -56,8 +56,10 @@ require.config({
         sandbox      : 'sandbox',
 
         //Modules
-        trackList    : 'modules/tracks/trackList',
-        track        : 'modules/tracks/track',
+        'tracklist.view'  : 'modules/tracks/tracklist.view',
+        'tracklist.collection' : 'modules/tracks/tracklist.collection',
+        'track.model' : 'modules/tracks/track.model',
+        'track.view' : 'modules/tracks/track.view',
         player       : 'modules/player/player',
         controls     : 'modules/player/controls',
         nav          : 'modules/nav/nav',
@@ -78,21 +80,20 @@ require( ['jquery', 'soundmanager'], function($, soundManager) {
         url: '/media/flash/soundmanager2_flash9.swf',
         flashVersion: 9,
         useFlashBlock: false,
-        debugMode: false,
+        debugMode: true,
         ontimeout: function(/*error*/) {
         // uh-oh, SM2 failed to start - error, unsupported or other issue
             //console.log('we messed up: ', error);
         },
         flash9Options : {
-            useWaveformData: false,
-            bufferTime: 0
+            useWaveformData: false
         }
         
     });
 
     soundManager.defaultOptions = {
-        autoLoad: true,
-        autoPlay: true,
+        autoLoad: false,
+        autoPlay: false,
         stream: true,
         onplay: function(){
             $('#playBtn').text('"');

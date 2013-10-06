@@ -5,13 +5,11 @@ define([
     'jquery',
     'underscore',
     'backbone',
-    'core',
     'soundmanager',
-    'text!modules/player/templates/controls.html',
-    'd3'
+    'text!modules/player/templates/controls.html'
 ],
 
-function( $, _, Backbone, core, soundManager, controlsTmpl ){
+function( $, _, Backbone, soundManager, controlsTmpl ){
 'use strict';
     var DJ = {};
     DJ.PlayerM = Backbone.Model.extend({

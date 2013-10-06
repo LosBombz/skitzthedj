@@ -1,3 +1,8 @@
+/*global define*/
+
+/**
+ * List of Tracks for site
+ */
 define(function(){
 
 	var tracks = [

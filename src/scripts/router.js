@@ -11,12 +11,7 @@ define([
     function($, _, Backbone, playerController, contactController){
     'use strict';
     
-    var DJ = {};
-
-    // $('.footer-hook').append(contactV.render().el);
-
-    
-    DJ.TrackRouter = Backbone.Router.extend({
+    return Backbone.Router.extend({
         routes : {
             ''                   : 'index',
             '/'                  : 'index',
@@ -49,7 +44,5 @@ define([
         }
 
     });
-
-    return DJ;
 
 });
