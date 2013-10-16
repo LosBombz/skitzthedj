@@ -5,10 +5,9 @@ require([
     'jquery',
     'backbone',
     'router',
-    'playerController',
     'jquery.tm'
 
-], function( soundManager, $, Backbone, TrackRouter, playerController) {
+], function( soundManager, $, Backbone, TrackRouter) {
     'use strict';
 
     var app = {};
@@ -23,7 +22,6 @@ require([
     $(function() {
         
         $initDfd.then(function(){
-            playerController.tracks.createSound();
             app.router = new TrackRouter();
             Backbone.history.start();
 

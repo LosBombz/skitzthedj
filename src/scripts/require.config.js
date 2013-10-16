@@ -92,7 +92,7 @@ require( ['jquery', 'soundmanager'], function($, soundManager) {
     });
 
     soundManager.defaultOptions = {
-        autoLoad: false,
+        autoLoad: true,
         autoPlay: false,
         stream: true,
         onplay: function(){
