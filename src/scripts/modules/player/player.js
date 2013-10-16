@@ -82,7 +82,7 @@ function( $, _, Backbone, soundManager){
         var self = this;
 
         if (this.model.get('currentTrack')) {
-            this.model.get('currentTrack').stop();
+            this.model.get('currentTrack').destruct();
         }
 
         soundManager.createSound({
