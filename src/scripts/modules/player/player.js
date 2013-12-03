@@ -87,7 +87,12 @@ function( $, _, Backbone, soundManager){
 
         soundManager.createSound({
                 id: trackId,
-                url: url,
+                url: [
+                    {
+                        type: 'audio/mp3', 
+                        url:'http://d3n8lz3bk9houk.cloudfront.net/' + url
+                    }
+                ],
                 whileloading: function(){
                     var loaded = Math.round(this.bytesLoaded / this.bytesTotal * 100) + '%';
                     
