@@ -16,15 +16,15 @@ define(function(){
                 'downloadUrl' : '/tracks/td-4-27-12.mp3',
                 'trackMarks' : [10, 20, 30, 40, 60,80]
             },
-            {
-                'trackId': 'after-hours',
-                'title' : 'After Hours',
-                'trackUrl' : 'after-hours.mp3',
-                'artist' : 'DJ. Skitz',
-                'cover' : '/images/mixes/ah.png',
-                'downloadUrl' : '/tracks/AfterHours.mp3',
-                'trackMarks' : [10, 20, 30, 40, 60,80]
-            },
+            // {
+            //     'trackId': 'after-hours',
+            //     'title' : 'After Hours',
+            //     'trackUrl' : 'after-hours.mp3',
+            //     'artist' : 'DJ. Skitz',
+            //     'cover' : '/images/mixes/ah.png',
+            //     'downloadUrl' : '/tracks/AfterHours.mp3',
+            //     'trackMarks' : [10, 20, 30, 40, 60,80]
+            // },
             {
                 'trackId': 'good-good-night',
                 'title' : 'Good Good Night (DJ Skitz Blend)',
