@@ -80,7 +80,7 @@ require( ['jquery', 'soundmanager'], function($, soundManager) {
         url: '/media/flash/soundmanager2_flash9.swf',
         flashVersion: 9,
         useFlashBlock: false,
-        debugMode: true,
+        debugMode: false,
         preferFlash:false,
         ontimeout: function(/*error*/) {
         // uh-oh, SM2 failed to start - error, unsupported or other issue
@@ -93,7 +93,7 @@ require( ['jquery', 'soundmanager'], function($, soundManager) {
     });
 
     soundManager.defaultOptions = {
-        autoLoad: false,
+        autoLoad: true,
         autoPlay: false,
         stream: true,
         onplay: function(){
